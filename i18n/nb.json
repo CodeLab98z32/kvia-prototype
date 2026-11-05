@@ -7,7 +7,7 @@
     "menu": "Meny",
     "skip": "Hopp til innhold",
     "groupA": "Tjenesten",
-    "groupB": "Prototype",
+    "groupB": "Prototype og belegg",
     "overview": "Oversikt",
     "notices": "Kunngjøringer",
     "screening": "Screening",
@@ -38,7 +38,7 @@
     "theme_light": "Lyst",
     "theme_dark": "Mørkt",
     "theme_system": "Følg systemet",
-    "statusDemo": "Prototype",
+    "statusDemo": "Prototype · demo",
     "statusHint": "Driftsstatus — grønn: i drift, rød: frakoblet, gul: prototype / demodrift"
   },
   "mock": {
@@ -57,7 +57,20 @@
     "notFound": "Finnes ikke i denne kjøringen.",
     "synthetic": "syntetisk",
     "underlying": "Vis underliggende data",
-    "unknown": "Ukjent"
+    "unknown": "Ukjent",
+    "all": "Alle",
+    "close": "Lukk",
+    "copied": "Kopiert",
+    "copy": "Kopier",
+    "errorTitle": "Visningen kunne ikke lastes",
+    "errorText": "Dataene fra den frosne kjøringen kunne ikke leses.",
+    "loading": "Laster",
+    "nSelected": "{n} valgt",
+    "notFoundTitle": "Ikke funnet",
+    "reset": "Nullstill",
+    "retry": "Prøv igjen",
+    "showLess": "Vis mindre",
+    "showMore": "Vis mer"
   },
   "status": {
     "active": "Aktiv",
@@ -161,7 +174,8 @@
       "reports": "Diagnoserapporter",
       "reportsSub": "videresendt + lagt til manuelt",
       "missing": "Manglende dokumenter",
-      "missingSub": "bevis trengs, utløpt eller mangler"
+      "missingSub": "bevis trengs, utløpt eller mangler",
+      "reportsSub2": "{f} videresendt · {m} lagt til manuelt"
     },
     "distribution": "Indikasjoner i rapportene",
     "how": "Slik fungerer det",
@@ -189,7 +203,11 @@
     "ctaScreening": "Se rangerte kunngjøringer",
     "ctaReports": "Åpne diagnoserapporter",
     "aiLabel": "KI",
-    "humanLabel": "Menneskelig beslutning"
+    "humanLabel": "Menneskelig beslutning",
+    "moreLogic": "Se den interne logikken",
+    "seeAll": "Hele den rangerte listen",
+    "topTitle": "Deres beste treff",
+    "topSub": "De fem høyeste treffscorene for firmaet; kunngjøringer på eller over {th} videresendes til diagnoserapport."
   },
   "chain": {
     "pre": {
@@ -257,7 +275,12 @@
       "v_single": "Én",
       "v_multi": "Flere",
       "clear": "Nullstill filtre",
-      "more": "Filtre"
+      "more": "Flere filtre",
+      "clearShort": "Nullstill alle",
+      "vb_lt1": "Under NOK 1 mill.",
+      "vb_1to10": "NOK 1–10 mill.",
+      "vb_gt10": "Over NOK 10 mill.",
+      "vb_unknown": "Ukjent"
     },
     "sortBy": "Sorter",
     "sortDefault": "Standard rekkefølge",
@@ -267,7 +290,8 @@
       "value": "Verdi",
       "title": "Tittel",
       "status": "Status"
-    }
+    },
+    "noneText": "Prøv å fjerne et filter eller tømme søket."
   },
   "notice": {
     "doffin": "Åpne på doffin.no",
@@ -297,7 +321,15 @@
     "value_zero_treated_as_unknown": "0 behandles som ukjent, aldri som NOK 0",
     "anyw": "anyw = utførelse hvor som helst i Norge → forenlig med alle regioner",
     "statusIgnored": "status er tomt; aktivitet bestemmes av kunngjøringstype + frist",
-    "versionHash": "Versjonshash"
+    "versionHash": "Versjonshash",
+    "legislation": "Regelverk",
+    "procedure": "Prosedyre",
+    "published": "Publisert",
+    "manualHint": "Under terskelen: den forhåndsberegnede rapporten kan legges til manuelt. Ingenting behandles på nytt.",
+    "noDocs": "Ingen konkurransedokumenter",
+    "noDocsText": "Ingen dokumenter er lagret for denne kunngjøringen.",
+    "rank": "Plass {r} av {n}",
+    "tabOverview": "Oversikt"
   },
   "screening": {
     "title": "Screening",
@@ -322,7 +354,13 @@
     "contradiction": "motstridende data",
     "openNotice": "Åpne kunngjøring",
     "promptIO": "Prompt og I/O",
-    "footnote": "Mock-kjøring: delscorene er generert av kode fra CPV/NUTS/verdi-overlapp (teambeslutning for fase 1); aggregering, sikkerhet og ruting er den reelle koden."
+    "footnote": "Mock-kjøring: delscorene er generert av kode fra CPV/NUTS/verdi-overlapp (teambeslutning for fase 1); aggregering, sikkerhet og ruting er den reelle koden.",
+    "kBelow": "Under terskel",
+    "kForwarded": "Videresendt",
+    "kPending": "Venter på rådgiver",
+    "kPendingSub": "ikke scoret · se rådgiversiden",
+    "kScreened": "Screenede kunngjøringer",
+    "notScored": "Til gjennomgang — ikke scoret"
   },
   "reports": {
     "title": "Diagnoserapporter",
@@ -338,7 +376,16 @@
     "noneForwarded": "Ingen kunngjøring nådde terskelen.",
     "noneManual": "Ingen ennå. Bruk «Lag diagnoserapport» i den rangerte listen eller på en kunngjøring.",
     "noneAwaiting": "Ingen kunngjøring venter på gjennomgang.",
-    "hint": "Mangler en konkurranse? Legg til en kunngjøring under terskelen fra"
+    "hint": "Mangler en konkurranse? Legg til en kunngjøring under terskelen fra",
+    "colMissing": "Utestående dokumenter",
+    "colTender": "Konkurranse",
+    "kReports": "Rapporter",
+    "none": "Ingen",
+    "source": "Kilde",
+    "srcForwarded": "Videresendt automatisk",
+    "srcManual": "Lagt til manuelt",
+    "srcManualLocal": "Lagt til i denne nettleseren",
+    "sub2": "Diagnoserapportene til valgt firma: videresendt av screeningen eller lagt til manuelt av tilbudsansvarlig."
   },
   "report": {
     "create": "Lag diagnoserapport",
@@ -381,7 +428,17 @@
     "noMissing": "Ingen manglende dokumenter.",
     "disclaimer": "Kun en indikasjon. Firmaet bestemmer om det skal gi tilbud. Ingenting sendes inn.",
     "mockNote": "MOCK: kravene kommer fra et generert plassholderdokument og beskriver ingen reell konkurranse.",
-    "footnote": "Krav uten kildehenvisning påvirker aldri indikasjonen. Dokumentasjonsstatus, utløpsflagg og indikasjon beregnes av kode."
+    "footnote": "Krav uten kildehenvisning påvirker aldri indikasjonen. Dokumentasjonsstatus, utløpsflagg og indikasjon beregnes av kode.",
+    "colDocs": "Dokumentasjon",
+    "colMatch": "Vurdering",
+    "colRequirement": "Krav",
+    "kPartlyNot": "Delvis / ikke oppfylt",
+    "kRequirements": "Krav",
+    "lockerConnection": "Kobling til Capability Locker",
+    "lockerShort": "Locker",
+    "openDocument": "Åpne konkurransedokumentet",
+    "showInDocument": "Vis i dokumentet",
+    "technical": "Tekniske detaljer (underliggende data)"
   },
   "readinessText": {
     "documented": "Dokumentasjonen er dokumentert og gyldig på tilbudsfristen.",
@@ -403,7 +460,7 @@
   },
   "company": {
     "sub": "skrivebeskyttet visning av profilen (datamodell tabell A1)",
-    "health": "Helsesjekk av profilen",
+    "health": "Dokumentasjonsproblemer",
     "healthSub": "Regelbaserte flagg (ingen KI): utløpt, utløper innen {days} dager, erklært manglende.",
     "search": "Søkeprofil",
     "searchSub": "Hva firmaet ser etter — styrer screeningen.",
@@ -426,7 +483,9 @@
       "references": "Referanser",
       "account": "Konto",
       "baseline": "Utgangspunkt"
-    }
+    },
+    "noIssues": "Ingen dokumentasjonsproblemer.",
+    "sub2": "Skrivebeskyttet visning av firmaets profil (datamodell tabell A1). Redigering hører til profiloppsettet og er ikke en del av prototypen."
   },
   "pdf": {
     "page": "Side",
@@ -570,6 +629,18 @@
       "health": {
         "title": "Helsesjekk av profilen (tjeneste 3)",
         "text": "Flagger utløpte oppføringer, oppføringer som utløper innen {days} dager fra referansedatoen, og verdier erklært manglende."
+      },
+      "retrieval": {
+        "title": "Gjenfinning av avsnitt",
+        "text": "Hvert konkurransedokument deles i sider (dokumentnavn og side beholdes). BM25 rangerer sidene per kravkategori med norske og engelske søkeord; de 40 beste sidene og alle sider med kravoverskrift går til uttrekk. Hentede side-ID-er logges, slik at et krav funnet andre steder teller som gjenfinningsbom (T8)."
+      },
+      "matching": {
+        "title": "Manglende og motstridende data",
+        "text": "Et datapunkt som mangler på én av sidene får ingen delscore; det holdes utenfor treffscoren og senker sikkerheten. Motstrid (f.eks. utførelsessted mot oppdragsgivers adresse) tolkes og scores, og senker også sikkerheten. Det finnes ikke noe regelbasert forhåndsfilter på CPV eller nøkkelord."
+      },
+      "lacks": {
+        "title": "Mangler data blir aldri stilltiende matchet",
+        "text": "Hvis ingen felt i Capability Locker dekker et krav, eller verdien er erklært manglende, klassifiseres kravet som mangler data. Krav uten gyldig kildehenvisning når aldri dette steget og påvirker aldri indikasjonen."
       }
     },
     "assumptionsTitle": "Antakelser i denne kjøringen",
@@ -624,6 +695,49 @@
         "text": "Vurderer hvert krav som oppfylt, delvis oppfylt, ikke oppfylt eller mangler data, med sikkerhet; indikasjonen følger av faste regler.",
         "impl": "LLM (Claude Fable 5.1); dokumentasjonsstatus og go / grensetilfelle / no-go beregnes i kode"
       }
+    },
+    "aiPart": "KI",
+    "codePart": "Deterministisk kode",
+    "rulesAndAssumptions": "Regler og antakelser",
+    "stage": "Steg",
+    "sub2": "Mekanismen i seks steg — KI-kapabilitetene fra dokumentet om KI-mekanismekjeden — med hva modellen gjør, hva fast kode gjør og hvor et menneske bestemmer.",
+    "stage6": {
+      "retrieval": {
+        "ai": "Navngitt som KI-kapabilitet i mekanismekjeden: finner relevante avsnitt slik at modellen forankres i kilden.",
+        "code": "Implementert som BM25-rangering av sider; aktivitetsregelen avgjør hvilke kunngjøringer som går til forbehandling.",
+        "human": "—",
+        "output": "kandidatavsnitt per kunngjøring, loggede side-ID-er"
+      },
+      "extraction": {
+        "ai": "LLM lister hvert obligatorisk krav og dokumentasjonskrav med kilde (to pass: kilder, så JSON).",
+        "code": "Skjemavalidering, kildekontroll på sitert side, markeringskoordinater, frigivingsport.",
+        "human": "Rådgiver gjennomgår flaggede kunngjøringer og frigir dem",
+        "output": "kravliste med kilder; frigitt eller flagget"
+      },
+      "matching": {
+        "ai": "LLM gir en delscore med begrunnelse for hvert datapunkt i en frigitt kunngjøring, inkludert tittel og beskrivelse.",
+        "code": "Skjemavalidering; prompten får bare søkeprofilen (ikke Capability Locker eller kontaktfelt).",
+        "human": "—",
+        "output": "delscorer, begrunnelser, motstrid"
+      },
+      "ranking": {
+        "ai": "Navngitt som KI-kapabilitet i mekanismekjeden (rangering av kunngjøringer).",
+        "code": "Vektet aggregering til treffscore 0–100, sikkerhetsnivåer, terskelruting, én rangert liste per firma.",
+        "human": "Tilbudsansvarlig kan legge til kunngjøringer under terskelen",
+        "output": "rangert liste med videresendt / under terskel"
+      },
+      "matching2": {
+        "ai": "LLM kobler hvert lagret krav til feltet i Capability Locker som besvarer det.",
+        "code": "Gjenbruker de lagrede kravene — dokumentene leses aldri på nytt per firma.",
+        "human": "Firmaet kan flagge ethvert resultat",
+        "output": "felt per krav"
+      },
+      "classification": {
+        "ai": "LLM vurderer hvert krav som oppfylt / delvis / ikke oppfylt / mangler data, med sikkerhet.",
+        "code": "Dokumentasjonsstatus på fristen, utløpsflagg, manglende dokumenter og indikasjonen go / grensetilfelle / no-go.",
+        "human": "Tilbudsansvarlig bestemmer om det skal gis tilbud",
+        "output": "sjekkliste, manglende dokumenter, indikasjon"
+      }
     }
   },
   "prompts": {
@@ -647,7 +761,15 @@
     "citations": "Kilder {ok}/{n}",
     "citationTable": "Kildekontroll og markering per krav",
     "citationOk": "sitert tekst på sitert side",
-    "highlighted": "markert"
+    "highlighted": "markert",
+    "checks": "Kontroller",
+    "mockEvidence": "Mock-belegg",
+    "model": "Modell",
+    "noCitationChecks": "Denne oppgaven har ingen kildekontroll.",
+    "schemaFailed": "Skjemavalidering feilet",
+    "schemaPassed": "Skjemavalidering bestått",
+    "task": "KI-oppgave",
+    "version": "Promptversjon"
   },
   "adviser": {
     "title": "Rådgiversiden (simulert)",
@@ -673,7 +795,10 @@
     "effectReleased": "Screenet for alle firmaer etter frigiving; rapport der den er videresendt eller lagt til.",
     "effectFit": "{firm}: treff {fit}",
     "effectPending": "Synlig i kunngjøringssøket med merke; ingen treffscore og ingen rapport for noe firma.",
-    "footnote": "Feiltilstanden for flaggede kunngjøringer (T7) vises her bare på mock-kjøringen. Kunngjøringsdataene endres aldri for å fremprovosere et flagg."
+    "footnote": "Feiltilstanden for flaggede kunngjøringer (T7) vises her bare på mock-kjøringen. Kunngjøringsdataene endres aldri for å fremprovosere et flagg.",
+    "effectPendingShort": "Ingen treffscore, ingen rapport",
+    "readOnly": "Skrivebeskyttet — beslutninger registreres av teamet, ikke her",
+    "sourceFile": "Kilde: data/adviser_decisions.json"
   },
   "tests": {
     "title": "Testtilfeller",
@@ -688,13 +813,38 @@
     "evidence": "Belegg",
     "mockWarning": "«passed (mock)» viser at kodestiene oppfører seg som spesifisert på mock-innhold. Det er ikke testbelegg om reelle konkurranser og skal ikke rapporteres slik.",
     "coverage": "Dekning av tilstander i mock-kjøringen",
-    "coverageSub": "{c} av {n} definerte tilstander har minst ett eksempel (ellers feiler bygget)."
+    "coverageSub": "{c} av {n} definerte tilstander har minst ett eksempel (ellers feiler bygget).",
+    "kFailed": "Feilet",
+    "kNotObserved": "Ikke observert (fase 2)",
+    "kPassed": "Bestått (mock)",
+    "kReady": "Klar til kjøring",
+    "sub2": "Påkrevde tester T1–T11 med forventninger, observasjoner og lenker til belegg. Status beregnes av kode fra resultatene i kjøringen.",
+    "types": {
+      "typical": "Typisk",
+      "edge": "Grensetilfelle",
+      "failure": "Feil",
+      "key_assumption": "Nøkkelantakelse",
+      "recompute": "Ny beregning",
+      "stability": "Stabilitet"
+    },
+    "ev": {
+      "screening": "Screening",
+      "report": "Diagnoserapport",
+      "notices": "Kunngjøring",
+      "adviser": "Rådgiversiden",
+      "prompts": "Prompter og I/O",
+      "logic": "Intern logikk",
+      "run": "Data og kjøring"
+    }
   },
   "testlog": {
     "title": "Testlogg",
     "sub": "Testlogg for prototypen i formatet til vedlegg A i oppgaven. Eksporter som CSV eller skriv ut.",
     "print": "Skriv ut",
-    "note": "Læring/revisjon hentes fra data/test_log_notes.json og skrives av teamet. Observasjonene i fase 1 er mock-observasjoner."
+    "note": "Læring/revisjon hentes fra data/test_log_notes.json og skrives av teamet. Observasjonene i fase 1 er mock-observasjoner.",
+    "csv": "Eksporter CSV",
+    "none": "Ingen oppføring passer søket.",
+    "search": "Søk i testloggen"
   },
   "run": {
     "title": "Data og kjøring",
@@ -738,7 +888,10 @@
     "csvTitle": "Kunngjøringsdata (CSV)",
     "csvSub": "{file} — {n} rader, {c} kolonner, vist uendret.",
     "csvSearch": "Søk i dataene",
-    "csvNote": "Prototypens eneste datasett med kunngjøringer. De oppfunne MOCK-kunngjøringene er ikke en del av denne filen."
+    "csvNote": "Prototypens eneste datasett med kunngjøringer. De oppfunne MOCK-kunngjøringene er ikke en del av denne filen.",
+    "sourcesSub": "Inndatafilene til kjøringen med SHA-256-sjekksummer; hele manifestet for resultatene nedenfor.",
+    "sub2": "Opphavet til den frosne kjøringen nettsiden spiller av: kilder, datoer, modell, prompter, sjekksummer og begrensninger.",
+    "utility": "Verktøy"
   },
   "statusHint": {
     "active": "Konkurransekunngjøring med tilbudsfrist etter referansedatoen",

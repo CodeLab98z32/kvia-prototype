@@ -15,9 +15,9 @@ type PdfPage = {
 };
 
 /** Embedded PDF.js viewer. Highlights are drawn as overlays from stored PDF coordinates (SPEC §7 highlight, §8.4). */
-export function PdfViewer({ url, page, onPageChange, highlights = [], activeId, onSelect, title }: {
+export function PdfViewer({ url, page, onPageChange, highlights = [], activeId, onSelect, title, bare }: {
   url: string; page: number; onPageChange: (p: number) => void; highlights?: HL[]; activeId?: string | null;
-  onSelect?: (id: string) => void; title?: string;
+  onSelect?: (id: string) => void; title?: string; bare?: boolean;
 }) {
   const t = useTranslations();
   const wrap = useRef<HTMLDivElement>(null);
@@ -76,32 +76,34 @@ export function PdfViewer({ url, page, onPageChange, highlights = [], activeId, 
   const onPage = highlights.filter((h) => h.page === page);
   useEffect(() => {
     if (!activeId) return;
-    const el = wrap.current?.querySelector(`[data-hl="${activeId}"]`);
-    el?.scrollIntoView({ block: "center", behavior: "smooth" });
+    // scroll only the viewer's own scroll area, never the page
+    const el = wrap.current?.querySelector<HTMLElement>(`[data-hl="${activeId}"]`);
+    const box = wrap.current?.parentElement;
+    if (el && box) box.scrollTo({ top: Math.max(0, el.offsetTop - box.clientHeight / 2), behavior: "smooth" });
   }, [activeId, vp]);
 
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">
-      <div className="flex items-center justify-between gap-2 border-b border-border px-3 py-2 text-sm">
-        <div className="min-w-0 truncate font-medium" title={title}>{title}</div>
+    <div className={cn("flex h-full flex-col overflow-hidden bg-surface", !bare && "rounded-xl border border-border")}>
+      <div className="flex h-11 items-center justify-between gap-2 border-b border-border px-3 text-[13px]">
+        <div className="min-w-0 truncate font-medium text-muted" title={title}>{title}</div>
         <div className="flex shrink-0 items-center gap-1">
-          <button className="rounded p-1 hover:bg-surface-2 disabled:opacity-40" disabled={page <= 1} onClick={() => onPageChange(page - 1)} aria-label={t("pdf.prev")}>
+          <button className="t-fast grid h-8 w-8 place-items-center rounded-md hover:bg-surface-2 disabled:opacity-40" disabled={page <= 1} onClick={() => onPageChange(page - 1)} aria-label={t("pdf.prev")}>
             <ChevronLeft className="h-4 w-4" aria-hidden />
           </button>
           <span className="tnum text-xs">{t("pdf.page")} {page} / {doc?.numPages ?? "…"}</span>
-          <button className="rounded p-1 hover:bg-surface-2 disabled:opacity-40" disabled={!doc || page >= doc.numPages} onClick={() => onPageChange(page + 1)} aria-label={t("pdf.next")}>
+          <button className="t-fast grid h-8 w-8 place-items-center rounded-md hover:bg-surface-2 disabled:opacity-40" disabled={!doc || page >= doc.numPages} onClick={() => onPageChange(page + 1)} aria-label={t("pdf.next")}>
             <ChevronRight className="h-4 w-4" aria-hidden />
           </button>
-          <a className="rounded p-1 hover:bg-surface-2" href={`${url}#page=${page}`} target="_blank" rel="noreferrer" aria-label={t("pdf.open")}>
+          <a className="t-fast grid h-8 w-8 place-items-center rounded-md hover:bg-surface-2" href={`${url}#page=${page}`} target="_blank" rel="noreferrer" aria-label={t("pdf.open")}>
             <ExternalLink className="h-4 w-4" aria-hidden />
           </a>
         </div>
       </div>
-      <div className="relative flex-1 overflow-auto bg-surface-2 p-2">
+      <div className="relative flex-1 overflow-auto bg-surface-2/70 p-3">
         <div ref={wrap} className="relative mx-auto w-full">
           {!doc && !err && <div className="grid h-64 place-items-center text-muted"><Loader2 className="h-5 w-5 animate-spin" aria-hidden /></div>}
           {err && <div className="p-4 text-sm text-nogo">{t("pdf.error")}: {err}</div>}
-          <canvas ref={canvas} className={cn("block bg-white shadow", !doc && "hidden")} />
+          <canvas ref={canvas} className={cn("block bg-white shadow-hair ring-1 ring-border", !doc && "hidden")} />
           {vp && onPage.map((h) => h.rects.map((r, i) => {
             const [a, b, c, d] = vp.convertToViewportRectangle(r);
             return (

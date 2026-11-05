@@ -1,103 +1,72 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { Check, Minus, X } from "lucide-react";
-import type { ReactNode } from "react";
-import { Loading, PageTitle } from "@/components/ui/ui";
+import { Loading, PageTitle, Section, Tabs } from "@/components/ui/ui";
+import { Dot } from "@/components/ui/chips";
 import { cn } from "@/lib/format";
 import { useL, useModel } from "@/lib/state";
 import type { HealthFlag, ProfileField } from "@/lib/types";
+import { useQueryState } from "@/lib/url-state";
 
-const DOT: Record<string, string> = { expired: "bg-nogo", expiring: "bg-warn", declared_missing: "bg-flag" };
-
-function proofCls(s: string) {
-  if (s.startsWith("Documented")) return "text-go";
-  if (s === "Self-declared") return "text-warn";
-  if (s === "Declared missing") return "text-flag";
-  return "text-muted";
-}
+type Tab = "search" | "locker" | "account";
+const HTONE = { expired: "nogo", expiring: "warn", declared_missing: "flag" } as const;
+const proofTone = (s: string) => (s.startsWith("Documented") ? "go" : s === "Self-declared" ? "warn" : s === "Declared missing" ? "flag" : "muted") as "go" | "warn" | "flag" | "muted";
 
 function Proof({ f }: { f: ProfileField }) {
-  if (f.parts) return <span className="flex flex-col">{f.parts.map((p) => <span key={p.part} className={cn("text-xs", proofCls(p.proof_status))}>{p.part}: {p.proof_status}</span>)}</span>;
-  return <span className={cn("text-xs font-medium", proofCls(f.proof_status))}>{f.proof_status_original}</span>;
-}
-
-function SectionHead({ title, sub }: { title: string; sub: string }) {
-  return (
-    <div className="mb-4">
-      <h2 className="text-[17px] font-semibold">{title}</h2>
-      <p className="mt-0.5 text-[13px] text-muted">{sub}</p>
-    </div>
-  );
+  if (f.parts) return <span className="flex flex-col gap-1">{f.parts.map((p) => <Dot key={p.part} tone={proofTone(p.proof_status)}>{p.part}: {p.proof_status}</Dot>)}</span>;
+  return <Dot tone={proofTone(f.proof_status)}>{f.proof_status_original}</Dot>;
 }
 
 const split = (v: string) => v.split(";").map((x) => x.trim()).filter(Boolean);
-
-/** Statement such as "Framework: yes (…)" → icon by yes / no / not applicable. */
 function YesNo({ text }: { text: string }) {
   const lc = text.toLowerCase();
-  const neg = /:\s*no\b|not applicable|declared missing|unsure/.test(lc);
   const pos = /:\s*yes\b/.test(lc);
-  const Icon = pos ? Check : neg ? (/not applicable|unsure/.test(lc) ? Minus : X) : Minus;
-  return (
-    <li className="flex items-start gap-2 text-[14px]">
-      <Icon className={cn("mt-0.5 h-4 w-4 shrink-0", pos ? "text-go" : neg ? "text-muted" : "text-muted")} aria-hidden />
-      <span>{text}</span>
-    </li>
-  );
+  const neg = /:\s*no\b/.test(lc);
+  const Icon = pos ? Check : neg ? X : Minus;
+  return <li className="flex items-start gap-2"><Icon className={cn("mt-0.5 h-4 w-4 shrink-0", pos ? "text-go" : "text-muted")} aria-hidden /><span>{text}</span></li>;
 }
-
-function SearchValue({ f }: { f: ProfileField }) {
-  if (f.id === "main_cpv" || f.id === "secondary_cpv" || f.id === "region_nuts") {
+function Value({ f }: { f: ProfileField }) {
+  if (["main_cpv", "secondary_cpv", "region_nuts"].includes(f.id)) {
     return (
-      <ul className="flex flex-wrap gap-1.5">
-        {split(f.value).map((x) => {
-          const [code, ...rest] = x.split(" ");
-          return <li key={x} className="inline-flex items-baseline gap-1.5 rounded-md border border-border bg-surface-2/60 px-2 py-1 text-[13px]"><span className="tnum font-semibold">{code}</span><span className="text-muted">{rest.join(" ")}</span></li>;
-        })}
+      <ul className="flex flex-col gap-1">
+        {split(f.value).map((x) => { const [code, ...rest] = x.split(" "); return <li key={x}><span className="tnum font-medium">{code}</span> <span className="text-muted">{rest.join(" ")}</span></li>; })}
       </ul>
     );
   }
-  if (f.id === "contract_form" || f.id === "framework_dps") {
-    return <ul className="space-y-1">{f.value.split(/\.\s+/).map((s) => s.replace(/\.$/, "")).filter(Boolean).map((s) => <YesNo key={s} text={s} />)}</ul>;
-  }
-  if (f.id === "size_band") return <span className="tnum text-[15px] font-semibold">{f.value}</span>;
-  return <span className="text-[14px]">{f.value}</span>;
+  if (f.id === "contract_form" || f.id === "framework_dps") return <ul className="space-y-1">{f.value.split(/\.\s+/).map((s) => s.replace(/\.$/, "")).filter(Boolean).map((s) => <YesNo key={s} text={s} />)}</ul>;
+  return <span>{f.value}</span>;
 }
 
-function Row({ label, children, meta }: { label: ReactNode; children: ReactNode; meta?: ReactNode }) {
-  return (
-    <div className="grid gap-x-6 gap-y-1.5 py-3.5 md:grid-cols-[200px_1fr_170px]">
-      <div className="text-[13px] font-medium text-muted">{label}</div>
-      <div className="min-w-0">{children}</div>
-      <div className="text-xs text-muted md:text-right">{meta}</div>
-    </div>
-  );
-}
-
-function LockerTable({ fields, flags }: { fields: ProfileField[]; flags: Map<string, HealthFlag[]> }) {
+function FieldTable({ fields, flags }: { fields: ProfileField[]; flags: Map<string, HealthFlag[]> }) {
   const t = useTranslations();
   const L = useL();
   const cats = [...new Set(fields.map((f) => f.table_a1_category))];
   return (
-    <div className="space-y-6">
-      {cats.map((c) => {
-        const fs = fields.filter((f) => f.table_a1_category === c);
-        return (
-          <div key={c}>
-            <h3 className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-muted">{t(`company.cat.${c}`)}</h3>
-            <div className="divide-y divide-border border-y border-border">
-              {fs.map((f) => (
-                <Row key={f.id} label={L(f, "label")}
-                  meta={<div className="space-y-0.5"><Proof f={f} /><div>{t("company.updated")} {f.last_updated}</div>
-                    {f.expiry_original && f.expiry_original !== "–" && <div>{t("report.expiry")}: {f.expiry_original}</div>}
-                    {(flags.get(f.id) ?? []).map((h, i) => <div key={i} className="inline-flex items-center gap-1"><span className={cn("h-1.5 w-1.5 rounded-full", DOT[h.kind])} />{t(`health.${h.kind}`)}</div>)}</div>}>
-                  <span className="text-[14px]">{f.value}</span>
-                </Row>
-              ))}
+    <div className="space-y-8">
+      {cats.map((c) => (
+        <div key={c}>
+          {cats.length > 1 && <h3 className="mb-2 text-[14px] font-semibold">{t(`company.cat.${c}`)}</h3>}
+          <div className="overflow-hidden rounded-xl border border-border">
+            <div className="hidden h-10 grid-cols-[200px_minmax(0,1fr)_190px_150px] items-center gap-4 bg-surface-2/50 px-4 text-meta font-medium text-muted md:grid">
+              <span>{t("company.dataPoint")}</span><span>{t("company.value")}</span><span>{t("company.proof")}</span><span>{t("report.expiry")}</span>
             </div>
+            {fields.filter((f) => f.table_a1_category === c).map((f) => {
+              const fl = flags.get(f.id) ?? [];
+              return (
+                <div key={f.id} className={cn("grid gap-x-4 gap-y-1.5 border-t border-border px-4 py-3.5 text-body first:border-0 md:grid-cols-[200px_minmax(0,1fr)_190px_150px] md:first:border-t", fl.length && "bg-warn-soft/25")}>
+                  <div className="font-medium md:font-normal md:text-muted">{L(f, "label")}</div>
+                  <div className="min-w-0"><Value f={f} /></div>
+                  <div className="text-[13px]"><Proof f={f} /><div className="mt-0.5 text-meta text-muted">{t("company.updated")} {f.last_updated}</div></div>
+                  <div className="text-[13px]">
+                    <span className={cn(f.expiry_original === "–" && "text-muted")}>{f.expiry_original}</span>
+                    {fl.map((h, i) => <div key={i} className="mt-1"><Dot tone={HTONE[h.kind]}>{t(`health.${h.kind}`)}</Dot></div>)}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        );
-      })}
+        </div>
+      ))}
     </div>
   );
 }
@@ -106,49 +75,32 @@ export default function CompanyPage() {
   const t = useTranslations();
   const m = useModel();
   const L = useL();
+  const [tab, setTab] = useQueryState("tab", "search");
   if (!m) return <Loading />;
   const p = m.profile;
   const flags = new Map<string, HealthFlag[]>();
   m.health.forEach((h) => flags.set(h.field, [...(flags.get(h.field) ?? []), h]));
   return (
-    <div className="animate-fadein space-y-12">
-      <PageTitle title={p.firm.name} sub={`${L(p.firm, "sector")} · ${t("company.sub")}`} />
-
-      <section>
-        <SectionHead title={t("company.health")} sub={t("company.healthSub", { days: m.run.health_check.expiring_within_days })} />
-        <ul className="divide-y divide-border border-y border-border">
-          {m.health.map((h, i) => (
-            <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2.5 text-[14px]">
-              <span className={cn("h-2 w-2 shrink-0 rounded-full", DOT[h.kind])} aria-hidden />
-              <span className="w-36 shrink-0 text-[13px] text-muted">{t(`health.${h.kind}`)}</span>
-              <span className="font-medium">{L(h, "label")}</span>
-              {h.date && <span className="tnum text-[13px] text-muted">{h.date}{h.days_left !== undefined ? ` · ${t("common.daysLeft", { n: h.days_left })}` : ""}</span>}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section>
-        <SectionHead title={t("company.search")} sub={t("company.searchSub")} />
-        <div className="divide-y divide-border border-y border-border">
-          {p.search_profile.map((f) => (
-            <Row key={f.id} label={L(f, "label")} meta={<div className="space-y-0.5"><Proof f={f} /><div>{t("company.updated")} {f.last_updated}</div></div>}>
-              <SearchValue f={f} />
-            </Row>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <SectionHead title={t("company.locker")} sub={t("company.lockerSub")} />
-        <LockerTable fields={p.capability_locker} flags={flags} />
-      </section>
-
-      <section>
-        <SectionHead title={t("company.account")} sub={t("company.accountSub")} />
-        <LockerTable fields={p.account_and_baseline} flags={flags} />
-      </section>
-      <p className="text-xs text-muted">{t("company.source", { src: p.source, model: p.data_model })} {L(p.firm, "name_note")}</p>
+    <div className="anim-page">
+      <PageTitle kicker={L(p.firm, "sector")} title={p.firm.name} sub={t("company.sub2")} />
+      <Section title={t("company.health")} sub={t("company.healthSub", { days: m.run.health_check.expiring_within_days })} className="mb-10">
+        {m.health.length === 0 ? <p className="text-body text-muted">{t("company.noIssues")}</p> : (
+          <ul className="overflow-hidden rounded-xl border border-border">
+            {m.health.map((h, i) => (
+              <li key={i} className="grid gap-x-4 gap-y-0.5 border-t border-border px-4 py-3 first:border-0 sm:grid-cols-[170px_minmax(0,1fr)_auto]">
+                <Dot tone={HTONE[h.kind]}>{t(`health.${h.kind}`)}</Dot>
+                <span className="font-medium">{L(h, "label")}</span>
+                <span className="tnum text-[13px] text-muted">{h.date ?? ""}{h.days_left !== undefined ? ` · ${t("common.daysLeft", { n: h.days_left })}` : ""}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </Section>
+      <Tabs<Tab> className="mb-6" value={tab as Tab} onChange={(v) => setTab(v, "push")} tabs={[
+        { id: "search", label: t("company.search") }, { id: "locker", label: t("company.locker") }, { id: "account", label: t("company.account") }]} />
+      <p className="mb-5 text-body text-muted">{tab === "search" ? t("company.searchSub") : tab === "locker" ? t("company.lockerSub") : t("company.accountSub")}</p>
+      <FieldTable fields={tab === "search" ? p.search_profile : tab === "locker" ? p.capability_locker : p.account_and_baseline} flags={flags} />
+      <p className="mt-8 text-meta text-muted">{t("company.source", { src: p.source, model: p.data_model })} {L(p.firm, "name_note")}</p>
     </div>
   );
 }
