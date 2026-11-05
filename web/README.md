@@ -13,4 +13,5 @@ New profiles are added as data files in `/data/profiles` (plus a pipeline run) �
 Manual additions made by a viewer are kept only in that browser (`localStorage`); "Reset demo" is on the Data & run page.
 
 Pages: A1 Overview `/`, A2 Notices `/notices`, notice detail `/notices/{id}`, A3 Screening `/screening`,
-A4 Reports `/reports` and `/reports/{id}`, A5 Company `/company`; prototype pages B1–B6 under `/prototype/…`.
+A4 Reports `/reports` and `/reports/{id}`, A5 Company `/company`; prototype pages B1–B6 under `/prototype/…`;
+internal development page `/internal/dev-stats` (mode coverage, manifest). Team design decisions: `docs/conflict_log.md`.

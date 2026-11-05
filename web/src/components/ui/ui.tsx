@@ -5,7 +5,7 @@ import { useState, type ComponentProps, type ReactNode } from "react";
 import { cn } from "@/lib/format";
 
 export function Card({ className, ...p }: ComponentProps<"div">) {
-  return <div className={cn("rounded-xl border border-border bg-surface shadow-sm", className)} {...p} />;
+  return <div className={cn("rounded-lg border border-border bg-surface", className)} {...p} />;
 }
 export function CardHeader({ title, sub, right, icon }: { title: ReactNode; sub?: ReactNode; right?: ReactNode; icon?: ReactNode }) {
   return (
@@ -13,7 +13,7 @@ export function CardHeader({ title, sub, right, icon }: { title: ReactNode; sub?
       <div className="flex min-w-0 items-start gap-3">
         {icon && <div className="mt-0.5 text-accent">{icon}</div>}
         <div className="min-w-0">
-          <h2 className="text-[15px] font-semibold leading-6">{title}</h2>
+          <h2 className="text-[14.5px] font-semibold leading-6">{title}</h2>
           {sub && <p className="mt-0.5 text-sm text-muted">{sub}</p>}
         </div>
       </div>
@@ -41,11 +41,11 @@ export function LinkButton({ variant = "secondary", className, ...p }: Component
 
 export function PageTitle({ title, sub, right, kicker }: { title: ReactNode; sub?: ReactNode; right?: ReactNode; kicker?: ReactNode }) {
   return (
-    <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+    <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
       <div className="min-w-0">
         {kicker && <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">{kicker}</div>}
-        <h1 className="text-2xl font-bold tracking-tight sm:text-[28px]">{title}</h1>
-        {sub && <p className="mt-1 max-w-3xl text-[15px] text-muted">{sub}</p>}
+        <h1 className="text-2xl font-bold tracking-tight">{title}</h1>
+        {sub && <p className="mt-1 max-w-3xl text-[14.5px] text-muted">{sub}</p>}
       </div>
       {right}
     </div>

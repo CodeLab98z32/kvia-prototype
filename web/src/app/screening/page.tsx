@@ -90,7 +90,7 @@ export default function ScreeningPage() {
   const firstBelow = ranked.findIndex((r) => r.route === "below_threshold");
   return (
     <div className="animate-fadein">
-      <PageTitle kicker={t("nav.groupA")} title={t("screening.title")} sub={t("screening.sub", { n: ranked.length, th })} />
+      <PageTitle title={t("screening.title")} sub={t("screening.sub", { n: ranked.length, th })} />
       {m.pending.length > 0 && (
         <div className="mb-4 flex flex-wrap items-center gap-2 rounded-xl border border-flag/30 bg-flag-soft p-3 text-sm text-flag">
           <Flag className="h-4 w-4" aria-hidden />{t("screening.pendingNote", { n: m.pending.length })}
