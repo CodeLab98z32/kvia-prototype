@@ -1,0 +1,38 @@
+{
+  "_note": "Adviser decisions applied after the release gate and before screening (SPEC §4, §9). Phase 1 entries are MOCK decisions recorded for the mock run (mock: true) and must be replaced by the team's real decisions in Phase 2.",
+  "decisions": [
+    {
+      "notice_id": "2026-116600",
+      "decision": "released",
+      "decided_on": "2026-11-04",
+      "adviser": "Adviser (simulated)",
+      "flag_reviewed": "conflicting_values",
+      "comment_en": "MOCK: checked both passages. The contract terms (page 6, NOK 10 million) are binding; the NOK 5 million requirement on page 3 is superseded and removed.",
+      "comment_nb": "MOCK: begge avsnittene er kontrollert. Kontraktsvilkårene (side 6, NOK 10 millioner) gjelder; kravet om NOK 5 millioner på side 3 er erstattet og fjernet.",
+      "corrections": [
+        {"op": "remove", "req_id": "R04", "reason_en": "Superseded by R07 (contract terms)", "reason_nb": "Erstattet av R07 (kontraktsvilkår)"}
+      ],
+      "mock": true
+    },
+    {
+      "notice_id": "2026-116577",
+      "decision": "pending",
+      "adviser": "Adviser (simulated)",
+      "flag_reviewed": "model_self_rating_low",
+      "comment_en": "MOCK: queued; not yet reviewed.",
+      "comment_nb": "MOCK: i kø; ikke gjennomgått ennå.",
+      "corrections": [],
+      "mock": true
+    },
+    {
+      "notice_id": "MOCK-0002",
+      "decision": "pending",
+      "adviser": "Adviser (simulated)",
+      "flag_reviewed": "documents_missing",
+      "comment_en": "MOCK: documents requested from the buyer's platform.",
+      "comment_nb": "MOCK: dokumentene er etterspurt fra oppdragsgivers plattform.",
+      "corrections": [],
+      "mock": true
+    }
+  ]
+}

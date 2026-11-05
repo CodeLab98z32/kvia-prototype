@@ -1,0 +1,30 @@
+# Code-level checks: fixture tests, mock-run mode coverage (in a temporary run id), typecheck and i18n.
+name: Checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+      - run: pip install -r pipeline/requirements.txt
+      - run: python -m pytest -q tests
+      - run: python -c "import sys; sys.path.insert(0,'pipeline'); from kvia import manifest; from pathlib import Path; bad=manifest.verify(Path('outputs/mock-2026-11-05')); print(bad); sys.exit(1 if bad else 0)"
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci && npm run sync-data && npx tsc --noEmit && node scripts/check-i18n.mjs
+        working-directory: web

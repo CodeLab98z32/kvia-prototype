@@ -1,0 +1,16 @@
+{
+  "_note": "Learning / revision column of the Prototype Test Log (assignment Appendix A). Phase 1 entries describe the mock run only; the team replaces them with real learnings and revisions after the Phase 2 tests (SPEC §11 revision_rule).",
+  "notes": {
+    "T1": {"en": "Phase 1 (mock): code path works — missing value excluded and confidence lowered; award notice never reaches screening. Real result pending Phase 2.", "nb": "Fase 1 (mock): kodestien virker — manglende verdi holdes utenfor og senker sikkerheten; tildelingskunngjøring screenes aldri. Reelt resultat i fase 2."},
+    "T2": {"en": "Phase 1 (mock): tax-certificate six-month rule and design-approval gap surface as expected. Revision pending real documents.", "nb": "Fase 1 (mock): seksmånedersregelen for skatteattest og mangelen på prosjekteringsgodkjenning vises som forventet. Revisjon venter på reelle dokumenter."},
+    "T3": {"en": "Phase 1 (mock): per-lot scoring keeps Lot A visible as not relevant; contradictions lower confidence to low instead of excluding the notice.", "nb": "Fase 1 (mock): scoring per delkontrakt viser delkontrakt A som ikke relevant; motstrid senker sikkerheten til lav i stedet for å utelate kunngjøringen."},
+    "T4": {"en": "Table A1 has no fleet/equipment field → lacks_data (borderline). Revision candidate: add a fleet/equipment capacity field to Table A1 (SPEC §11 revision_rule).", "nb": "Tabell A1 har ikke felt for bilpark/utstyr → mangler data (grensetilfelle). Revisjonskandidat: legg til felt for kjøretøy- og utstyrskapasitet i tabell A1."},
+    "T5": {"en": "Expiry flag is computed by code against the tender deadline; 30-day window remains an assumption to calibrate.", "nb": "Utløpsflagget beregnes av kode mot tilbudsfristen; 30-dagersvinduet er fortsatt en antakelse som må kalibreres."},
+    "T6": {"en": "Status field ignored; activeness rule uses notice type + deadline. No revision needed on the provided export.", "nb": "Statusfeltet ignoreres; aktivitetsregelen bruker kunngjøringstype + frist. Ingen revisjon nødvendig for eksporten."},
+    "T7": {"en": "Gate logic demonstrated on the mock run only (mock flags and MOCK notices). Real flags depend on the real documents; if none occurs, report 'trigger not observed'.", "nb": "Portlogikken er bare vist på mock-kjøringen. Reelle flagg avhenger av de reelle dokumentene; oppstår ingen, rapporteres «utløser ikke observert»."},
+    "T8": {"en": "Pending Phase 2: needs a manual gold list per anchor tender.", "nb": "Venter på fase 2: krever en manuell gullstandard per ankerkonkurranse."},
+    "T9": {"en": "Pending Phase 2: Phase 1 screening is itself rule-based (mock).", "nb": "Venter på fase 2: screeningen i fase 1 er selv regelbasert (mock)."},
+    "T10": {"en": "Trigger script ready; team runs and records it.", "nb": "Utløserskriptet er klart; teamet kjører og registrerer det."},
+    "T11": {"en": "Pending Phase 2: three real extraction runs of the anchors.", "nb": "Venter på fase 2: tre reelle ekstraksjonskjøringer av ankerkunngjøringene."}
+  }
+}

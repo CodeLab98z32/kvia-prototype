@@ -1,0 +1,180 @@
+[
+  {
+    "id": "T1",
+    "type": "typical",
+    "scenario": "P3 screening vs all released notices",
+    "expected": "2026-116568 forwarded with top fit; confidence lowered for missing value; Kantinedrift not screened (award notice)",
+    "status": "passed (mock)",
+    "observed_en": "Top of P3 list: 2026-116568 (fit 99, forwarded, confidence medium); Kantinedrift 2026-116531 screened: False",
+    "observed_nb": "Øverst på P3-listen: 2026-116568 (score 99, forwarded, sikkerhet medium); Kantinedrift 2026-116531 screenet: False",
+    "evidence": [
+      {
+        "page": "screening",
+        "firm": "P3",
+        "notice": "2026-116568"
+      }
+    ]
+  },
+  {
+    "id": "T2",
+    "type": "typical",
+    "scenario": "P1 screening + report on 2026-116619",
+    "expected": "forwarded; design scope → partly_met or not_met; tax certificate → expired/missing document; indication not Go; R02029 not screened",
+    "status": "passed (mock)",
+    "observed_en": "2026-116619 forwarded (fit 95); design approval not_met; tax certificate readiness expired; indication no-go; R02029 screened: False",
+    "observed_nb": "2026-116619 forwarded (score 95); prosjekteringsgodkjenning not_met; skatteattest expired; indikasjon no-go; R02029 screenet: False",
+    "evidence": [
+      {
+        "page": "report",
+        "firm": "P1",
+        "notice": "2026-116619",
+        "req": "R06"
+      }
+    ]
+  },
+  {
+    "id": "T3",
+    "type": "edge",
+    "scenario": "P2 vs multi-lot framework 2026-116579",
+    "expected": "Lot B relevant, Lot A not; NUTS and aggregate-value contradictions lower confidence instead of excluding; StartBANK expired; credit rating lacks_data",
+    "status": "passed (mock)",
+    "observed_en": "Lot A fit 45 (relevant False), Lot B fit 82 (relevant True); contradictions ['aggregate_vs_calloff_value', 'nuts_vs_buyer_location']; confidence low; StartBANK readiness expired; credit rating lacks_data",
+    "observed_nb": "Delkontrakt A score 45, delkontrakt B score 82; motstrid ['aggregate_vs_calloff_value', 'nuts_vs_buyer_location']; sikkerhet low; StartBANK expired; kredittvurdering lacks_data",
+    "evidence": [
+      {
+        "page": "screening",
+        "firm": "P2",
+        "notice": "2026-116579"
+      },
+      {
+        "page": "report",
+        "firm": "P2",
+        "notice": "2026-116579",
+        "lot": "B"
+      }
+    ]
+  },
+  {
+    "id": "T4",
+    "type": "edge",
+    "scenario": "P3 report: fleet-capacity requirement with no locker field",
+    "expected": "lacks_data → borderline, never silently matched",
+    "status": "passed (mock)",
+    "observed_en": "Fleet requirement R06: lacks_data (locker field none); indication borderline",
+    "observed_nb": "Krav om bilpark R06: lacks_data (felt none); indikasjon borderline",
+    "evidence": [
+      {
+        "page": "report",
+        "firm": "P3",
+        "notice": "2026-116568",
+        "req": "R06"
+      }
+    ]
+  },
+  {
+    "id": "T5",
+    "type": "edge",
+    "scenario": "P3 ISO 14001 valid on deadline, expires 4 days later",
+    "expected": "readiness documented (valid) + visible expiry flag in the checklist",
+    "status": "passed (mock)",
+    "observed_en": "ISO 14001 readiness documented, valid until 2026-11-30, expiring-soon flag True",
+    "observed_nb": "ISO 14001: documented, gyldig til 2026-11-30, utløper snart True",
+    "evidence": [
+      {
+        "page": "report",
+        "firm": "P3",
+        "notice": "2026-116568",
+        "req": "R05"
+      }
+    ]
+  },
+  {
+    "id": "T6",
+    "type": "failure",
+    "scenario": "Competition notices with empty status (2026-116619, 2026-116544) and award notices with future dates",
+    "expected": "activeness rule screens the former, excludes the latter",
+    "status": "passed (mock)",
+    "observed_en": "Empty-status competition notices active and screened: True; award notices with future dates ['2026-116470', '2026-116531'] excluded: True",
+    "observed_nb": "Konkurranser med tom status aktive og screenet: True; tildelinger med fremtidige datoer ['2026-116470', '2026-116531'] utelatt: True",
+    "evidence": [
+      {
+        "page": "notices",
+        "notice": "2026-116619"
+      },
+      {
+        "page": "notices",
+        "notice": "2026-116470"
+      }
+    ]
+  },
+  {
+    "id": "T7",
+    "type": "failure",
+    "scenario": "Notice with missing or unreadable tender documents, or low extraction confidence",
+    "expected": "flagged; visible in notice browser and adviser queue; no fit score and no report until released; after recorded release, screened normally",
+    "status": "passed (mock, gate logic)",
+    "observed_en": "Flagged pending: ['2026-116577', 'MOCK-0002', 'MOCK-0003'] (screened: none); released by adviser and screened: ['2026-116600']. Gate logic shown on the MOCK run only; real flags in Phase 2 depend on the real documents.",
+    "observed_nb": "Flagget og venter: ['2026-116577', 'MOCK-0002', 'MOCK-0003'] (screenet: ingen); frigitt av rådgiver og screenet: ['2026-116600']. Portlogikken er bare vist på mock-kjøringen.",
+    "evidence": [
+      {
+        "page": "adviser"
+      }
+    ]
+  },
+  {
+    "id": "T8",
+    "type": "key_assumption",
+    "scenario": "Retrieval + extraction find ALL mandatory requirements and proof demands with correct page references (manual gold list per anchor tender)",
+    "expected": "recall ≥ 0.90; zero uncited requirements",
+    "status": "not observed (Phase 2)",
+    "observed_en": "Not observable on mock data (no gold list; mock requirements are placed by code). Code checks run: retrieval misses 0, uncited requirements shown 0.",
+    "observed_nb": "Kan ikke observeres på mock-data (ingen gullstandard). Kodekontroller: gjenfinningsbom 0, krav uten kilde vist 0.",
+    "evidence": [
+      {
+        "page": "prompts"
+      }
+    ]
+  },
+  {
+    "id": "T9",
+    "type": "key_assumption",
+    "scenario": "LLM screening vs a rule-based CPV filter on the same notices and profiles",
+    "expected": "evidence for or against the claim that rule-based filtering misses relevant notices",
+    "status": "not observed (Phase 2)",
+    "observed_en": "Not observable: Phase 1 screening is itself a mock CPV/NUTS overlap (team decision).",
+    "observed_nb": "Kan ikke observeres: screeningen i fase 1 er selv en mock basert på CPV/NUTS-overlapp.",
+    "evidence": [
+      {
+        "page": "logic"
+      }
+    ]
+  },
+  {
+    "id": "T10",
+    "type": "recompute",
+    "scenario": "Change one Capability Locker field and run trigger script",
+    "expected": "only that firm's comparison re-runs; extraction reused",
+    "status": "ready – team to run",
+    "observed_en": "Trigger script built (pipeline/trigger_sim.py) and covered by a fixture test; the recorded test run is executed by the team.",
+    "observed_nb": "Utløserskriptet er bygget og dekket av en kodetest; den registrerte testkjøringen gjøres av teamet.",
+    "evidence": [
+      {
+        "page": "run"
+      }
+    ]
+  },
+  {
+    "id": "T11",
+    "type": "stability",
+    "scenario": "Pre-processing of the three anchor notices run 3 times",
+    "expected": "agreement rate reported; unstable requirements flagged",
+    "status": "not observed (Phase 2)",
+    "observed_en": "Requires three real extraction runs (Phase 2).",
+    "observed_nb": "Krever tre reelle ekstraksjonskjøringer (fase 2).",
+    "evidence": [
+      {
+        "page": "run"
+      }
+    ]
+  }
+]

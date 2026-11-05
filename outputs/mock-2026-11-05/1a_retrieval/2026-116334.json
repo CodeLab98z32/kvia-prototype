@@ -1,0 +1,76 @@
+{
+  "pages_total": 6,
+  "retrieved_page_ids": [
+    "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p1",
+    "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p3",
+    "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p4",
+    "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p5"
+  ],
+  "by_heading_match": [
+    "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p3",
+    "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p4",
+    "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p5"
+  ],
+  "per_category_top": {
+    "qualification": [
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p3",
+        "score": 6.448
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p4",
+        "score": 4.497
+      }
+    ],
+    "technical": [
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p5",
+        "score": 1.683
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p3",
+        "score": 1.678
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p4",
+        "score": 1.286
+      }
+    ],
+    "financial": [
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p3",
+        "score": 3.686
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p1",
+        "score": 1.306
+      }
+    ],
+    "certification": [],
+    "hms": [],
+    "reference": [
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p3",
+        "score": 4.915
+      }
+    ],
+    "capacity": [
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p3",
+        "score": 1.229
+      }
+    ],
+    "formal": [
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p4",
+        "score": 1.925
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116334_konkurransegrunnlag.pdf#p3",
+        "score": 1.229
+      }
+    ]
+  },
+  "unreadable_pages": [],
+  "retrieval_misses": []
+}

@@ -1,0 +1,657 @@
+{
+  "profile_id": "P3",
+  "synthetic": true,
+  "source": "docs/Synthetic company profiles.docx, Table B3",
+  "data_model": "Table A1, docs/Company profile data.docx",
+  "firm": {
+    "name": "Synthetic Company 3",
+    "initials": "SC3",
+    "sector_en": "Septic, sewer and sludge services · Agder / Telemark",
+    "sector_nb": "Slamtømming, avløp og slam · Agder / Telemark",
+    "name_note_en": "The profile tables give no firm name; the table title is used as display name.",
+    "name_note_nb": "Profiltabellene oppgir ikke firmanavn; tabelltittelen brukes som visningsnavn."
+  },
+  "search_profile": [
+    {
+      "id": "main_cpv",
+      "label_en": "Main CPV",
+      "label_nb": "Hoved-CPV",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Main and secondary CPV codes",
+      "value": "90460000 Cesspool or septic tank emptying services",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "90460000"
+        ]
+      }
+    },
+    {
+      "id": "secondary_cpv",
+      "label_en": "Secondary CPV",
+      "label_nb": "Sekundære CPV-koder",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Main and secondary CPV codes",
+      "value": "90470000 Sewer cleaning services; 90513600 Sludge removal services; 90513700 Sludge transport services; 90640000 Gully cleaning and emptying services",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "90470000",
+          "90513600",
+          "90513700",
+          "90640000"
+        ]
+      }
+    },
+    {
+      "id": "region_nuts",
+      "label_en": "Region (NUTS)",
+      "label_nb": "Region (NUTS)",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Region (NUTS codes)",
+      "value": "NO092 Agder; NO094 Telemark",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "NO092",
+          "NO094"
+        ]
+      }
+    },
+    {
+      "id": "contract_subject",
+      "label_en": "Contract subject",
+      "label_nb": "Kontraktstype",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract subject (works, supplies, services)",
+      "value": "Services",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "subjects": [
+          "Services"
+        ]
+      }
+    },
+    {
+      "id": "contract_form",
+      "label_en": "Contract form",
+      "label_nb": "Kontraktsform",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract form",
+      "value": "Subcontractor: yes. Execution, design-and-build and general contract: not applicable to a services firm",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "execution": null,
+        "design_and_build": null,
+        "general_contract": null,
+        "subcontractor": true,
+        "note": "not applicable to a services firm except subcontractor"
+      }
+    },
+    {
+      "id": "size_band",
+      "label_en": "Contract-size band",
+      "label_nb": "Kontraktsstørrelse",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract-size band (min-max NOK)",
+      "value": "NOK 1–25 million total contract value, including options",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "min_nok": 1000000,
+        "max_nok": 25000000,
+        "basis": "total contract value incl. options"
+      }
+    },
+    {
+      "id": "framework_dps",
+      "label_en": "Framework agreements and DPS",
+      "label_nb": "Rammeavtaler og DPS",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Willingness to bid on framework agreements and DPS",
+      "value": "Framework: yes. DPS: coordinator unsure what a DPS involves; to be clarified at onboarding",
+      "proof_status_original": "Self-declared (framework); Declared missing (DPS)",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Mixed",
+      "parts": [
+        {
+          "part": "Framework",
+          "proof_status": "Self-declared",
+          "expiry_date": null
+        },
+        {
+          "part": "DPS",
+          "proof_status": "Declared missing",
+          "expiry_date": null
+        }
+      ],
+      "expiry_date": null,
+      "structured": {
+        "framework": true,
+        "dps": null
+      }
+    },
+    {
+      "id": "lot_preferences",
+      "label_en": "Lot preferences",
+      "label_nb": "Delkontrakter",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Lot preferences for multi-lot notices",
+      "value": "All lots within Agder; would bid on the whole contract",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "max_lots": null,
+        "regions": [
+          "Agder"
+        ],
+        "whole_contract": true
+      }
+    }
+  ],
+  "capability_locker": [
+    {
+      "id": "org_nr",
+      "label_en": "Organisation number",
+      "label_nb": "Organisasjonsnummer",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Organization number",
+      "value": "000 000 103 (synthetic)",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "employee_count",
+      "label_en": "Employee count",
+      "label_nb": "Antall ansatte",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Employee count",
+      "value": "22",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "count": 22
+      }
+    },
+    {
+      "id": "founding_year",
+      "label_en": "Founding year",
+      "label_nb": "Stiftelsesår",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Founding year",
+      "value": "1998",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "year": 1998
+      }
+    },
+    {
+      "id": "staff",
+      "label_en": "Staff by role and qualification",
+      "label_nb": "Ansatte etter rolle og kvalifikasjon",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Staff by role and qualification",
+      "value": "1 managing director; 1 operations manager; 1 office and finance officer; 16 drivers and operators with heavy-vehicle licence and professional driver competence (YSK); 2 heavy-vehicle mechanics; 1 apprentice (heavy-vehicle mechanics)",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "key_personnel_cvs",
+      "label_en": "Key personnel CVs",
+      "label_nb": "CV-er for nøkkelpersonell",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Key personnel CVs",
+      "value": "No CVs prepared",
+      "proof_status_original": "Declared missing",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Declared missing",
+      "expiry_date": null,
+      "structured": {
+        "held": [],
+        "missing": [
+          "all"
+        ]
+      }
+    },
+    {
+      "id": "working_languages",
+      "label_en": "Working languages",
+      "label_nb": "Arbeidsspråk",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Working languages (Norwegian/English)",
+      "value": "Norwegian (all staff); English and Lithuanian (3 drivers)",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "languages": [
+          "nb",
+          "en",
+          "lt"
+        ],
+        "all_staff_norwegian": true
+      }
+    },
+    {
+      "id": "insurance",
+      "label_en": "Insurance type and coverage",
+      "label_nb": "Forsikring og dekning",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Insurance type and coverage",
+      "value": "General liability, NOK 10 million per claim, including sudden pollution damage",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-22",
+      "expiry_original": "2027-01-31",
+      "proof_status": "Documented",
+      "expiry_date": "2027-01-31",
+      "structured": {
+        "type": "general liability incl. sudden pollution damage",
+        "coverage_nok": 10000000
+      }
+    },
+    {
+      "id": "tax_vat_certificate",
+      "label_en": "Tax and VAT certificate",
+      "label_nb": "Skatteattest (skatt og mva.)",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "Tax and VAT certificate with issue date",
+      "value": "Issued 2026-08-20",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-08-20",
+      "expiry_original": "Six months from issue: 2027-02-20",
+      "proof_status": "Documented",
+      "expiry_date": "2027-02-20",
+      "structured": {
+        "issue_date": "2026-08-20",
+        "validity_rule": "six_months_from_issue"
+      }
+    },
+    {
+      "id": "hms_declaration",
+      "label_en": "HMS self-declaration",
+      "label_nb": "HMS-egenerklæring",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "HMS self-declaration",
+      "value": "Signed 2026-02-03",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-02-03",
+      "expiry_original": "Review due 2027-02-03",
+      "proof_status": "Documented",
+      "expiry_date": "2027-02-03",
+      "expiry_kind": "review_due",
+      "structured": {
+        "signed": "2026-02-03"
+      }
+    },
+    {
+      "id": "startbank_achilles",
+      "label_en": "StartBANK / Achilles",
+      "label_nb": "StartBANK / Achilles",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "StartBANK/Achilles registration where relevant",
+      "value": "StartBANK: not relevant to the firm's markets. Achilles: not registered",
+      "proof_status_original": "Not applicable",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Mixed",
+      "parts": [
+        {
+          "part": "StartBANK",
+          "proof_status": "Not applicable",
+          "expiry_date": null,
+          "registered": false
+        },
+        {
+          "part": "Achilles",
+          "proof_status": "Not applicable",
+          "expiry_date": null,
+          "registered": false
+        }
+      ],
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "approved_apprentice",
+      "label_en": "Approved apprentice company",
+      "label_nb": "Godkjent lærebedrift",
+      "table_a1_category": "certificates_and_approvals",
+      "table_a1_category_nb": "Sertifikater og godkjenninger",
+      "table_a1_data_point": "Approved apprentice company",
+      "value": "Issuer: county authority, Agder; scope: heavy-vehicle mechanics",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-22",
+      "expiry_original": "No expiry",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "approved": true,
+        "issuer": "county authority, Agder",
+        "scope": "heavy-vehicle mechanics"
+      }
+    },
+    {
+      "id": "environmental_certificate",
+      "label_en": "Environmental management certificate",
+      "label_nb": "Miljøsertifikat",
+      "table_a1_category": "certificates_and_approvals",
+      "table_a1_category_nb": "Sertifikater og godkjenninger",
+      "table_a1_data_point": "Sector approvals (issuer, scope, expiry)",
+      "value": "ISO 14001; issuer: accredited certification body (anonymised); scope: septic, sewer and sludge services",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-22",
+      "expiry_original": "2026-11-30",
+      "proof_status": "Documented",
+      "expiry_date": "2026-11-30",
+      "structured": {
+        "standard": "ISO 14001",
+        "held": true,
+        "scope": "septic, sewer and sludge services"
+      }
+    },
+    {
+      "id": "driver_competence_ysk",
+      "label_en": "Professional driver competence (YSK)",
+      "label_nb": "Yrkessjåførkompetanse (YSK)",
+      "table_a1_category": "certificates_and_approvals",
+      "table_a1_category_nb": "Sertifikater og godkjenninger",
+      "table_a1_data_point": "Sector approvals (issuer, scope, expiry)",
+      "value": "16 of 16 drivers certified; 2 certificates expire within the period",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-22",
+      "expiry_original": "Earliest 2026-12-15",
+      "proof_status": "Documented",
+      "expiry_date": "2026-12-15",
+      "expiry_kind": "earliest",
+      "structured": {
+        "certified": 16,
+        "of": 16
+      }
+    },
+    {
+      "id": "turnover",
+      "label_en": "Turnover 2021–2025",
+      "label_nb": "Omsetning 2021–2025",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Turnover for the last five years",
+      "value": "NOK 31.5 / 33.0 / 36.2 / 38.9 / 37.4 million",
+      "proof_status_original": "Documented (annual accounts)",
+      "last_updated": "2026-06-30",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "by_year_nok": {
+          "2021": 31500000.0,
+          "2022": 33000000.0,
+          "2023": 36200000.0,
+          "2024": 38900000.0,
+          "2025": 37400000.0
+        }
+      }
+    },
+    {
+      "id": "profit",
+      "label_en": "Profit before tax 2021–2025",
+      "label_nb": "Resultat før skatt",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Profit",
+      "value": "NOK 1.6 / 1.9 / 2.4 / 2.6 / 2.2 million",
+      "proof_status_original": "Documented (annual accounts)",
+      "last_updated": "2026-06-30",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "by_year_nok": {
+          "2021": 1600000.0,
+          "2022": 1900000.0,
+          "2023": 2400000.0,
+          "2024": 2600000.0,
+          "2025": 2200000.0
+        }
+      }
+    },
+    {
+      "id": "equity_ratio",
+      "label_en": "Equity ratio",
+      "label_nb": "Egenkapitalandel",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Equity ratio",
+      "value": "32 % (2025)",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-06-30",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "percent": 32,
+        "year": 2025
+      }
+    },
+    {
+      "id": "credit_rating",
+      "label_en": "Credit rating",
+      "label_nb": "Kredittvurdering",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Credit rating",
+      "value": "AA",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-05-12",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "rating": "AA"
+      }
+    },
+    {
+      "id": "reference_1",
+      "label_en": "Reference 1",
+      "label_nb": "Referanse 1",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Municipality, Telemark (public); 2022–2026; NOK 9.8 million in total; CPV 90460000; emptying of about 900 septic tanks per year, contract won through Doffin",
+      "proof_status_original": "Documented (reference letter)",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "public",
+        "year": 2026,
+        "value_nok": 9800000.0,
+        "cpv": "90460000",
+        "region": "Telemark",
+        "years": "2022–2026"
+      }
+    },
+    {
+      "id": "reference_2",
+      "label_en": "Reference 2",
+      "label_nb": "Referanse 2",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Industrial client, Agder (private); 2024; NOK 1.5 million; CPV 90513600; sludge removal from process tanks",
+      "proof_status_original": "Documented (reference letter)",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "private",
+        "year": 2024,
+        "value_nok": 1500000.0,
+        "cpv": "90513600",
+        "region": "Agder"
+      }
+    },
+    {
+      "id": "reference_3",
+      "label_en": "Reference 3",
+      "label_nb": "Referanse 3",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Housing cooperatives, Agder (private); 2025; NOK 0.7 million; CPV 90470000; flushing and camera inspection of private sewer lines",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "private",
+        "year": 2025,
+        "value_nok": 700000.0,
+        "cpv": "90470000",
+        "region": "Agder"
+      }
+    }
+  ],
+  "account_and_baseline": [
+    {
+      "id": "bid_coordinator",
+      "label_en": "Bid coordinator",
+      "label_nb": "Tilbudsansvarlig",
+      "table_a1_category": "account",
+      "table_a1_category_nb": "Konto",
+      "table_a1_data_point": "Named bid coordinator and contact details",
+      "value": "Tomas Eide (fictional), operations manager; tomas.eide@sorlandet-tank.example; +47 000 00 103",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "bidding_history",
+      "label_en": "Bidding history",
+      "label_nb": "Tilbudshistorikk",
+      "table_a1_category": "account",
+      "table_a1_category_nb": "Konto",
+      "table_a1_data_point": "Bidding history (number of past bids and wins)",
+      "value": "1 public bid (2022, won); none since",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "finding_tenders",
+      "label_en": "Current way of finding tenders",
+      "label_nb": "Slik finner firmaet konkurranser i dag",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Current way of finding tenders",
+      "value": "No systematic search; learns of tenders through municipal contacts",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "time_spent",
+      "label_en": "Time spent on past bid attempts",
+      "label_nb": "Tidsbruk på tidligere tilbud",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Time spent on past bid attempts",
+      "value": "About 80 hours for the 2022 bid, with help from the firm's accountant",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "ai_experience",
+      "label_en": "Starting experience with AI tools",
+      "label_nb": "Erfaring med KI-verktøy",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Starting experience with AI tools",
+      "value": "None",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-22",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    }
+  ]
+}

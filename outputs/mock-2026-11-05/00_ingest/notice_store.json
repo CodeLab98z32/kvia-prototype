@@ -1,0 +1,2431 @@
+{
+  "columns": [
+    "doffin_id",
+    "doffin_url",
+    "notice_type",
+    "eforms_notice_form",
+    "eforms_notice_subtype",
+    "status",
+    "case_number",
+    "issue_date",
+    "publication_date",
+    "tender_deadline_utc",
+    "contract_signed_date",
+    "buyer_name",
+    "buyer_org_nr",
+    "buyer_type",
+    "buyer_activity",
+    "buyer_city",
+    "buyer_postal_code",
+    "buyer_nuts",
+    "contact_name",
+    "contact_email",
+    "contact_phone",
+    "title",
+    "title_en",
+    "description",
+    "contract_type",
+    "procedure",
+    "legislation",
+    "framework_agreement",
+    "dynamic_purchasing_system",
+    "lot_count",
+    "trade",
+    "cpv_main",
+    "cpv_additional",
+    "place_of_performance_nuts",
+    "currency",
+    "estimated_value",
+    "awarded_value",
+    "received_tenders",
+    "winner_name",
+    "winner_org_nr"
+  ],
+  "export_rows": 25,
+  "records": [
+    {
+      "doffin_id": "2026-115654",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "10b20be413cebee0879c06faef20f97573827f394451c3f756cfc21270e80c85",
+      "original": {
+        "doffin_id": "2026-115654",
+        "doffin_url": "https://doffin.no/notices/2026-115654",
+        "notice_type": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "29",
+        "status": "",
+        "case_number": "NRH-7049-26-0001",
+        "issue_date": "2026-10-07",
+        "publication_date": "2026-10-08",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "2026-07-23",
+        "buyer_name": "Helse Sør-Øst RHF",
+        "buyer_org_nr": "991324968",
+        "buyer_type": "pub-undert-cga",
+        "buyer_activity": "health",
+        "buyer_city": "HAMAR",
+        "buyer_postal_code": "2317",
+        "buyer_nuts": "NO020",
+        "contact_name": "Milan Lepovic",
+        "contact_email": "milan.lepovic@sykehusbygg.no",
+        "contact_phone": "+47 454 24 078",
+        "title": "Kontrakt Entreprise 7049 Anskaffelse av plantemateriale til utomhusanlegg",
+        "title_en": "Contract Contract 7049 Procurement of plant material for outdoor installations",
+        "description": "Formålet med anskaffelsen er å engasjere en leverandør som skal stå ansvarlig for ytelsene som skal leveres i entreprise 7049 anskaffelse plantemateriale.Hovedelementene i oppdraget er leveranse av plantemateriale til utomhus for Nye Rikshospitalet.",
+        "contract_type": "Supplies",
+        "procedure": "Negotiated with prior publication",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Agricultural, farming, fishing and forestry products",
+        "cpv_main": "03451000",
+        "cpv_additional": "03450000 | 03451100 | 03451300 | 03452000",
+        "place_of_performance_nuts": "NO081",
+        "currency": "NOK",
+        "estimated_value": "",
+        "awarded_value": "11261961.0",
+        "received_tenders": "3",
+        "winner_name": "VXTR",
+        "winner_org_nr": "987693088"
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "03450000",
+          "03451100",
+          "03451300",
+          "03452000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO081"
+        ],
+        "buyer_name_list": [
+          "Helse Sør-Øst RHF"
+        ],
+        "buyer_city_list": [
+          "HAMAR"
+        ],
+        "buyer_nuts_list": [
+          "NO020"
+        ],
+        "cpv_all": [
+          "03451000",
+          "03450000",
+          "03451100",
+          "03451300",
+          "03452000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "03"
+      }
+    },
+    {
+      "doffin_id": "2026-115833",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "a8f35fe8880844756f3909e9e45792eee0850b7ad4fc8c551c64c0982371700d",
+      "original": {
+        "doffin_id": "2026-115833",
+        "doffin_url": "https://doffin.no/notices/2026-115833",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "cmuyhdc3l000404l603r2qjt8",
+        "issue_date": "2026-10-08",
+        "publication_date": "2026-10-12",
+        "tender_deadline_utc": "2026-11-12 11:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "Kinn kommune | Askvoll kommune | Aurland kommune | Bremanger kommune | Fjaler kommune | Gloppen kommune | Gulen kommune | Høyanger kommune | Luster kommune | Lærdal kommune | Sogndal kommune | Stad kommune | Stryn kommune | Årdal kommune | Solund kommune | Vik kommune",
+        "buyer_org_nr": "820956532 | 964968330 | 964968063 | 959318166 | 864968422 | 964969124 | 938497524 | 944439838 | 964968241 | 954681890 | 922121893 | 921060157 | 963989202 | 954679721 | 964967458 | 937498764",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Måløy | Askvoll | Aurland | Svelgen | Dale i Sunnfjord | Sandane | Eivindvik | Høyanger | Gaupne | Lærdal | Leikanger | Nordfjordeid | Stryn | Årdalstangen | Hardbakke | Vik i Sogn",
+        "buyer_postal_code": "6702 | 6980 | 5745 | 6723 | 6963 | 6823 | 5966 | 6993 | 6868 | 6887 | 6863 | 6770 | 6783 | 6885 | 6924 | 6891",
+        "buyer_nuts": "NO0A2",
+        "contact_name": "Kinn kommune | Askvoll kommune | Aurland kommune | Bremanger kommune | Fjaler kommune | Gloppen kommune | Gulen kommune | Høyanger kommune | Luster kommune | Lærdal kommune | Sogndal kommune | Stad kommune | Stryn kommune | Årdal kommune | Solund kommune | Vik kommune",
+        "contact_email": "innkjop@kinn.kommune.no | postmottak@askvoll.kommune.no | post@aurland.kommune.no | post@bremanger.kommune.no | post@fjaler.kommune.no | postmottak@gloppen.kommune.no | kristoffer.elvebakke@gulen.kommune.no | postmottak@hoyanger.kommune.no | post@luster.kommune.no | post@laerdal.kommune.no | postmottak@sogndal.kommune.no | post@stad.kommune.no | postmottak@stryn.kommune.no | postmottak@ardal.kommune.no | post@solund.kommune.no | postmottak@vik.kommune.no",
+        "contact_phone": "+4757756000 | 004757730700 | +47 57632900 | +47 57796300 | 57738000 | 57883800 | 94156701 | +4757711500 | +4757685500 | +47 57641200 | +47 57 65 25 00 | +4757885800 | +4757874700 | +4757665000 | +4757786200 | +4757698200",
+        "title": "Læremiddel til grunnskulen - INSS",
+        "title_en": "Teaching aids for the basic ball - INSS",
+        "description": "INSS vil med denne anskaffinga inngå rammeavtalar for kjøp av trykte læremiddel til grunnskulen, 1.–10. trinn. Anskaffinga er delt i tre geografiske delkontraktar.\n\nDeltakarar i rammeavtale etter denne anskaffinga er følgande kommunar:\n\nAskvoll, Aurland, Bremanger, Fjaler, Gloppen, Gulen, Høyanger, Kinn, Luster, Lærdal, Sogndal, Solund, Stad, Stryn, Vik og Årdal.\n\nSjå vedlegg \"Konkurransegrunnlag Læremidler\" samt følgande vedlegg for informasjon om konkurransen:\n\nVedlegg 1 – Kravspesifikasjon\n\nVedlegg 2 – Prisskjema\n\nVedlegg 3 – Oversikt over deltakarar på avtala\n\nVedlegg 4 - Referanseliste – relevante leveransar\n\nVedlegg 5 – Kontraktsvilkår\n\nVedlegg 6 – Forpliktelseserklæring\n\nVedlegg 7 – Tilbodsbrev og tilbydars atterhald",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "3",
+        "trade": "Printed matter and related products",
+        "cpv_main": "22111000",
+        "cpv_additional": "22112000",
+        "place_of_performance_nuts": "NO0A2",
+        "currency": "NOK",
+        "estimated_value": "60000000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "22112000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO0A2"
+        ],
+        "buyer_name_list": [
+          "Kinn kommune",
+          "Askvoll kommune",
+          "Aurland kommune",
+          "Bremanger kommune",
+          "Fjaler kommune",
+          "Gloppen kommune",
+          "Gulen kommune",
+          "Høyanger kommune",
+          "Luster kommune",
+          "Lærdal kommune",
+          "Sogndal kommune",
+          "Stad kommune",
+          "Stryn kommune",
+          "Årdal kommune",
+          "Solund kommune",
+          "Vik kommune"
+        ],
+        "buyer_city_list": [
+          "Måløy",
+          "Askvoll",
+          "Aurland",
+          "Svelgen",
+          "Dale i Sunnfjord",
+          "Sandane",
+          "Eivindvik",
+          "Høyanger",
+          "Gaupne",
+          "Lærdal",
+          "Leikanger",
+          "Nordfjordeid",
+          "Stryn",
+          "Årdalstangen",
+          "Hardbakke",
+          "Vik i Sogn"
+        ],
+        "buyer_nuts_list": [
+          "NO0A2"
+        ],
+        "cpv_all": [
+          "22111000",
+          "22112000"
+        ],
+        "tender_deadline": "2026-11-12T11:00:00",
+        "estimated_value_nok": 60000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 3,
+        "place_anywhere": false,
+        "cpv_division": "22"
+      }
+    },
+    {
+      "doffin_id": "2026-116107",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "bff329c3da68c904f774dabd3cac20ebefcf516dc02d2768a19143d1a06d9547",
+      "original": {
+        "doffin_id": "2026-116107",
+        "doffin_url": "https://doffin.no/notices/2026-116107",
+        "notice_type": "ANNOUNCEMENT_OF_INTENT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "25",
+        "status": "",
+        "case_number": "cmv6lcysv000u06l7h5bhd4xm",
+        "issue_date": "2026-10-15",
+        "publication_date": "2026-10-16",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "",
+        "buyer_name": "Steinkjer kommune",
+        "buyer_org_nr": "840029212",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Steinkjer",
+        "buyer_postal_code": "7729",
+        "buyer_nuts": "NO060",
+        "contact_name": "Steinkjer kommune",
+        "contact_email": "postmottak@steinkjer.kommune.no",
+        "contact_phone": "+4774169000",
+        "title": "Intensjonskunngjøring – leasing av elektrisk motvektstruck til Dampsaga Bad",
+        "title_en": "Intention notice - leasing electric counter-weight truck for Dampsaga Bad",
+        "description": "Anskaffelsen krever en truck som samtidig kan håndtere paller på cirka 1 450 kg, ha kjørehøyde under 2 000 mm, manøvreres på begrenset plass og transportere lasten sikkert i 20 % helling. Transport av kjemikalier gjør også mastkontroll særlig viktig. Oppdragsgiver vurderer at denne kombinasjonen begrenser utvalget av egnede løsninger betydelig.\n\nOppdragsgiver planlegger å inngå avtale med Toyota Material Handling Norway AS, som har tilbudt en løsning med midlertidig truck frem til levering av ny truck.\n\nIntensjonskunngjøringen publiseres for å skape åpenhet om den planlagte avtalen og gi andre leverandører mulighet til å dokumentere at de kan oppfylle de samme behovene. Dersom det fremkommer aktuelle alternativer, vil oppdragsgiver revurdere grunnlaget for direkte tildeling og gjennomføre konkurranse.",
+        "contract_type": "Supplies",
+        "procedure": "Negotiated without prior publication",
+        "legislation": "",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Industrial machinery",
+        "cpv_main": "42415110",
+        "cpv_additional": "42410000 | 42415000 | 42400000 | 42418900 | 42418500 | 42000000 | 42418000 | 42415200 | 42415100",
+        "place_of_performance_nuts": "NO060",
+        "currency": "",
+        "estimated_value": "",
+        "awarded_value": "",
+        "received_tenders": "0",
+        "winner_name": "TOYOTA MATERIAL HANDLING NORWAY AS",
+        "winner_org_nr": "925806005"
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "42410000",
+          "42415000",
+          "42400000",
+          "42418900",
+          "42418500",
+          "42000000",
+          "42418000",
+          "42415200",
+          "42415100"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO060"
+        ],
+        "buyer_name_list": [
+          "Steinkjer kommune"
+        ],
+        "buyer_city_list": [
+          "Steinkjer"
+        ],
+        "buyer_nuts_list": [
+          "NO060"
+        ],
+        "cpv_all": [
+          "42415110",
+          "42410000",
+          "42415000",
+          "42400000",
+          "42418900",
+          "42418500",
+          "42000000",
+          "42418000",
+          "42415200",
+          "42415100"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": null,
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "42"
+      }
+    },
+    {
+      "doffin_id": "2026-116235",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "7c516bfc8a0f656658333778c555d48b172645a21cc65b7072d0aa88424905fa",
+      "original": {
+        "doffin_id": "2026-116235",
+        "doffin_url": "https://doffin.no/notices/2026-116235",
+        "notice_type": "ADVISORY_NOTICE",
+        "eforms_notice_form": "PriorInformationNotice",
+        "eforms_notice_subtype": "4",
+        "status": "",
+        "case_number": "26/167",
+        "issue_date": "2026-10-16",
+        "publication_date": "2026-10-20",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "",
+        "buyer_name": "Sarpsborg kommune",
+        "buyer_org_nr": "938801363",
+        "buyer_type": "ra",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Sarpsborg",
+        "buyer_postal_code": "1702",
+        "buyer_nuts": "NO083",
+        "contact_name": "Susann Kvam",
+        "contact_email": "susann.kvam@sarpsborg.com",
+        "contact_phone": "+4769108000",
+        "title": "Markedsdialog arbeidstidsplanleggingssystem for Sarpsborg kommune",
+        "title_en": "Market dialogue working hours planning system for Sarpsborg municipality",
+        "description": "Sarpsborg kommune ønsker å gjennomføre markedsdialog rundt arbeidstidsplanleggingssystem for å kartlegge markedet.",
+        "contract_type": "Supplies",
+        "procedure": "",
+        "legislation": "",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Software and information systems",
+        "cpv_main": "48450000",
+        "cpv_additional": "48000000 | 48330000 | 48332000 | 48400000 | 48451000",
+        "place_of_performance_nuts": "NO083",
+        "currency": "",
+        "estimated_value": "",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "48000000",
+          "48330000",
+          "48332000",
+          "48400000",
+          "48451000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO083"
+        ],
+        "buyer_name_list": [
+          "Sarpsborg kommune"
+        ],
+        "buyer_city_list": [
+          "Sarpsborg"
+        ],
+        "buyer_nuts_list": [
+          "NO083"
+        ],
+        "cpv_all": [
+          "48450000",
+          "48000000",
+          "48330000",
+          "48332000",
+          "48400000",
+          "48451000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": null,
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "48"
+      }
+    },
+    {
+      "doffin_id": "2026-116314",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "f657e1e3d50930f98ff87eb840bb8174fd55ee112e5b21671f4ea40b9e1bd64f",
+      "original": {
+        "doffin_id": "2026-116314",
+        "doffin_url": "https://doffin.no/notices/2026-116314",
+        "notice_type": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "29",
+        "status": "",
+        "case_number": "2026/54591",
+        "issue_date": "2026-10-19",
+        "publication_date": "2026-10-21",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "2026-09-14",
+        "buyer_name": "Barne-, ungdoms- og familiedirektoratet",
+        "buyer_org_nr": "986128433",
+        "buyer_type": "cga",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Tønsberg",
+        "buyer_postal_code": "3103 | 0125",
+        "buyer_nuts": "NO093",
+        "contact_name": "Ingrid Glenndal",
+        "contact_email": "ingridrustad.glenndal@bufdir.no | postmottak@bufdir.no",
+        "contact_phone": "+47 46892684 | 466 15 000",
+        "title": "Anskaffelse av rammeavtale for personalarmer",
+        "title_en": "Procurement of a framework agreement for personnel arms",
+        "description": "Bufdir vil inngå rammeavtale for personalarmer til ansatte. Avtalen er landsdekkende og den skal inngås med en leverandør.",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Security, fire-fighting, police and defence equipment",
+        "cpv_main": "35121700",
+        "cpv_additional": "35100000 | 35121000",
+        "place_of_performance_nuts": "anyw",
+        "currency": "NOK",
+        "estimated_value": "0.0",
+        "awarded_value": "30000000.0",
+        "received_tenders": "7",
+        "winner_name": "Amigo Systems AB",
+        "winner_org_nr": "5567608723"
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "35100000",
+          "35121000"
+        ],
+        "place_of_performance_nuts_list": [
+          "anyw"
+        ],
+        "buyer_name_list": [
+          "Barne-, ungdoms- og familiedirektoratet"
+        ],
+        "buyer_city_list": [
+          "Tønsberg"
+        ],
+        "buyer_nuts_list": [
+          "NO093"
+        ],
+        "cpv_all": [
+          "35121700",
+          "35100000",
+          "35121000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": null,
+        "estimated_value_status": "zero_treated_as_unknown",
+        "legislation_normalised": null,
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": true,
+        "cpv_division": "35"
+      }
+    },
+    {
+      "doffin_id": "2026-116318",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "8d4078f5c0ab3527493b8a2b3bb374b0eb476ee4eb3be0026193e7697d3e41ae",
+      "original": {
+        "doffin_id": "2026-116318",
+        "doffin_url": "https://doffin.no/notices/2026-116318",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "26/30",
+        "issue_date": "2026-10-19",
+        "publication_date": "2026-10-21",
+        "tender_deadline_utc": "2026-11-19 11:00:58",
+        "contract_signed_date": "",
+        "buyer_name": "Høgskulen på Vestlandet",
+        "buyer_org_nr": "917641404",
+        "buyer_type": "body-pl-cga",
+        "buyer_activity": "education",
+        "buyer_city": "Bergen",
+        "buyer_postal_code": "5020",
+        "buyer_nuts": "NO0A2",
+        "contact_name": "Tobias Bergo Smedegaard",
+        "contact_email": "tosme0127@hvl.no",
+        "contact_phone": "55 58 58 00",
+        "title": "Tolkekabiner",
+        "title_en": "Interpreter cabins",
+        "description": "Avtalen omfatter levering av åtte (8) stasjonære tolkekabiner med tilhørende tolkeutstyr, programvare og øvrige nødvendige komponenter for å etablere en komplett og operativ tolkeløsning for undervisning i simultantolkning ved Høgskulen på Vestlandet. Leveransen omfatter også nødvendig montering, installasjon, konfigurering, testing, dokumentasjon og opplæring.",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Radio, television and communication equipment",
+        "cpv_main": "32342410",
+        "cpv_additional": "32321200",
+        "place_of_performance_nuts": "NO0A2",
+        "currency": "",
+        "estimated_value": "",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "32321200"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO0A2"
+        ],
+        "buyer_name_list": [
+          "Høgskulen på Vestlandet"
+        ],
+        "buyer_city_list": [
+          "Bergen"
+        ],
+        "buyer_nuts_list": [
+          "NO0A2"
+        ],
+        "cpv_all": [
+          "32342410",
+          "32321200"
+        ],
+        "tender_deadline": "2026-11-19T11:00:58",
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": null,
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "32"
+      }
+    },
+    {
+      "doffin_id": "2026-116334",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "e96b11718bfd60c46087d3fbbd91b8a6534c19ba462e4b9080efec50b7e8b23d",
+      "original": {
+        "doffin_id": "2026-116334",
+        "doffin_url": "https://doffin.no/notices/2026-116334",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "2027,2",
+        "issue_date": "2026-10-20",
+        "publication_date": "2026-10-21",
+        "tender_deadline_utc": "2026-11-23 10:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "Waco Forsikringsmegling AS",
+        "buyer_org_nr": "966844515",
+        "buyer_type": "pub-undert",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "BRYNE",
+        "buyer_postal_code": "4340",
+        "buyer_nuts": "NO0A1",
+        "contact_name": "Inger Marie Laland",
+        "contact_email": "inger.marie@waco.no",
+        "contact_phone": "+47 51779580",
+        "title": "Forsikring for Rogaland fylkeskommune",
+        "title_en": "Insurance for Rogaland County",
+        "description": "Gjelder forsikringer for Rogaland fylkeskommune.",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Financial and insurance services",
+        "cpv_main": "66510000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "NO0A1",
+        "currency": "",
+        "estimated_value": "",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "NO0A1"
+        ],
+        "buyer_name_list": [
+          "Waco Forsikringsmegling AS"
+        ],
+        "buyer_city_list": [
+          "BRYNE"
+        ],
+        "buyer_nuts_list": [
+          "NO0A1"
+        ],
+        "cpv_all": [
+          "66510000"
+        ],
+        "tender_deadline": "2026-11-23T10:00:00",
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "66"
+      }
+    },
+    {
+      "doffin_id": "2026-116386",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "7dc3f263e73bc1001222a5e529606007ab101d3b00c415522374fab7e2223ed1",
+      "original": {
+        "doffin_id": "2026-116386",
+        "doffin_url": "https://doffin.no/notices/2026-116386",
+        "notice_type": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "29",
+        "status": "",
+        "case_number": "26/3637",
+        "issue_date": "2026-10-21",
+        "publication_date": "2026-10-22",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "2026-10-05",
+        "buyer_name": "Ålesund kommune",
+        "buyer_org_nr": "929911709",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Ålesund",
+        "buyer_postal_code": "6003",
+        "buyer_nuts": "NO0A3",
+        "contact_name": "Marton Leine",
+        "contact_email": "marton.bjordal.leine@alesund.kommune.no",
+        "contact_phone": "+4770162000",
+        "title": "Anskaffelse - Kjøp og leasing av iOS nettbrett, 2026",
+        "title_en": "Procurement - Purchase and leasing of iOS tablet, 2026",
+        "description": "Formålet med anskaffelsen er å dekke behovet for kjøp og leasing av iOS-nettbrett inkl. tilbehør iht. kravspesifikasjon",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Office and computing equipment",
+        "cpv_main": "30200000",
+        "cpv_additional": "30000000 | 30100000 | 30210000 | 30213000 | 30213100 | 30213500 | 30214000 | 30230000",
+        "place_of_performance_nuts": "NO0A3",
+        "currency": "NOK",
+        "estimated_value": "40000000.0",
+        "awarded_value": "40000000.0",
+        "received_tenders": "1",
+        "winner_name": "Atea AS",
+        "winner_org_nr": "976239997"
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "30000000",
+          "30100000",
+          "30210000",
+          "30213000",
+          "30213100",
+          "30213500",
+          "30214000",
+          "30230000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO0A3"
+        ],
+        "buyer_name_list": [
+          "Ålesund kommune"
+        ],
+        "buyer_city_list": [
+          "Ålesund"
+        ],
+        "buyer_nuts_list": [
+          "NO0A3"
+        ],
+        "cpv_all": [
+          "30200000",
+          "30000000",
+          "30100000",
+          "30210000",
+          "30213000",
+          "30213100",
+          "30213500",
+          "30214000",
+          "30230000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": 40000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": null,
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "30"
+      }
+    },
+    {
+      "doffin_id": "2026-116470",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "759cd2149b46dde71a184901ae4b49b5fa03e2935a32cfe457900329a3f9bed7",
+      "original": {
+        "doffin_id": "2026-116470",
+        "doffin_url": "https://doffin.no/notices/2026-116470",
+        "notice_type": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "29",
+        "status": "",
+        "case_number": "202610486",
+        "issue_date": "2026-10-22",
+        "publication_date": "2026-10-23",
+        "tender_deadline_utc": "2028-10-09 00:00:00",
+        "contract_signed_date": "2026-10-09",
+        "buyer_name": "Norges vassdrags- og energidirektorat (NVE)",
+        "buyer_org_nr": "970205039",
+        "buyer_type": "pub-undert-cga",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "OSLO",
+        "buyer_postal_code": "0368",
+        "buyer_nuts": "NO081",
+        "contact_name": "Silje Graue Lerøy",
+        "contact_email": "silje@odinprosjekt.no",
+        "contact_phone": "+47 92460024",
+        "title": "Rammeavtale - Metanol brenselcelleenheter med tilbehør",
+        "title_en": "Framework agreement - Methanol fuel cell units with accessories",
+        "description": "NVE har ansvaret for overvåking og kartlegging av ustabile fjellpartier i Norge.I dag er det 10 ustabile fjellpartier med høy risiko som kontinuerlig overvåkes av NVE.  De vanligste målemetodene er GPS og totalstasjon, bakkebasert radarsystem samt laser og strekkstag. I tillegg brukes forskjellige kamerasystemer samt kommunikasjon via radio. Installasjonene er ofte plassert utilgjengelig til, med egendefinerte strømforsyninger ut fra behov. Mange av disse strømforsyningene er hybridløsninger med batterier, solceller, vindmøller og metanol brenselceller. Disse blir designet ut fra strømbehov, tilgjengelighet, solinnstråling osv. pr i dag har NVE ca. 35 enheter i drift, men antallet varierer ut fra behovet. NVE ønsker nå inngå rammeavtale på leveranser av metanol brenselcelleenheter med tilbehør (metanol og fuelmanager).",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Electrical machinery and equipment",
+        "cpv_main": "31122100",
+        "cpv_additional": "31122000 | 31127000",
+        "place_of_performance_nuts": "anyw",
+        "currency": "NOK",
+        "estimated_value": "24000000.0",
+        "awarded_value": "14000000.0",
+        "received_tenders": "3",
+        "winner_name": "CORDINA NORGE AS",
+        "winner_org_nr": "934158776"
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "31122000",
+          "31127000"
+        ],
+        "place_of_performance_nuts_list": [
+          "anyw"
+        ],
+        "buyer_name_list": [
+          "Norges vassdrags- og energidirektorat (NVE)"
+        ],
+        "buyer_city_list": [
+          "OSLO"
+        ],
+        "buyer_nuts_list": [
+          "NO081"
+        ],
+        "cpv_all": [
+          "31122100",
+          "31122000",
+          "31127000"
+        ],
+        "tender_deadline": "2028-10-09T00:00:00",
+        "estimated_value_nok": 24000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": true,
+        "cpv_division": "31"
+      }
+    },
+    {
+      "doffin_id": "2026-116531",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "7ef35bc89c8fed0230fe026d18bf261662a1ebc1380465d1c77ce1a304ebe359",
+      "original": {
+        "doffin_id": "2026-116531",
+        "doffin_url": "https://doffin.no/notices/2026-116531",
+        "notice_type": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "N29",
+        "status": "",
+        "case_number": "2026/8",
+        "issue_date": "2026-10-22",
+        "publication_date": "2026-10-23",
+        "tender_deadline_utc": "2029-11-01 00:00:00",
+        "contract_signed_date": "2026-10-09",
+        "buyer_name": "Statsforvalterens fellestjenester | Statsforvalteren i Troms og Finnmark",
+        "buyer_org_nr": "921627009 | 967311014",
+        "buyer_type": "cga",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "ARENDAL | Vadsø",
+        "buyer_postal_code": "4804 | 9815",
+        "buyer_nuts": "NO092 | NO073",
+        "contact_name": "Kjersti Fosse",
+        "contact_email": "kjersti.fosse@statsforvalteren.no | sftfpost@statsforvalteren.no",
+        "contact_phone": "+47 47912070 | 789503",
+        "title": "Kantinedrift til Statsforvalteren i Troms og Finnmark",
+        "title_en": "",
+        "description": "Anskaffelsen omfatter levering av kantinedrift til Statsforvalteren i Troms og Finnmark  til sitt kontorsted i Vadsø. Kantinedriften omfatter daglig levering av varm og kald mat, salg av lunsj og kioskvarer til ansatte og gjester, daglig drift og renhold av en helautomatisk kaffemaskin og en termostrakter i kantinen, mat og kaffe til møter og mindre arrangement/selskap etter behov. Det er ca. 160 ansatte som arbeider i bygget og som kan benytte seg av kantinens tjenester.",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "Anskaffelseforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Hotel, restaurant and retail services",
+        "cpv_main": "55512000",
+        "cpv_additional": "55500000 | 55510000 | 55511000",
+        "place_of_performance_nuts": "NO073",
+        "currency": "NOK",
+        "estimated_value": "4100000.0",
+        "awarded_value": "4100000.0",
+        "received_tenders": "2",
+        "winner_name": "ISS FACILITY SERVICES AS",
+        "winner_org_nr": "NO914791723MVA"
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "55500000",
+          "55510000",
+          "55511000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO073"
+        ],
+        "buyer_name_list": [
+          "Statsforvalterens fellestjenester",
+          "Statsforvalteren i Troms og Finnmark"
+        ],
+        "buyer_city_list": [
+          "ARENDAL",
+          "Vadsø"
+        ],
+        "buyer_nuts_list": [
+          "NO092",
+          "NO073"
+        ],
+        "cpv_all": [
+          "55512000",
+          "55500000",
+          "55510000",
+          "55511000"
+        ],
+        "tender_deadline": "2029-11-01T00:00:00",
+        "estimated_value_nok": 4100000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "55"
+      }
+    },
+    {
+      "doffin_id": "2026-116544",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "43f5a69153ee5da228f4f3b4cdbbd0f27ee11ded2849f8dbb4fda2668b99efb8",
+      "original": {
+        "doffin_id": "2026-116544",
+        "doffin_url": "https://doffin.no/notices/2026-116544",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "E3",
+        "status": "",
+        "case_number": "cmu6t8220003b04l2z9dmbrpq",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-24",
+        "tender_deadline_utc": "2026-11-23 11:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "Møre og Romsdal Fylkeskommune",
+        "buyer_org_nr": "944183779",
+        "buyer_type": "body-pl-ra",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Molde",
+        "buyer_postal_code": "6404",
+        "buyer_nuts": "NO0A3",
+        "contact_name": "Møre og Romsdal Fylkeskommune",
+        "contact_email": "post@mrfylke.no",
+        "contact_phone": "+47 71258000",
+        "title": "Møbler til Braatthallen",
+        "title_en": "",
+        "description": "1. Om Oppdragsgiver\n\nOppdragsgiver for denne konkurransen er Møre og Romsdal fylkeskommune ved Bygg og Eiendomsavdelingen.\n\n2. Bakgrunn og formål\n\nMøre og Romsdal fylkeskommune skal gjennomføre anskaffelse av levering, montering og plassering av møbler til Kristiansund videregående skole -lokasjon Braatthallen i Kristiansund (Sankthanshaugen 1, 6514 Kristiansund N)\n\nFormålet med anskaffelsen er å møblere nyrenoverte lokaler i Braatthallen Kristiansund. Lokalene benyttes av Kristiansund videregående skole for bl.a kantinetilbud og undervisning i restaurant og matfag.\n\nAnskaffelsen omfatter møbler til:\n\n· Foajé\n\n· Kantine\n\nSe mer informasjon om oppdraget i Oppdragsbeskrivelsen og vedlagte skisser / planer for nærmere beskrivelser av miljø og sammensetning av møbler mm.\n\n3. Tildelingskriterier \n\nViser her til fane Tildelingskriterier og tilhørende krav i fane Kravspesifikasjon.\n\n3.1 Evalueringsmodell\n\nVed evalueringen vil det for tildelingskriteriene bli satt karakter. I karaktersettingen blir det benyttet en karakterskala fra 1‐10, der 10 er beste score. Karakteren som blir gitt for hvert tildelingskriterium, multiplisert med vekt, blir til kriteriets poengsum.\n\nEvalueringen blir dessuten gjennomført på en slik måte at karaktersettingen sikrer at relevante forskjeller mellom tilbudene blir gjenspeilet i de poengene som tilbudene får.\n\n4. Kontrakt\n\nDet vil bli inngått kontrakt mellom oppdragsgiver og leverandør for levering av leveransen som er spesifisert i dette konkurransegrunnlaget med vedlegg.\n\nAvtalen som blir inngått vil være basert på Avtale varekjøp.",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "https://lovdata.no/eli/forskrift/2016/8/12/974",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Furniture, furnishings, domestic appliances and cleaning products",
+        "cpv_main": "39110000",
+        "cpv_additional": "39143210 | 39150000 | 39112000 | 39156000 | 39151300 | 39143200",
+        "place_of_performance_nuts": "NO0A3",
+        "currency": "NOK",
+        "estimated_value": "1225000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "39143210",
+          "39150000",
+          "39112000",
+          "39156000",
+          "39151300",
+          "39143200"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO0A3"
+        ],
+        "buyer_name_list": [
+          "Møre og Romsdal Fylkeskommune"
+        ],
+        "buyer_city_list": [
+          "Molde"
+        ],
+        "buyer_nuts_list": [
+          "NO0A3"
+        ],
+        "cpv_all": [
+          "39110000",
+          "39143210",
+          "39150000",
+          "39112000",
+          "39156000",
+          "39151300",
+          "39143200"
+        ],
+        "tender_deadline": "2026-11-23T11:00:00",
+        "estimated_value_nok": 1225000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "39"
+      }
+    },
+    {
+      "doffin_id": "2026-116547",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "f4c244307814f6289ccd21cae23c278919cea6ddb80a3dbf801d9db31e687546",
+      "original": {
+        "doffin_id": "2026-116547",
+        "doffin_url": "https://doffin.no/notices/2026-116547",
+        "notice_type": "ADVISORY_NOTICE",
+        "eforms_notice_form": "PriorInformationNotice",
+        "eforms_notice_subtype": "E2",
+        "status": "",
+        "case_number": "VLFK/26/262",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-24",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "",
+        "buyer_name": "Vestland fylkeskommune",
+        "buyer_org_nr": "821311632",
+        "buyer_type": "ra",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "LEIKANGER",
+        "buyer_postal_code": "6863",
+        "buyer_nuts": "",
+        "contact_name": "Elisabeth Skeie",
+        "contact_email": "elisabeth.skeie@vlfk.no",
+        "contact_phone": "+47 05557",
+        "title": "Marknadsdialog om hurtiggåanede MOB-båt",
+        "title_en": "",
+        "description": "Vi ønskjer tilbakemelding frå leverandørar på innhaldet i konkurransegrunnlaget samt svar på spørsmål vedlagt denne marknadsdialogen",
+        "contract_type": "Supplies",
+        "procedure": "",
+        "legislation": "https://lovdata.no/eli/forskrift/2016/8/12/974",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Transport equipment",
+        "cpv_main": "34510000",
+        "cpv_additional": "34000000 | 34500000",
+        "place_of_performance_nuts": "anyw",
+        "currency": "",
+        "estimated_value": "",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "34000000",
+          "34500000"
+        ],
+        "place_of_performance_nuts_list": [
+          "anyw"
+        ],
+        "buyer_name_list": [
+          "Vestland fylkeskommune"
+        ],
+        "buyer_city_list": [
+          "LEIKANGER"
+        ],
+        "buyer_nuts_list": [],
+        "cpv_all": [
+          "34510000",
+          "34000000",
+          "34500000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": true,
+        "cpv_division": "34"
+      }
+    },
+    {
+      "doffin_id": "2026-116566",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "9942b27228014eaef1af74fdbec89f082df8868aeecdaeee4c4f7f330032ba21",
+      "original": {
+        "doffin_id": "2026-116566",
+        "doffin_url": "https://doffin.no/notices/2026-116566",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "10230",
+        "issue_date": "2026-10-22",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "2026-11-23 11:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "Statens vegvesen",
+        "buyer_org_nr": "971032081",
+        "buyer_type": "body-pl-cga",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Oslo",
+        "buyer_postal_code": "0663",
+        "buyer_nuts": "NO081",
+        "contact_name": "Debra Gunnerød",
+        "contact_email": "firmapost@vegvesen.no",
+        "contact_phone": "+47 22073000",
+        "title": "Rammeavtale for kjøp av bistand til rekruttering",
+        "title_en": "Framework Agreement for Recruitment Assistance Services",
+        "description": "Statens vegvesen, Fellesfunksjoner og HR (heretter benevnt som Oppdragsgiver) ønsker tilbud på bistand til rekruttering. Statens vegvesen består i dag av Vegdirektoratet og seks divisjoner. Statens vegvesen går foran i utviklingen av et framtidsrettet, effektivt, miljøvennlig og trygt transportsystem. Vi bygger, drifter og vedlikeholder landets riksveger, og har nasjonalt ansvar for beredskap på veg gjennom å utvikle tydelige regelverk og standarder for alle. Gjennom samarbeid med og tilsyn av trafikanter og kjøretøy, ny teknologi og utvikling av digitale tjenester sørger vi for at trafikanter og næringsliv får en tryggere, enklere og grønnere reisehverdag. \n\nOppdragsgiver har behov for kompetanse innen en rekke fagområder og på ulike nivåer i organisasjonen. Rekrutteringsbehovet kan variere over tid og omfatte både operative, tekniske, administrative, merkantile, digitale, juridiske og ledende stillinger. Bistanden skal derfor kunne tilpasses den enkelte rekrutteringsprosessen og behovene i den aktuelle delen av etaten. \n\nRammeavtalen skal kunne benyttes av alle deler av etaten og omfatte rekruttering på tvers av fagområder, organisatoriske enheter, stillingskategorier og geografiske lokasjoner. Formålet med anskaffelsen er å dekke etatens behov for fleksibel og profesjonell rekrutteringsbistand og bidra til at Oppdragsgiver tiltrekker seg og rekrutterer kvalifiserte og motiverte søkere. Avtalen er ikke avgrenset til bestemte fagområder, roller eller stillingstyper.\n\nAnskaffelsen er derfor organisert i flere delkontrakter som dekker ulike tjenester og kompetanseområder. Enkelte delkontrakter kan være tilpasset særskilte behov i enkelte divisjoner eller fagmiljøer, der det er behov for spesialisert markedskunnskap, kandidatnettverk eller rekrutteringskompetanse.\n\nRammeavtalen skal inngås med inntil 6 leverandører.\n\nDelkontrakt 1 - Lederstillinger inntil 2 leverandører\n\nDelkontrakt 2 - Administrative, merkantile og øvrige støttefunksjoner inntil 2 leverandører\n\nDelkontrakt 3 - Tekniske og faglige stillinger inntil 2 leverandører",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "3",
+        "trade": "Business services (legal, marketing, consulting, recruitment)",
+        "cpv_main": "79600000",
+        "cpv_additional": "79611000 | 79635000",
+        "place_of_performance_nuts": "NO020 | NO085 | NO073 | NO084 | NO072 | NO083 | NO094 | NO060 | NO071 | NO093 | NO081 | NO092 | NO0A3 | NO0A2 | NO0A1",
+        "currency": "NOK",
+        "estimated_value": "25000000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "79611000",
+          "79635000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO020",
+          "NO085",
+          "NO073",
+          "NO084",
+          "NO072",
+          "NO083",
+          "NO094",
+          "NO060",
+          "NO071",
+          "NO093",
+          "NO081",
+          "NO092",
+          "NO0A3",
+          "NO0A2",
+          "NO0A1"
+        ],
+        "buyer_name_list": [
+          "Statens vegvesen"
+        ],
+        "buyer_city_list": [
+          "Oslo"
+        ],
+        "buyer_nuts_list": [
+          "NO081"
+        ],
+        "cpv_all": [
+          "79600000",
+          "79611000",
+          "79635000"
+        ],
+        "tender_deadline": "2026-11-23T11:00:00",
+        "estimated_value_nok": 25000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": null,
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 3,
+        "place_anywhere": false,
+        "cpv_division": "79"
+      }
+    },
+    {
+      "doffin_id": "2026-116567",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "928ee514240afd1d9b8cfe6fed9bdd7cc1f1655643e318da1723403a543150f2",
+      "original": {
+        "doffin_id": "2026-116567",
+        "doffin_url": "https://doffin.no/notices/2026-116567",
+        "notice_type": "ADVISORY_NOTICE",
+        "eforms_notice_form": "PriorInformationNotice",
+        "eforms_notice_subtype": "4",
+        "status": "",
+        "case_number": "B26/200087",
+        "issue_date": "2026-10-22",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "",
+        "buyer_name": "FORSVARSMATERIELL",
+        "buyer_org_nr": "916075855",
+        "buyer_type": "def-cont",
+        "buyer_activity": "defence",
+        "buyer_city": "OSLO",
+        "buyer_postal_code": "0151",
+        "buyer_nuts": "NO081",
+        "contact_name": "Jonas Lunden",
+        "contact_email": "jonlunden@mil.no",
+        "contact_phone": "45695158",
+        "title": "Markedsdialog - Skipshandel",
+        "title_en": "Market dialogue - Ship trade",
+        "description": "Forsvarsmateriell (FMA) er ansvarlig for å inngå avtaler på vegne av Forsvaret. Herunder avtale for leveranse av proviant samt kioskvarer til Forsvarets, Forsvarets forskningsinstitutt, Havforskningsinstituttet og Kystverket fartøyer. FMA skal i nær fremtid inngå ny avtale for denne tjenesten. FMA ønsker i forkant av anskaffelsesprosessen å invitere til skriftlig og muntlig tilbakemeldinger fra leverandørmarkedet. Se til vedlagte dokument med spørsmål til markedet, og påmelding til markedsdialog.",
+        "contract_type": "Supplies",
+        "procedure": "",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Food, beverages and tobacco",
+        "cpv_main": "15000000",
+        "cpv_additional": "15800000 | 15900000",
+        "place_of_performance_nuts": "anyw",
+        "currency": "",
+        "estimated_value": "",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "15800000",
+          "15900000"
+        ],
+        "place_of_performance_nuts_list": [
+          "anyw"
+        ],
+        "buyer_name_list": [
+          "FORSVARSMATERIELL"
+        ],
+        "buyer_city_list": [
+          "OSLO"
+        ],
+        "buyer_nuts_list": [
+          "NO081"
+        ],
+        "cpv_all": [
+          "15000000",
+          "15800000",
+          "15900000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": true,
+        "cpv_division": "15"
+      }
+    },
+    {
+      "doffin_id": "2026-116568",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "3629ac0b18727c39a2a1ee804a5a536503c31012ddbf424c8c7105cf927900b3",
+      "original": {
+        "doffin_id": "2026-116568",
+        "doffin_url": "https://doffin.no/notices/2026-116568",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "825",
+        "issue_date": "2026-10-22",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "2026-11-26 11:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "Agder Renovasjon IKS",
+        "buyer_org_nr": "997765494",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Arendal",
+        "buyer_postal_code": "4849",
+        "buyer_nuts": "NO092",
+        "contact_name": "",
+        "contact_email": "kundesenter@agderrenovasjon.no",
+        "contact_phone": "37 05 88 00",
+        "title": "Slamtømming Agder Renovasjon",
+        "title_en": "Emptying sludge Agder Renovasjon",
+        "description": "Denne konkurransen gjelder tømming av slamavskillere i kommunene Arendal, Froland og Grimstad, totalt ca. 2100 – 2300 enheter/år.Avtalen har en varighet på 6 år, med ensidig opsjon for oppdragsgiver om forlengelse på 1+1 år.",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Sewage, refuse, cleaning and environmental services",
+        "cpv_main": "90460000",
+        "cpv_additional": "90512000 | 90513600 | 90513700",
+        "place_of_performance_nuts": "NO092",
+        "currency": "",
+        "estimated_value": "",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "90512000",
+          "90513600",
+          "90513700"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO092"
+        ],
+        "buyer_name_list": [
+          "Agder Renovasjon IKS"
+        ],
+        "buyer_city_list": [
+          "Arendal"
+        ],
+        "buyer_nuts_list": [
+          "NO092"
+        ],
+        "cpv_all": [
+          "90460000",
+          "90512000",
+          "90513600",
+          "90513700"
+        ],
+        "tender_deadline": "2026-11-26T11:00:00",
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "90"
+      }
+    },
+    {
+      "doffin_id": "2026-116574",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "575e07277a6ef8b1ddf28f87644d1c7c1502599e6e7a15639105193f10e37df0",
+      "original": {
+        "doffin_id": "2026-116574",
+        "doffin_url": "https://doffin.no/notices/2026-116574",
+        "notice_type": "ADVISORY_NOTICE",
+        "eforms_notice_form": "PriorInformationNotice",
+        "eforms_notice_subtype": "4",
+        "status": "",
+        "case_number": "26/203207",
+        "issue_date": "2026-10-22",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "",
+        "buyer_name": "Politiets fellestjenester",
+        "buyer_org_nr": "974761157",
+        "buyer_type": "cga",
+        "buyer_activity": "pub-os",
+        "buyer_city": "OSLO",
+        "buyer_postal_code": "0369",
+        "buyer_nuts": "NO081",
+        "contact_name": "Helene Munthe-Aasbø",
+        "contact_email": "helene.munthe-aasbo@politiet.no",
+        "contact_phone": "+47 61318000",
+        "title": "IT - konsulenter til politiet (RFI)",
+        "title_en": "IT - consultants for the police (RFI)",
+        "description": "Dagens rammeavtaler for konsulenter til produktutvikling i politiet utløper i løpet av høsten 2027. Det er derfor behov for å anskaffe nye rammeavtaler. Det er ønskelig å videreføre dagens modell som består av to delkontrakter, en partneravtale og en mer tradisjonell avtale uten strategisk samarbeid, men i tillegg planlegges det nå for en tredje delkontrakt for særskilte sikkerhetsbehov. Det er i forbindelse med ny delkontrakt at vi trenger å innhente informasjon fra markedet.",
+        "contract_type": "Services",
+        "procedure": "",
+        "legislation": "",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "IT services",
+        "cpv_main": "72000000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "anyw",
+        "currency": "NOK",
+        "estimated_value": "4000000000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "anyw"
+        ],
+        "buyer_name_list": [
+          "Politiets fellestjenester"
+        ],
+        "buyer_city_list": [
+          "OSLO"
+        ],
+        "buyer_nuts_list": [
+          "NO081"
+        ],
+        "cpv_all": [
+          "72000000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": 4000000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": null,
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": true,
+        "cpv_division": "72"
+      }
+    },
+    {
+      "doffin_id": "2026-116577",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "e3b4d92ca31d5f329a1474f4c35a2c662badabe6fd74e7c0a4be3383df7afe67",
+      "original": {
+        "doffin_id": "2026-116577",
+        "doffin_url": "https://doffin.no/notices/2026-116577",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "20",
+        "status": "ACTIVE",
+        "case_number": "25/180",
+        "issue_date": "2026-10-22",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "2026-12-14 11:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "Øksnes Kommune",
+        "buyer_org_nr": "845152012",
+        "buyer_type": "",
+        "buyer_activity": "",
+        "buyer_city": "MYRE",
+        "buyer_postal_code": "8430",
+        "buyer_nuts": "NO071",
+        "contact_name": "Bengt Stian Nilsen",
+        "contact_email": "bengtstian.nilsen@oksnes.kommune.no",
+        "contact_phone": "+47 76185000",
+        "title": "Kjøp av helse- og omsorgstjenester til personer med omfattende bistandsbehov",
+        "title_en": "Procurement of health and care services for persons with comprehensive assistance needs.",
+        "description": "Anskaffelsens formål er å inngå avtale om levering av et helhetlig og individuelt tilpasset bo- og omsorgstiltak. Tiltaket skal omfatte egnet bolig, bemanning, faglig oppfølging, ledelse, beredskap og samhandling med kommune og relevante samarbeidspartnere.Tiltaket skal bidra til en stabil og forsvarlig bolig- og omsorgssituasjon, forebygge kriser, styrke mestring og selvstendighet samt ivareta bruker og ansatte.Leveransen omfatter fullt møblert og egnet bolig som er godkjent til formålet og ivaretar HMS og nødvendige sikkerhetstiltak, samt individuelt tilpasset oppfølging, praktisk bistand, aktivitetstilbud og koordinering.Fullstendig beskrivelse av leveransen følger av kravspesifikasjonen.En nærmere anonymisert beskrivelse av brukerens funksjonsnivå, bistandsbehov, risikoforhold og krav til tjenestens innhold fremgår av et eget tilgangsbegrenset informasjonsnotat. Opplysninger som er underlagt taushetsplikt, gjøres bare tilgjengelige i den grad det er nødvendig for å utarbeide tilbud. Informasjonsnotatet vil bli gjort tilgjengelig i Mercell når oppdragsgiver har mottatt taushetserklæring fra leverandøren.",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Health and social work services",
+        "cpv_main": "85100000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "NO071",
+        "currency": "NOK",
+        "estimated_value": "20000000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "NO071"
+        ],
+        "buyer_name_list": [
+          "Øksnes Kommune"
+        ],
+        "buyer_city_list": [
+          "MYRE"
+        ],
+        "buyer_nuts_list": [
+          "NO071"
+        ],
+        "cpv_all": [
+          "85100000"
+        ],
+        "tender_deadline": "2026-12-14T11:00:00",
+        "estimated_value_nok": 20000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "85"
+      }
+    },
+    {
+      "doffin_id": "2026-116578",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "8943bf012fe7c5f613d4f7de476a4fd1d632d20b6f0095b833a2e89bf711c774",
+      "original": {
+        "doffin_id": "2026-116578",
+        "doffin_url": "https://doffin.no/notices/2026-116578",
+        "notice_type": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "29",
+        "status": "",
+        "case_number": "2026/2102",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "2026-10-20",
+        "buyer_name": "Forsvarsbygg",
+        "buyer_org_nr": "975950662",
+        "buyer_type": "pub-undert-cga",
+        "buyer_activity": "defence",
+        "buyer_city": "OSLO",
+        "buyer_postal_code": "0151",
+        "buyer_nuts": "NO081",
+        "contact_name": "Truls Fundingsrud",
+        "contact_email": "truls.fundingsrud@forsvarsbygg.no",
+        "contact_phone": "+47 46870400",
+        "title": "R02029 – kjøp av byggevarer i region Nord – Vest Finnmark 2. gang",
+        "title_en": "R02029 - procurement of construction materials in the North - West Finnmark region, second time.",
+        "description": "Forsvarsbygg inviterer til konkurranse om levering av byggevarer. Avtalen gjelder for kjøp av byggevarer innenfor Region Nord, Vest-Finnmark, som inkluderer områdene: Porsangermoen. Byggevarene vil kunne omfatte blant annet, men er ikke begrenset til, trevarer, isolasjon, plater, feste materiell, overflate produkter og øvrige relevante bygge artikler. Avtalen gjelder både kjøpe i varehus og levering.Det stilles krav til lokasjon for varehus innenfor gitte avstander til lokasjoner. Se vedlegg 2.1 for detaljer.Leverandør skal dokumentere sine utsalgssteder i tilbudet med adresse som legges ved tilbudet.Dette er andregangs utlysning",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Construction structures and materials",
+        "cpv_main": "44110000",
+        "cpv_additional": "44111000 | 44190000 | 44220000",
+        "place_of_performance_nuts": "NO073",
+        "currency": "NOK",
+        "estimated_value": "",
+        "awarded_value": "6000000.0",
+        "received_tenders": "2",
+        "winner_name": "Optimera AS (hovedenhet)",
+        "winner_org_nr": "967013056"
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "44111000",
+          "44190000",
+          "44220000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO073"
+        ],
+        "buyer_name_list": [
+          "Forsvarsbygg"
+        ],
+        "buyer_city_list": [
+          "OSLO"
+        ],
+        "buyer_nuts_list": [
+          "NO081"
+        ],
+        "cpv_all": [
+          "44110000",
+          "44111000",
+          "44190000",
+          "44220000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "44"
+      }
+    },
+    {
+      "doffin_id": "2026-116579",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "716afc0bad2dabba1ddad734bbee60841ef4335635cafcc41f11504c0d3b33eb",
+      "original": {
+        "doffin_id": "2026-116579",
+        "doffin_url": "https://doffin.no/notices/2026-116579",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "2026/26345",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "2026-11-27 11:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "Haugesund Kommune",
+        "buyer_org_nr": "944073787",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "HAUGESUND",
+        "buyer_postal_code": "5528",
+        "buyer_nuts": "NO0A1",
+        "contact_name": "Lina Halling",
+        "contact_email": "Lina.halling@inventura.no",
+        "contact_phone": "+47 52743000",
+        "title": "Rammeavtale for rådgivende konsulenttjenester til Haugesund kommune",
+        "title_en": "Framework agreement for consultancy services for Haugesund municipality.",
+        "description": "Haugesund kommune skal inngå avtaler for levering av rådgivende konsulenttjenester.Det skal inngås to delkontrakter, hvor hver delkontrakt utgjør parallelle rammeavtaler. Det skal inngås parallelle rammeavtaler med to leverandører per delkontrakt, forutsatt at det foreligger et tilstrekkelig antall egnede tilbud. En leverandør kan gi tilbud på en eller begge delkontraktene og kan tildeles begge delkontrakter.Delkontraktene omfatter følgende:Delkontrakt A: Rammeavtale for rådgivning, planlegging og prosjektering innen mobilitets-, transport- og reguleringsplanlegging.Delkontrakt B: Rammeavtale for rådgivning, planlegging og prosjektering innen vei, vann og avløp.For ytterligere informasjon om anskaffelsens formål og omfang vises det til kravspesifikasjonen, se konkurransegrunnlaget samt Bilag 1 Vedlegg 1A og Bilag 1 Vedlegg 1B.",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "2",
+        "trade": "Architectural, engineering and inspection services",
+        "cpv_main": "71310000",
+        "cpv_additional": "71311000 | 71311210 | 71311220 | 71311300 | 71313000 | 71315210 | 71320000 | 71321300 | 71322000 | 71322200 | 71322500 | 71330000 | 71332000 | 71335000 | 71336000",
+        "place_of_performance_nuts": "NO0A2",
+        "currency": "NOK",
+        "estimated_value": "60000000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "71311000",
+          "71311210",
+          "71311220",
+          "71311300",
+          "71313000",
+          "71315210",
+          "71320000",
+          "71321300",
+          "71322000",
+          "71322200",
+          "71322500",
+          "71330000",
+          "71332000",
+          "71335000",
+          "71336000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO0A2"
+        ],
+        "buyer_name_list": [
+          "Haugesund Kommune"
+        ],
+        "buyer_city_list": [
+          "HAUGESUND"
+        ],
+        "buyer_nuts_list": [
+          "NO0A1"
+        ],
+        "cpv_all": [
+          "71310000",
+          "71311000",
+          "71311210",
+          "71311220",
+          "71311300",
+          "71313000",
+          "71315210",
+          "71320000",
+          "71321300",
+          "71322000",
+          "71322200",
+          "71322500",
+          "71330000",
+          "71332000",
+          "71335000",
+          "71336000"
+        ],
+        "tender_deadline": "2026-11-27T11:00:00",
+        "estimated_value_nok": 60000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 2,
+        "place_anywhere": false,
+        "cpv_division": "71"
+      }
+    },
+    {
+      "doffin_id": "2026-116580",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "96a4b979b7617ab6944fba6325c10ca1a14182f900ccdc4b4f9df6d89d7ba007",
+      "original": {
+        "doffin_id": "2026-116580",
+        "doffin_url": "https://doffin.no/notices/2026-116580",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "2026-11-23 11:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "SYKEHUSINNKJØP HF",
+        "buyer_org_nr": "916879067",
+        "buyer_type": "body-pl",
+        "buyer_activity": "health",
+        "buyer_city": "Vadsø",
+        "buyer_postal_code": "9811",
+        "buyer_nuts": "NO073",
+        "contact_name": "",
+        "contact_email": "post@sykehusinnkjop.no",
+        "contact_phone": "78950700",
+        "title": "Vitrektomimaskin til Øyeavdelingen ved UNN HF Tromsø",
+        "title_en": "Vitrectomy machine for the Eye Department at UNN HF Tromsø",
+        "description": "Øyeavdelingen ved Universitetssykehuset Nord-Norge HF skal anskaffe en Vitrektomimaskin.",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Medical equipment, pharmaceuticals and personal care",
+        "cpv_main": "33100000",
+        "cpv_additional": "33169100",
+        "place_of_performance_nuts": "NO072",
+        "currency": "NOK",
+        "estimated_value": "800000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "33169100"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO072"
+        ],
+        "buyer_name_list": [
+          "SYKEHUSINNKJØP HF"
+        ],
+        "buyer_city_list": [
+          "Vadsø"
+        ],
+        "buyer_nuts_list": [
+          "NO073"
+        ],
+        "cpv_all": [
+          "33100000",
+          "33169100"
+        ],
+        "tender_deadline": "2026-11-23T11:00:00",
+        "estimated_value_nok": 800000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": null,
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "33"
+      }
+    },
+    {
+      "doffin_id": "2026-116581",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "4117b13740ebcb698c67ae451167edd18f569cb5e688bb60f8e2ee7e89612bbe",
+      "original": {
+        "doffin_id": "2026-116581",
+        "doffin_url": "https://doffin.no/notices/2026-116581",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "17",
+        "status": "ACTIVE",
+        "case_number": "10263",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "2026-11-10 10:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "ELVIA AS",
+        "buyer_org_nr": "980489698",
+        "buyer_type": "spec-rights-entity",
+        "buyer_activity": "electricity",
+        "buyer_city": "HAMAR",
+        "buyer_postal_code": "2317",
+        "buyer_nuts": "NO020",
+        "contact_name": "Anna Vaag Bakke",
+        "contact_email": "anna.vaag.bakke@elvia.no",
+        "contact_phone": "+47 90784504",
+        "title": "Rammeavtale for levering av kurs- og kompetansetjenester",
+        "title_en": "Framework agreement for the provision of courses and competence services.",
+        "description": "Konkurransen gjelder anskaffelse av rammeavtale for kurs- og kompetansetjenester.\n\nOppdragsgiver er Elvia AS. Formålet med rammeavtalen er å sikre tilgang til et bredt utvalg av kurs og kompetanse til konkurransedyktige betingelser, med god kvalitet og tilgjengelighet. Avtalen er primært rettet mot produksjon og drift i Elvia. Avtalen skal bidra til å effektivisere anskaffelser av kurs og kompetanse.\n\nDenne rammeavtalen gjelder kurs gjennomført i leverandørens lokaler, hos kunden eller digitale kurs med kursholder.\n\nØvrige selskaper i Eidsiva Energi AS skal kunne knytte seg til Avtalen etter eget ønske og behov. Avtalen skal også kunne tiltransporteres øvrige selskaper i Eidsiva konsernet.\n\nAnskaffelsens nærmere innhold er beskrevet i avtalens vedlegg A – Leveringsomfang, vedlegg E – Kundens kravspesifikasjon og vedlegg 02 - Tilbudsmatrise.",
+        "contract_type": "Services",
+        "procedure": "Negotiated with prior publication",
+        "legislation": "",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Education and training services",
+        "cpv_main": "80590000",
+        "cpv_additional": "80560000 | 80511000",
+        "place_of_performance_nuts": "NO020 | NO084 | NO083 | NO081",
+        "currency": "NOK",
+        "estimated_value": "12500000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [
+          "80560000",
+          "80511000"
+        ],
+        "place_of_performance_nuts_list": [
+          "NO020",
+          "NO084",
+          "NO083",
+          "NO081"
+        ],
+        "buyer_name_list": [
+          "ELVIA AS"
+        ],
+        "buyer_city_list": [
+          "HAMAR"
+        ],
+        "buyer_nuts_list": [
+          "NO020"
+        ],
+        "cpv_all": [
+          "80590000",
+          "80560000",
+          "80511000"
+        ],
+        "tender_deadline": "2026-11-10T10:00:00",
+        "estimated_value_nok": 12500000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": null,
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "80"
+      }
+    },
+    {
+      "doffin_id": "2026-116587",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "3a86297675fe603e780ccc139524337c406ca6d18b87ac82181eecaa28245f9d",
+      "original": {
+        "doffin_id": "2026-116587",
+        "doffin_url": "https://doffin.no/notices/2026-116587",
+        "notice_type": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "30",
+        "status": "",
+        "case_number": "25/04910",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "2026-02-10",
+        "buyer_name": "AVINOR AS | AVINOR FLYSIKRING AS",
+        "buyer_org_nr": "985198292",
+        "buyer_type": "",
+        "buyer_activity": "airport",
+        "buyer_city": "Oslo | GARDERMOEN",
+        "buyer_postal_code": "0191 | 2061",
+        "buyer_nuts": "NO081",
+        "contact_name": "Simran Kaur",
+        "contact_email": "simran.kaur@avinor.no",
+        "contact_phone": "+47 815 30 550 | 99527564",
+        "title": "Avinor AS - T - 192844 - Anskaffelse - Rammeavtale for vedlikehold av radomer og stålmaster",
+        "title_en": "Avinor AS - T - 192844 - Procurement - Framework agreement for the maintenance of radomes and steel masts.",
+        "description": "Avinor AS og Avinor Flysikring AS skal inngå en rammeavtale for vedlikehold av radomer og stålmaster. Rammeavtalen omfatter 22 radomer og stålmaster plassert over hele landet.",
+        "contract_type": "Services",
+        "procedure": "Negotiated with prior publication",
+        "legislation": "",
+        "framework_agreement": "True",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Repair and maintenance services",
+        "cpv_main": "50100000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "anyw",
+        "currency": "NOK",
+        "estimated_value": "12000000.0",
+        "awarded_value": "12000000.0",
+        "received_tenders": "0",
+        "winner_name": "Eltel Networks",
+        "winner_org_nr": "912955915"
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "anyw"
+        ],
+        "buyer_name_list": [
+          "AVINOR AS",
+          "AVINOR FLYSIKRING AS"
+        ],
+        "buyer_city_list": [
+          "Oslo",
+          "GARDERMOEN"
+        ],
+        "buyer_nuts_list": [
+          "NO081"
+        ],
+        "cpv_all": [
+          "50100000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": 12000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": null,
+        "framework": true,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": true,
+        "cpv_division": "50"
+      }
+    },
+    {
+      "doffin_id": "2026-116600",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "f1843b848352c8f11755cbbf6a0603a7b0b761ec384c85822d415fa9966fcf43",
+      "original": {
+        "doffin_id": "2026-116600",
+        "doffin_url": "https://doffin.no/notices/2026-116600",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "26/33088",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "2026-11-27 11:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "NORDRE FOLLO KOMMUNE",
+        "buyer_org_nr": "922092648",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "SKI",
+        "buyer_postal_code": "1400",
+        "buyer_nuts": "NO084",
+        "contact_name": "Karl-Inge Olufsen",
+        "contact_email": "karl-inge.olufsen@nordrefollo.kommune.no",
+        "contact_phone": "02178",
+        "title": "Transport til og fra svømmeundervisning",
+        "title_en": "Transport to and from swimming lessons",
+        "description": "Nordre Follo kommune skal inngå tjenesteavtale om levering av transport til og fra svømmeundervisning.",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Transport services",
+        "cpv_main": "60140000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "NO084",
+        "currency": "NOK",
+        "estimated_value": "30000000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "NO084"
+        ],
+        "buyer_name_list": [
+          "NORDRE FOLLO KOMMUNE"
+        ],
+        "buyer_city_list": [
+          "SKI"
+        ],
+        "buyer_nuts_list": [
+          "NO084"
+        ],
+        "cpv_all": [
+          "60140000"
+        ],
+        "tender_deadline": "2026-11-27T11:00:00",
+        "estimated_value_nok": 30000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "60"
+      }
+    },
+    {
+      "doffin_id": "2026-116608",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "37ee57d378100c4f767cdeabf3cb18f9f51a0470ff1fcb1e39c18c14a79481a1",
+      "original": {
+        "doffin_id": "2026-116608",
+        "doffin_url": "https://doffin.no/notices/2026-116608",
+        "notice_type": "ANNOUNCEMENT_OF_INTENT",
+        "eforms_notice_form": "ContractAwardNotice",
+        "eforms_notice_subtype": "25",
+        "status": "",
+        "case_number": "cmvjfvhcj001008jmt2scng8j",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "",
+        "buyer_name": "Tingvoll kommune",
+        "buyer_org_nr": "964981515",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Tingvoll",
+        "buyer_postal_code": "6630",
+        "buyer_nuts": "NO0A3",
+        "contact_name": "Tingvoll kommune",
+        "contact_email": "ole.lie@tingvoll.kommune.no",
+        "contact_phone": "+47 909 71 817",
+        "title": "Fjernvarme Tingvoll kommune - kontraktsperiode",
+        "title_en": "District heating Tingvoll municipality - contract period",
+        "description": "Oppdragsgiver vurderer at den planlagte endringen utelukkende gjelder kontraktens varighet. Leveransens art, omfang og tilknytning til eksisterende infrastruktur videreføres uendret, og kontraktens grunnleggende karakter endres dermed ikke. Oppdragsgiver anser derfor at det foreligger grunnlag for å inngå avtale om forlenget kontraktsperiode uten å gjennomføre en ny konkurranse.\n\nOppdragsgiver vurderer at den planlagte forlengelsen ikke endrer kontraktens grunnleggende karakter, og at det foreligger grunnlag for å inngå avtale om forlenget kontraktsperiode uten gjennomføring av ny konkurranse.\n\nVed vurderingen er det også lagt vekt på at den opprinnelige kontrakten uttrykkelig åpner for at partene kan forhandle frem en avtale med lengre løpetid.",
+        "contract_type": "Supplies",
+        "procedure": "Negotiated without prior publication",
+        "legislation": "",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Petroleum products, fuel, electricity and energy",
+        "cpv_main": "09323000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "NO0A3",
+        "currency": "",
+        "estimated_value": "",
+        "awarded_value": "",
+        "received_tenders": "0",
+        "winner_name": "TINGVOLL FLIS OG VARME AS",
+        "winner_org_nr": "918300422"
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "NO0A3"
+        ],
+        "buyer_name_list": [
+          "Tingvoll kommune"
+        ],
+        "buyer_city_list": [
+          "Tingvoll"
+        ],
+        "buyer_nuts_list": [
+          "NO0A3"
+        ],
+        "cpv_all": [
+          "09323000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": null,
+        "estimated_value_status": "missing",
+        "legislation_normalised": null,
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "09"
+      }
+    },
+    {
+      "doffin_id": "2026-116619",
+      "mock": false,
+      "source": "doffin_export",
+      "version_hash": "38fefb6f56da1ab2fc2142bc70ec3b25c8b0910cf22c6715fbf91efc09aa95e0",
+      "original": {
+        "doffin_id": "2026-116619",
+        "doffin_url": "https://doffin.no/notices/2026-116619",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "ContractNotice",
+        "eforms_notice_subtype": "E3",
+        "status": "",
+        "case_number": "26/32",
+        "issue_date": "2026-10-23",
+        "publication_date": "2026-10-26",
+        "tender_deadline_utc": "2026-11-20 11:00:58",
+        "contract_signed_date": "",
+        "buyer_name": "Porsgrunn kommune",
+        "buyer_org_nr": "939991034",
+        "buyer_type": "ra",
+        "buyer_activity": "gen-pub",
+        "buyer_city": "Porsgrunn",
+        "buyer_postal_code": "3915",
+        "buyer_nuts": "",
+        "contact_name": "Gunnvor Svartdal",
+        "contact_email": "gunnvor.svartdal@porsgrunn.kommune.no",
+        "contact_phone": "+4735 54 70 00",
+        "title": "Vaskeri Frednes - ombygging",
+        "title_en": "",
+        "description": "Porsgrunn kommune skal på grunn av økte leveranser av vasketøy bygge om vaskeriet på Frednes. \nArbeidene som består i nytt lagerbygg (ca. 36 m2) på nordsiden av bygget samt flytting av div rom intert i arealet.\nTilbudet omfatter prosjektering og gjennomføring av ombyggingen i underetasjen på Frednes sykehjem. Det er søk rammetillatelse for tiltket .",
+        "contract_type": "Works",
+        "procedure": "Open",
+        "legislation": "https://lovdata.no/eli/forskrift/2016/8/12/974",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Construction work",
+        "cpv_main": "45000000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "NO094",
+        "currency": "NOK",
+        "estimated_value": "6000000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "NO094"
+        ],
+        "buyer_name_list": [
+          "Porsgrunn kommune"
+        ],
+        "buyer_city_list": [
+          "Porsgrunn"
+        ],
+        "buyer_nuts_list": [],
+        "cpv_all": [
+          "45000000"
+        ],
+        "tender_deadline": "2026-11-20T11:00:58",
+        "estimated_value_nok": 6000000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "45"
+      }
+    },
+    {
+      "doffin_id": "MOCK-0001",
+      "mock": true,
+      "source": "mock_notices (invented)",
+      "version_hash": "20fa81c9e64c8d45a8c3478c30d15f67d34d3afb5805e34ceb191fd5113da61c",
+      "original": {
+        "doffin_id": "MOCK-0001",
+        "doffin_url": "",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "competition",
+        "eforms_notice_subtype": "16",
+        "status": "",
+        "case_number": "",
+        "issue_date": "2026-10-20",
+        "publication_date": "2026-10-21",
+        "tender_deadline_utc": "2026-10-30 12:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "MOCK Oppdragsgiver (invented)",
+        "buyer_org_nr": "",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "",
+        "buyer_city": "MOCK",
+        "buyer_postal_code": "",
+        "buyer_nuts": "NO094",
+        "contact_name": "",
+        "contact_email": "",
+        "contact_phone": "",
+        "title": "MOCK — Rehabilitering av garderobeanlegg (oppfunnet kunngjøring)",
+        "title_en": "MOCK — Refurbishment of changing rooms (invented notice)",
+        "description": "OPPFUNNET KUNNGJØRING FOR PROTOTYPEN. Viser at en konkurranse med passert tilbudsfrist ikke screenes. Ikke en ekte konkurranse.",
+        "contract_type": "Works",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Construction work",
+        "cpv_main": "45453000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "NO094",
+        "currency": "NOK",
+        "estimated_value": "2500000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "NO094"
+        ],
+        "buyer_name_list": [
+          "MOCK Oppdragsgiver (invented)"
+        ],
+        "buyer_city_list": [
+          "MOCK"
+        ],
+        "buyer_nuts_list": [
+          "NO094"
+        ],
+        "cpv_all": [
+          "45453000"
+        ],
+        "tender_deadline": "2026-10-30T12:00:00",
+        "estimated_value_nok": 2500000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "45"
+      }
+    },
+    {
+      "doffin_id": "MOCK-0002",
+      "mock": true,
+      "source": "mock_notices (invented)",
+      "version_hash": "061b774405c54695064adf82db9724a00b29a28da6f63156cf206e3c30cbacf1",
+      "original": {
+        "doffin_id": "MOCK-0002",
+        "doffin_url": "",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "competition",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "",
+        "issue_date": "2026-10-20",
+        "publication_date": "2026-10-21",
+        "tender_deadline_utc": "2026-12-01 12:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "MOCK Oppdragsgiver (invented)",
+        "buyer_org_nr": "",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "",
+        "buyer_city": "MOCK",
+        "buyer_postal_code": "",
+        "buyer_nuts": "NO092",
+        "contact_name": "",
+        "contact_email": "",
+        "contact_phone": "",
+        "title": "MOCK — Spyling av avløpsledninger (oppfunnet kunngjøring)",
+        "title_en": "MOCK — Flushing of sewer pipes (invented notice)",
+        "description": "OPPFUNNET KUNNGJØRING FOR PROTOTYPEN. Konkurransedokumentene mangler, så kunngjøringen flagges for rådgivergjennomgang. Ikke en ekte konkurranse.",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Sewage, refuse, cleaning and environmental services",
+        "cpv_main": "90470000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "NO092",
+        "currency": "NOK",
+        "estimated_value": "1800000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "NO092"
+        ],
+        "buyer_name_list": [
+          "MOCK Oppdragsgiver (invented)"
+        ],
+        "buyer_city_list": [
+          "MOCK"
+        ],
+        "buyer_nuts_list": [
+          "NO092"
+        ],
+        "cpv_all": [
+          "90470000"
+        ],
+        "tender_deadline": "2026-12-01T12:00:00",
+        "estimated_value_nok": 1800000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "90"
+      }
+    },
+    {
+      "doffin_id": "MOCK-0003",
+      "mock": true,
+      "source": "mock_notices (invented)",
+      "version_hash": "9d18cec32e5519ec29ebe26a48903ce15033231de3cb5ef0e02b9ebd48b2ff90",
+      "original": {
+        "doffin_id": "MOCK-0003",
+        "doffin_url": "",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "competition",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "",
+        "issue_date": "2026-10-20",
+        "publication_date": "2026-10-21",
+        "tender_deadline_utc": "",
+        "contract_signed_date": "",
+        "buyer_name": "MOCK Oppdragsgiver (invented)",
+        "buyer_org_nr": "",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "",
+        "buyer_city": "MOCK",
+        "buyer_postal_code": "",
+        "buyer_nuts": "NO0A1",
+        "contact_name": "",
+        "contact_email": "",
+        "contact_phone": "",
+        "title": "MOCK — Prosjektering av vannledning (oppfunnet kunngjøring)",
+        "title_en": "MOCK — Design of a water main (invented notice)",
+        "description": "OPPFUNNET KUNNGJØRING FOR PROTOTYPEN. Tilbudsfristen mangler i kunngjøringen, så den flagges for rådgivergjennomgang. Ikke en ekte konkurranse.",
+        "contract_type": "Services",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "False",
+        "lot_count": "1",
+        "trade": "Architectural, engineering and inspection services",
+        "cpv_main": "71322000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "NO0A1",
+        "currency": "NOK",
+        "estimated_value": "900000.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "NO0A1"
+        ],
+        "buyer_name_list": [
+          "MOCK Oppdragsgiver (invented)"
+        ],
+        "buyer_city_list": [
+          "MOCK"
+        ],
+        "buyer_nuts_list": [
+          "NO0A1"
+        ],
+        "cpv_all": [
+          "71322000"
+        ],
+        "tender_deadline": null,
+        "estimated_value_nok": 900000.0,
+        "estimated_value_status": "present",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": false,
+        "lot_count_int": 1,
+        "place_anywhere": false,
+        "cpv_division": "71"
+      }
+    },
+    {
+      "doffin_id": "MOCK-0004",
+      "mock": true,
+      "source": "mock_notices (invented)",
+      "version_hash": "99e44049179f5d07c5ee20c2a39d7a155eba9aa235f7caae4ef0a471eb99213d",
+      "original": {
+        "doffin_id": "MOCK-0004",
+        "doffin_url": "",
+        "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+        "eforms_notice_form": "competition",
+        "eforms_notice_subtype": "16",
+        "status": "ACTIVE",
+        "case_number": "",
+        "issue_date": "2026-10-20",
+        "publication_date": "2026-10-21",
+        "tender_deadline_utc": "2026-12-04 12:00:00",
+        "contract_signed_date": "",
+        "buyer_name": "MOCK Oppdragsgiver (invented)",
+        "buyer_org_nr": "",
+        "buyer_type": "body-pl-la",
+        "buyer_activity": "",
+        "buyer_city": "MOCK",
+        "buyer_postal_code": "",
+        "buyer_nuts": "NO081",
+        "contact_name": "",
+        "contact_email": "",
+        "contact_phone": "",
+        "title": "MOCK — Dynamisk innkjøpsordning for kontorrekvisita (oppfunnet kunngjøring)",
+        "title_en": "MOCK — Dynamic purchasing system for office supplies (invented notice)",
+        "description": "OPPFUNNET KUNNGJØRING FOR PROTOTYPEN. Viser utførelsessted «anyw» (hele Norge), en dynamisk innkjøpsordning og estimert verdi 0 (ukjent). Ikke en ekte konkurranse.",
+        "contract_type": "Supplies",
+        "procedure": "Open",
+        "legislation": "Anskaffelsesforskriften",
+        "framework_agreement": "False",
+        "dynamic_purchasing_system": "True",
+        "lot_count": "1",
+        "trade": "Office and computing equipment",
+        "cpv_main": "30192000",
+        "cpv_additional": "",
+        "place_of_performance_nuts": "anyw",
+        "currency": "NOK",
+        "estimated_value": "0.0",
+        "awarded_value": "",
+        "received_tenders": "",
+        "winner_name": "",
+        "winner_org_nr": ""
+      },
+      "derived": {
+        "cpv_additional_list": [],
+        "place_of_performance_nuts_list": [
+          "anyw"
+        ],
+        "buyer_name_list": [
+          "MOCK Oppdragsgiver (invented)"
+        ],
+        "buyer_city_list": [
+          "MOCK"
+        ],
+        "buyer_nuts_list": [
+          "NO081"
+        ],
+        "cpv_all": [
+          "30192000"
+        ],
+        "tender_deadline": "2026-12-04T12:00:00",
+        "estimated_value_nok": null,
+        "estimated_value_status": "zero_treated_as_unknown",
+        "legislation_normalised": "Anskaffelsesforskriften",
+        "framework": false,
+        "dps": true,
+        "lot_count_int": 1,
+        "place_anywhere": true,
+        "cpv_division": "30"
+      }
+    }
+  ],
+  "export_file": "data/raw/doffin_notices_2026-10-26_25.csv"
+}

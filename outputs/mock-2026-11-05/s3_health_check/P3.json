@@ -1,0 +1,36 @@
+[
+  {
+    "field": "framework_dps",
+    "part": "DPS",
+    "kind": "declared_missing",
+    "label_en": "Framework agreements and DPS — DPS",
+    "label_nb": "Rammeavtaler og DPS — DPS",
+    "date": null
+  },
+  {
+    "field": "key_personnel_cvs",
+    "part": null,
+    "kind": "declared_missing",
+    "label_en": "Key personnel CVs",
+    "label_nb": "CV-er for nøkkelpersonell",
+    "date": null
+  },
+  {
+    "field": "environmental_certificate",
+    "part": null,
+    "kind": "expiring",
+    "label_en": "Environmental management certificate",
+    "label_nb": "Miljøsertifikat",
+    "date": "2026-11-30",
+    "days_left": 26
+  },
+  {
+    "field": "driver_competence_ysk",
+    "part": null,
+    "kind": "expiring",
+    "label_en": "Professional driver competence (YSK)",
+    "label_nb": "Yrkessjåførkompetanse (YSK)",
+    "date": "2026-12-15",
+    "days_left": 41
+  }
+]

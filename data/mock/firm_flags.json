@@ -1,0 +1,31 @@
+{
+  "_note": "Read-only EXAMPLES of the clarification desk (Service 3). Not live; the website shows the flag button disabled.",
+  "flags": [
+    {
+      "flag_id": "F-001",
+      "firm_id": "P1",
+      "notice_id": "2026-116619",
+      "req_key": "approval_design",
+      "raised_on": "2026-11-04",
+      "text_en": "We would use an external designer with design approval. Is the design requirement really 'not met'?",
+      "text_nb": "Vi ville brukt en ekstern prosjekterende med godkjenning. Er prosjekteringskravet virkelig «ikke oppfylt»?",
+      "status": "answered (example)",
+      "adviser_answer_en": "The requirement is on the bidder. Relying on a subcontractor's approval may be allowed; check the tender documents for 'støtte seg på andre virksomheter' and add the designer's approval and CV to your locker.",
+      "adviser_answer_nb": "Kravet gjelder leverandøren. Det kan være tillatt å støtte seg på en underleverandørs godkjenning; sjekk konkurransegrunnlaget og legg prosjekterendes godkjenning og CV inn i lockeren.",
+      "mock": true
+    },
+    {
+      "flag_id": "F-002",
+      "firm_id": "P3",
+      "notice_id": "2026-116568",
+      "req_key": "fleet",
+      "raised_on": "2026-11-04",
+      "text_en": "The checklist says 'lacks data' for vehicle capacity. The profile form has no field for our fleet — where can we record it?",
+      "text_nb": "Sjekklisten sier «mangler data» for kjøretøykapasitet. Profilskjemaet har ikke noe felt for bilparken vår — hvor kan vi registrere den?",
+      "status": "open (example)",
+      "adviser_answer_en": null,
+      "adviser_answer_nb": null,
+      "mock": true
+    }
+  ]
+}

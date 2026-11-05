@@ -1,0 +1,18 @@
+[
+  {
+    "field": "startbank_achilles",
+    "part": "StartBANK",
+    "kind": "expired",
+    "label_en": "StartBANK / Achilles — StartBANK",
+    "label_nb": "StartBANK / Achilles — StartBANK",
+    "date": "2026-09-30"
+  },
+  {
+    "field": "credit_rating",
+    "part": null,
+    "kind": "declared_missing",
+    "label_en": "Credit rating",
+    "label_nb": "Kredittvurdering",
+    "date": null
+  }
+]
