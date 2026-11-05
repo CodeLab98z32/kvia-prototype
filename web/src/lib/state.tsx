@@ -21,6 +21,7 @@ interface Ctx {
   setTheme: (t: Theme) => void;
   href: (path: string, params?: Record<string, string | undefined>) => string;
   localAdds: string[];
+  localReady: boolean;
   addLocal: (noticeId: string) => void;
   resetDemo: () => void;
 }
@@ -40,7 +41,9 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const urlLang = sp.get("lang");
   const [storedLang, setStoredLang] = useState<Lang>("en");
   const [theme, setThemeState] = useState<Theme>("system");
-  const [localAdds, setLocalAdds] = useState<string[]>([]);
+  const [local, setLocal] = useState<{ firm: string | null; adds: string[] }>({ firm: null, adds: [] });
+  const localAdds = local.firm === firm ? local.adds : [];
+  const localReady = local.firm === firm;
 
   useEffect(() => {
     const l = lsGet("kvia.lang");
@@ -49,7 +52,9 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     if (t === "light" || t === "dark") setThemeState(t);
   }, []);
   useEffect(() => {
-    try { setLocalAdds(JSON.parse(lsGet(LOCAL_ADDS_KEY(firm)) || "[]")); } catch { setLocalAdds([]); }
+    let adds: string[] = [];
+    try { adds = JSON.parse(lsGet(LOCAL_ADDS_KEY(firm)) || "[]"); } catch { adds = []; }
+    setLocal({ firm, adds: Array.isArray(adds) ? adds : [] });
   }, [firm]);
 
   const lang: Lang = urlLang === "nb" || urlLang === "en" ? urlLang : storedLang;
@@ -81,21 +86,20 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     return `${path}?${p.toString()}`;
   }, [firm, lang]);
   const addLocal = useCallback((nid: string) => {
-    setLocalAdds((prev) => {
-      const next = prev.includes(nid) ? prev : [...prev, nid];
-      lsSet(LOCAL_ADDS_KEY(firm), JSON.stringify(next));
-      return next;
-    });
-  }, [firm]);
+    const prev = local.firm === firm ? local.adds : [];
+    const next = prev.includes(nid) ? prev : [...prev, nid];
+    lsSet(LOCAL_ADDS_KEY(firm), JSON.stringify(next));
+    setLocal({ firm, adds: next });
+  }, [firm, local]);
   const resetDemo = useCallback(() => {
     try {
       Object.keys(localStorage).filter((k) => k.startsWith("kvia.manual.")).forEach((k) => localStorage.removeItem(k));
     } catch { /* ignore */ }
-    setLocalAdds([]);
-  }, []);
+    setLocal({ firm, adds: [] });
+  }, [firm]);
 
-  const value = useMemo(() => ({ firm, lang, theme, setFirm, setLang, setTheme, href, localAdds, addLocal, resetDemo }),
-    [firm, lang, theme, setFirm, setLang, setTheme, href, localAdds, addLocal, resetDemo]);
+  const value = useMemo(() => ({ firm, lang, theme, setFirm, setLang, setTheme, href, localAdds, localReady, addLocal, resetDemo }),
+    [firm, lang, theme, setFirm, setLang, setTheme, href, localAdds, localReady, addLocal, resetDemo]);
   return (
     <AppCtx.Provider value={value}>
       <NextIntlClientProvider locale={lang} messages={lang === "nb" ? nb : en} timeZone="Europe/Oslo">
@@ -134,15 +138,17 @@ export interface Model {
 
 /** Core data of the configured frozen run + the selected firm's results. */
 export function useModel(): Model | undefined {
-  const { firm, localAdds } = useApp();
+  const { firm, localAdds, localReady, setFirm } = useApp();
   const d = useJson<[IndexFile, RunInfo, Store, Record<string, Activeness>, { gate: Record<string, GateRecord>; effective_requirements: Record<string, import("./types").Requirement[]> }]>(
     ["index.json", "run/run_info.json", "run/notices.json", "run/0b_activeness.json", "run/1c_release_gate.json"]);
   const known = d ? d[0].profiles.some((p) => p.id === firm) : true;
+  // invalid ?as= value: fall back to the first profile instead of loading forever
+  useEffect(() => { if (d && !known && d[0].profiles[0]) setFirm(d[0].profiles[0].id); }, [d, known, setFirm]);
   const f = useJson<[Profile, Screening, Reports, HealthFlag[]]>(
     d && known ? [`profiles/${firm}.json`, `run/screening/${firm}.json`, `run/reports/${firm}.json`, `run/health/${firm}.json`]
       : [null]);
   return useMemo(() => {
-    if (!d || !f) return undefined;
+    if (!d || !f || !localReady) return undefined;
     const [index, run, store, act, gateFile] = d;
     const [profile, screening, reports, health] = f;
     const notices = Object.fromEntries(store.records.map((r) => [r.doffin_id, r]));
@@ -167,5 +173,5 @@ export function useModel(): Model | undefined {
     const pending = Object.values(gate).filter((g) => g.final_status === "flagged_pending").map((g) => g.notice_id);
     return { index, run, store, notices, act, gate, effective: gateFile.effective_requirements, profile, screening,
       reports, health, rank, status, visibility, pending };
-  }, [d, f, localAdds]);
+  }, [d, f, localAdds, localReady]);
 }

@@ -32,3 +32,13 @@ These override SPEC §8 where they differ.
 - Data & run (B6): run facts, the notice CSV (unaltered) and "Reset demo" only. Deviation from SPEC §8.2 B6 (sources, manifest, known limitations no longer on this page).
 - Adviser view moved to the end of the prototype navigation.
 - Calmer visual style: smaller corner radii, fewer filled boxes and charts, more white space.
+
+## Team decisions on the website — round 2 (2026-11-05, "Nordic Precision" redesign brief)
+
+These supersede round 1 where they differ.
+
+- Overview (A1) shows three compact statistics and the firm's top matches again (round 1 had moved key figures to A4).
+- Data & run (B6) is a provenance page again: run facts, sources with checksums, manifest, limitations, notice CSV,
+  and Reset demo in a separate utility area (round 1 had reduced it to run facts + CSV).
+- Prototype navigation order: Internal logic, Prompts & I/O, Adviser view, Test cases, Test log, Data & run.
+- Frame and tables follow the two reference images supplied with the brief; details in `docs/redesign_report.md`.

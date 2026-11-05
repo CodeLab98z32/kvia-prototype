@@ -1,294 +1,280 @@
 "use client";
-import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import {
-  AlertTriangle, ArrowLeft, Ban, CheckCircle2, Clock, FileWarning, Flag, Info, Loader2, Lock, Quote, ShieldCheck,
-} from "lucide-react";
+import { CheckCircle2, ChevronDown, FileText, Flag, Loader2, Lock, Quote, ShieldCheck } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { CreateReportButton } from "@/components/notice/CreateReportButton";
+import { DocReader } from "@/components/pdf/DocReader";
 import { PdfViewer } from "@/components/pdf/PdfViewer";
-import { Button, Card, CardHeader, Disclosure, JsonView, LinkButton, Loading, Tabs } from "@/components/ui/ui";
-import {
-  Chip, ConfidenceChip, ExpiringChip, FitBar, FlagChip, IndicationChip, MatchChip, MockChip, ReadinessChip, RouteChip,
-} from "@/components/ui/chips";
+import { BackLink, Button, Disclosure, EmptyState, JsonView, LinkButton, Loading, StatStrip, Tabs } from "@/components/ui/ui";
+import { Chip, ConfidenceChip, ExpiringChip, FlagChip, IndicationChip, MatchChip, MockChip, ReadinessChip, indicationTone } from "@/components/ui/chips";
 import { docUrl } from "@/lib/data";
 import { cn, daysLeft, fmtDate, nok } from "@/lib/format";
 import { buyer, shownLots, title } from "@/lib/reports";
 import { useApp, useL, useModel, type Model } from "@/lib/state";
-import type { Indication, Report, ReportLot, ReportRow } from "@/lib/types";
+import type { Report, ReportLot, ReportRow } from "@/lib/types";
+import { useQueryState } from "@/lib/url-state";
+import { useMedia } from "@/lib/use-media";
 
-const BANNER: Record<Indication, { cls: string; icon: React.ReactNode }> = {
-  go: { cls: "border-go/40 bg-go-soft text-go", icon: <CheckCircle2 className="h-7 w-7" aria-hidden /> },
-  borderline: { cls: "border-warn/40 bg-warn-soft text-warn", icon: <AlertTriangle className="h-7 w-7" aria-hidden /> },
-  "no-go": { cls: "border-nogo/40 bg-nogo-soft text-nogo", icon: <Ban className="h-7 w-7" aria-hidden /> },
-};
+const BAR = { go: "bg-go", warn: "bg-warn", nogo: "bg-nogo", flag: "bg-flag", accent: "bg-accent", info: "bg-info", proto: "bg-proto", muted: "bg-muted" } as const;
 
 function Processing({ onDone }: { onDone: () => void }) {
   const t = useTranslations();
   const [step, setStep] = useState(0);
   useEffect(() => {
-    const ids = [setTimeout(() => setStep(1), 450), setTimeout(() => setStep(2), 900), setTimeout(onDone, 1450)];
+    const ids = [setTimeout(() => setStep(1), 400), setTimeout(() => setStep(2), 800), setTimeout(onDone, 1300)];
     return () => ids.forEach(clearTimeout);
   }, [onDone]);
   return (
-    <Card className="p-8">
-      <div className="mx-auto max-w-md text-center">
-        <Loader2 className="mx-auto h-8 w-8 animate-spin text-accent" aria-hidden />
-        <h2 className="mt-3 text-lg font-semibold">{t("report.processing")}</h2>
-        <div className="mt-4 h-2 overflow-hidden rounded-full bg-surface-2"><div className="h-full animate-progress rounded-full bg-accent" /></div>
-        <ol className="mt-4 space-y-1 text-left text-sm">
-          {[0, 1, 2].map((i) => <li key={i} className={cn("flex items-center gap-2", i <= step ? "text-fg" : "text-muted")}>{i < step ? <CheckCircle2 className="h-4 w-4 text-go" aria-hidden /> : <span className="h-4 w-4 rounded-full border border-border" />}{t(`report.proc${i}`)}</li>)}
-        </ol>
-        <p className="mt-4 text-xs text-muted">{t("report.procNote")}</p>
-      </div>
-    </Card>
+    <div className="mx-auto max-w-md rounded-xl border border-border p-8 text-center" aria-live="polite">
+      <Loader2 className="mx-auto h-6 w-6 animate-spin text-accent" aria-hidden />
+      <h2 className="mt-3 text-[16px] font-semibold">{t("report.processing")}</h2>
+      <div className="mt-4 h-1 overflow-hidden rounded-full bg-surface-2"><div className="anim-progress h-full rounded-full bg-accent" /></div>
+      <ol className="mt-4 space-y-1.5 text-left text-[13px]">
+        {[0, 1, 2].map((i) => <li key={i} className={cn("flex items-center gap-2", i <= step ? "text-fg" : "text-muted")}>{i < step ? <CheckCircle2 className="h-4 w-4 text-go" aria-hidden /> : <span className="h-4 w-4 rounded-full border border-border" />}{t(`report.proc${i}`)}</li>)}
+      </ol>
+      <p className="mt-4 text-meta text-muted">{t("report.procNote")}</p>
+    </div>
   );
 }
 
-function reasonText(t: ReturnType<typeof useTranslations>, code: string) {
-  return t(`indicationReason.${code}`);
-}
-
-function Banner({ lot, onPick }: { lot: ReportLot; onPick: (req: string) => void }) {
+function Summary({ lot, onPick }: { lot: ReportLot; onPick: (req: string) => void }) {
   const t = useTranslations();
-  const b = BANNER[lot.indication];
+  const tone = indicationTone(lot.indication);
   const groups = new Map<string, string[]>();
   lot.indication_reasons.forEach((r) => groups.set(r.code, [...(groups.get(r.code) ?? []), ...(r.req_id ? [r.req_id] : [])]));
   return (
-    <div className={cn("rounded-xl border p-5", b.cls)} role="status">
-      <div className="flex flex-wrap items-center gap-3">
-        {b.icon}
-        <div>
-          <div className="text-xs font-semibold uppercase tracking-wider opacity-80">{t("report.indication")}</div>
-          <div className="text-2xl font-extrabold">{t(`indication.${lot.indication}`)}</div>
-        </div>
-        <div className="ml-auto text-xs font-medium opacity-90">{t("report.computedByCode")}</div>
+    <section className="relative overflow-hidden rounded-xl border border-border bg-surface p-5 pl-6" aria-label={t("report.indication")}>
+      <span className={cn("absolute inset-y-0 left-0 w-1", BAR[tone])} aria-hidden />
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <div className="text-meta font-medium text-muted">{t("report.indication")}</div>
+        <IndicationChip v={lot.indication} large />
+        <div className="text-meta text-muted sm:ml-auto">{t("report.computedByCode")}</div>
       </div>
-      <ul className="mt-3 space-y-1 text-sm text-fg">
+      <ul className="mt-3 space-y-1.5 text-[14px]">
         {[...groups.entries()].map(([code, ids]) => (
           <li key={code} className="flex flex-wrap items-center gap-1.5">
-            <span>• {reasonText(t, code)}</span>
-            {ids.map((id) => <button key={id} onClick={() => onPick(id)} className="rounded border border-current/30 bg-surface px-1.5 text-xs font-semibold hover:underline">{id}</button>)}
+            <span>{t(`indicationReason.${code}`)}</span>
+            {ids.map((id) => <button key={id} type="button" onClick={() => onPick(id)} className="t-fast tnum rounded-md border border-border px-1.5 text-meta font-semibold hover:border-accent hover:text-accent">{id}</button>)}
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
-function LockerCell({ row }: { row: ReportRow }) {
-  const t = useTranslations();
-  const L = useL();
-  if (!row.locker_snapshot.length) return <span className="text-xs text-flag">{t("report.noField")}</span>;
-  const s = row.locker_snapshot[0];
-  return (
-    <div className="text-xs">
-      <div className="font-semibold text-fg">{row.locker_snapshot.map((x) => L(x, "label")).join(", ")}</div>
-      <div className="text-muted">{s.proof_status_original}{s.expiry_original && s.expiry_original !== "–" ? ` · ${t("report.expiry")}: ${s.expiry_original}` : ""}</div>
-    </div>
-  );
-}
-
-function RowDetail({ m, report, row }: { m: Model; report: Report; row: ReportRow }) {
+function RowDetail({ m, report, row, onShow, docAvailable }: { m: Model; report: Report; row: ReportRow; onShow: () => void; docAvailable: boolean }) {
   const t = useTranslations();
   const L = useL();
   const flags = m.run.firm_flags.filter((f) => f.firm_id === report.firm_id && f.notice_id === report.notice_id && f.req_key === row.template_key);
   return (
-    <div className="space-y-3 border-t border-border bg-surface-2/50 p-4 text-sm">
-      <div className="grid gap-3 md:grid-cols-2">
-        <div><div className="text-xs font-semibold text-muted">{t("report.why")}</div><p>{L(row, "reason")}</p>
-          <p className="mt-1 text-xs text-muted">{t("common.confidence")}: {L(row, "confidence_reason")}</p></div>
-        <div><div className="text-xs font-semibold text-muted">{t("report.readinessRule")}</div>
-          <p>{t(`readinessText.${row.readiness}`)}{row.valid_until ? ` ${t("report.validUntil", { d: row.valid_until })}` : ""}</p>
-          {row.expiring_soon && <p className="mt-1 text-xs text-warn">{t("report.expiringText")}</p>}</div>
+    <div className="anim-dropdown space-y-5 border-t border-border bg-surface-2/40 px-4 py-5 text-[13.5px] sm:px-5">
+      <div className="grid gap-5 md:grid-cols-2">
+        <div><div className="text-meta font-medium text-muted">{t("report.why")}</div><p className="mt-1">{L(row, "reason")}</p>
+          <p className="mt-1 text-meta text-muted">{t("common.confidence")}: {L(row, "confidence_reason")}</p></div>
+        <div><div className="text-meta font-medium text-muted">{t("report.readinessRule")}</div>
+          <p className="mt-1">{t(`readinessText.${row.readiness}`)}{row.valid_until ? ` ${t("report.validUntil", { d: row.valid_until })}` : ""}</p>
+          {row.expiring_soon && <p className="mt-1 text-meta text-warn">{t("report.expiringText")}</p>}</div>
       </div>
       {row.source && (
-        <blockquote className="rounded-lg border-l-4 border-accent bg-surface p-3">
-          <div className="mb-1 flex items-center gap-1.5 text-xs text-muted"><Quote className="h-3.5 w-3.5" aria-hidden />{row.source.document} · {t("pdf.page")} {row.source.page_start}{!row.highlighted && ` · ${t("report.notHighlighted")}`}</div>
-          <p className="italic">“{row.source.cited_text}”</p>
-        </blockquote>
+        <figure className="rounded-lg border border-border bg-surface p-4">
+          <figcaption className="mb-1.5 flex flex-wrap items-center gap-x-2 text-meta text-muted"><Quote className="h-3.5 w-3.5" aria-hidden />{row.source.document} · {t("pdf.page")} {row.source.page_start}{!row.highlighted && ` · ${t("report.notHighlighted")}`}</figcaption>
+          <blockquote className="italic">“{row.source.cited_text}”</blockquote>
+          {docAvailable && <Button size="sm" className="mt-3" onClick={onShow}><FileText className="h-3.5 w-3.5" aria-hidden />{t("report.showInDocument")}</Button>}
+        </figure>
       )}
-      {row.locker_snapshot.map((s) => (
-        <div key={s.id} className="rounded-lg bg-surface p-3 text-xs">
-          <div className="font-semibold">{L(s, "label")} <span className="font-normal text-muted">({s.id})</span></div>
-          <div className="mt-1">{s.value}</div>
-          <div className="mt-1 text-muted">{t("company.proof")}: {s.proof_status_original} · {t("company.updated")}: {s.last_updated} · {t("report.expiry")}: {s.expiry_original}</div>
-        </div>
-      ))}
-      <div className="flex flex-wrap items-center gap-2">
+      <div>
+        <div className="mb-1.5 text-meta font-medium text-muted">{t("report.lockerConnection")}</div>
+        {row.locker_snapshot.length === 0 ? <p className="text-flag">{t("report.noField")}</p> : row.locker_snapshot.map((s) => (
+          <div key={s.id} className="border-t border-border py-2 first:border-0 first:pt-0">
+            <div className="font-medium">{L(s, "label")} <span className="font-mono text-meta font-normal text-muted">{s.id}</span></div>
+            <div className="mt-0.5">{s.value}</div>
+            <div className="mt-0.5 text-meta text-muted">{t("company.proof")}: {s.proof_status_original} · {t("company.updated")} {s.last_updated} · {t("report.expiry")}: {s.expiry_original}</div>
+          </div>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-3">
         {row.adviser_corrected && <Chip tone="info" icon={<ShieldCheck className="h-3.5 w-3.5" aria-hidden />}>{t("report.adviserCorrected")}</Chip>}
-        <Button disabled title={t("report.flagDisabled")}><Flag className="h-4 w-4" aria-hidden />{t("report.flag")}</Button>
-        <span className="text-xs text-muted">{t("report.flagDisabled")}</span>
+        <Button size="sm" disabled title={t("report.flagDisabled")}><Flag className="h-3.5 w-3.5" aria-hidden />{t("report.flag")}</Button>
+        <span className="text-meta text-muted">{t("report.flagDisabled")}</span>
       </div>
       {flags.map((f) => (
-        <div key={f.flag_id} className="rounded-lg border border-flag/30 bg-flag-soft p-3 text-xs">
-          <div className="mb-1 flex items-center gap-2 font-semibold text-flag"><Flag className="h-3.5 w-3.5" aria-hidden />{t("report.flagExample")} {f.flag_id} · {f.status}</div>
-          <p className="text-fg">“{L(f, "text")}”</p>
-          {f.adviser_answer_en && <p className="mt-1 text-fg"><b>{t("report.adviserAnswer")}:</b> {L(f, "adviser_answer")}</p>}
+        <div key={f.flag_id} className="rounded-lg border border-flag/30 bg-flag-soft/50 p-3 text-[13px]">
+          <div className="mb-1 font-medium text-flag">{t("report.flagExample")} {f.flag_id} · {f.status}</div>
+          <p>“{L(f, "text")}”</p>
+          {f.adviser_answer_en && <p className="mt-1"><span className="font-medium">{t("report.adviserAnswer")}:</span> {L(f, "adviser_answer")}</p>}
         </div>
       ))}
     </div>
   );
 }
 
-function Checklist({ m, report, lot, active, setActive }: { m: Model; report: Report; lot: ReportLot; active: string | null; setActive: (id: string) => void }) {
+function Checklist({ m, report, lot, active, toggle, show, docAvailable }: { m: Model; report: Report; lot: ReportLot; active: string; toggle: (id: string) => void; show: (row: ReportRow) => void; docAvailable: boolean }) {
   const t = useTranslations();
   const L = useL();
   return (
-    <ol className="divide-y divide-border">
-      {lot.rows.map((row) => {
-        const isActive = active === row.req_id;
-        return (
-          <li key={row.req_id} id={`req-${row.req_id}`} className={cn(isActive && "bg-accent-soft/30")}>
-            <button onClick={() => setActive(row.req_id)} aria-expanded={isActive} className="block w-full px-4 py-3 text-left hover:bg-surface-2/60">
-              <div className="min-w-0">
-                <div className="flex flex-wrap items-center gap-1.5 text-xs text-muted">
-                  <b className="text-fg">{row.req_id}</b>
-                  <Chip>{t(`category.${row.category}`)}</Chip>
-                  {row.mandatory ? <Chip tone="accent">{t("report.mandatory")}</Chip> : <Chip>{t("report.optional")}</Chip>}
-                  {row.lot_id && <Chip tone="info">{t("report.lot")} {row.lot_id}</Chip>}
-                  <span>· {t("pdf.page")} {row.source?.page_start}</span>
-                </div>
-                <div className="mt-1 font-medium">{L(row, "text_summary")}</div>
-                <div className="mt-1.5"><LockerCell row={row} /></div>
-              </div>
-              <div className="mt-2 flex flex-wrap items-center gap-1.5">
-                <MatchChip v={row.match_status} /><ConfidenceChip v={row.match_confidence} />
-                <ReadinessChip v={row.readiness} />
-                {row.expiring_soon && <ExpiringChip date={row.valid_until} />}
-              </div>
-            </button>
-            {isActive && <RowDetail m={m} report={report} row={row} />}
-          </li>
-        );
-      })}
-    </ol>
+    <div className="overflow-hidden rounded-xl border border-border bg-surface">
+      <ol>
+        {lot.rows.map((row) => {
+          const open = active === row.req_id;
+          const lockerLabel = row.locker_snapshot.length ? row.locker_snapshot.map((x) => L(x, "label")).join(", ") : t("report.noField");
+          return (
+            <li key={row.req_id} id={`req-${row.req_id}`} className="scroll-mt-20 border-t border-border first:border-0">
+              <button type="button" onClick={() => toggle(row.req_id)} aria-expanded={open}
+                className={cn("t-fast grid w-full grid-cols-[minmax(0,1fr)_16px] items-start gap-x-3 gap-y-2.5 px-4 py-4 text-left", open ? "bg-accent-soft/40" : "hover:bg-surface-2/50")}>
+                <span className="min-w-0">
+                  <span className="flex flex-wrap items-center gap-x-2 text-meta text-muted">
+                    <b className="tnum text-fg">{row.req_id}</b><span>{t(`category.${row.category}`)}</span><span>·</span>
+                    <span className={row.mandatory ? "text-fg" : ""}>{row.mandatory ? t("report.mandatory") : t("report.optional")}</span>
+                    {row.lot_id && <><span>·</span><span>{t("report.lot")} {row.lot_id}</span></>}<span>·</span><span>{t("pdf.page")} {row.source?.page_start}</span>
+                  </span>
+                  <span className="mt-1 block text-[14px] font-medium">{L(row, "text_summary")}</span>
+                  <span className={cn("mt-0.5 block text-meta", row.locker_snapshot.length ? "text-muted" : "text-flag")}>{t("report.lockerShort")}: {lockerLabel}</span>
+                </span>
+                <ChevronDown className={cn("mt-1 h-4 w-4 text-muted transition-transform duration-150", open && "rotate-180")} aria-hidden />
+                <span className="col-span-2 flex flex-wrap items-center gap-x-5 gap-y-1.5">
+                  <span><MatchChip v={row.match_status} /></span>
+                  <span><ConfidenceChip v={row.match_confidence} /></span>
+                  <span className="flex flex-wrap items-center gap-2"><ReadinessChip v={row.readiness} />{row.expiring_soon && <ExpiringChip date={row.valid_until} />}</span>
+                </span>
+              </button>
+              {open && <RowDetail m={m} report={report} row={row} onShow={() => show(row)} docAvailable={docAvailable} />}
+            </li>
+          );
+        })}
+      </ol>
+    </div>
   );
 }
 
+/** A4 detail — the flagship: indication, readiness, checklist, missing documents, linked document, technical details. */
 export function ReportPage({ id }: { id: string }) {
   const t = useTranslations();
   const m = useModel();
   const { href, lang, localAdds } = useApp();
   const L = useL();
-  const sp = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
-  const added = sp.get("added");
-  const [processing, setProcessing] = useState(!!added);
+  const [added, setAdded] = useQueryState("added");
+  const [lotParam, setLot] = useQueryState("lot");
+  const [active, setActive] = useQueryState("req");
   const [page, setPage] = useState(1);
-  const setParam = (k: string, v: string | null) => {
-    const p = new URLSearchParams(sp.toString());
-    if (v) p.set(k, v); else p.delete(k);
-    p.delete("added");
-    router.replace(`${pathname}?${p.toString()}`, { scroll: false });
-  };
+  const [reader, setReader] = useState(false);
+  const desktop = useMedia("(min-width: 1280px)");
   const report = m?.reports.reports[id];
   const lots = useMemo(() => (report && m ? (m.visibility(id) === "forwarded" ? shownLots(report) : report.lots) : []), [report, m, id]);
-  const lotId = sp.get("lot") ?? lots[0]?.lot_id ?? null;
-  const lot = lots.find((l) => l.lot_id === lotId) ?? lots[0];
-  const active = sp.get("req");
+  const lot = lots.find((l) => l.lot_id === lotParam) ?? lots[0];
   const activeRow = lot?.rows.find((r) => r.req_id === active);
   useEffect(() => { if (activeRow?.source) setPage(activeRow.source.page_start); }, [activeRow]);
-  useEffect(() => { if (active) document.getElementById(`req-${active}`)?.scrollIntoView({ block: "nearest" }); }, [active]);
 
   if (!m) return <Loading />;
   const rec = m.notices[id];
+  if (!rec) return <EmptyState title={t("common.notFoundTitle")} text={t("common.notFound")} />;
   const vis = m.visibility(id);
-  const back = <Link href={href("/reports")} className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"><ArrowLeft className="h-4 w-4" aria-hidden />{t("reports.title")}</Link>;
   const head = (
-    <div className="flex flex-wrap items-start justify-between gap-4">
-      <div className="min-w-0 max-w-3xl">
-        <div className="flex flex-wrap items-center gap-2 text-sm text-muted"><span className="tnum">{id}</span>{rec?.mock && <MockChip />}<span>· {buyer(m, id)}</span></div>
-        <h1 className="mt-1 text-2xl font-bold tracking-tight">{title(m, id, lang)}</h1>
+    <header className="mb-8">
+      <div className="mb-4"><BackLink href={href("/reports")}>{t("reports.title")}</BackLink></div>
+      <div className="flex flex-wrap items-center gap-x-2 text-meta text-muted"><span className="tnum">{id}</span><span>·</span><span>{buyer(m, id)}</span>{rec.mock && <MockChip />}</div>
+      <div className="mt-2 flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
+        <h1 className="min-w-0 max-w-3xl text-[24px] font-semibold leading-tight tracking-[-0.015em] sm:text-title">{title(m, id, lang)}</h1>
+        <LinkButton href={href(`/notices/${id}`)}>{t("screening.openNotice")}</LinkButton>
       </div>
-      <LinkButton href={href(`/notices/${id}`)}>{t("screening.openNotice")}</LinkButton>
-    </div>
+    </header>
   );
-  if (vis === "pending") {
-    return <div className="space-y-4">{back}{head}<Card className="p-6"><FlagChip /><p className="mt-3">{t("report.pendingText")}</p>
-      <LinkButton className="mt-3" href={href("/prototype/adviser", { notice: id })}>{t("notice.toAdviser")}</LinkButton></Card></div>;
-  }
-  if (vis === "not_screened" || !report) {
-    return <div className="space-y-4">{back}{head}<Card className="p-6"><p>{t("notice.notScreened")}</p><p className="mt-1 text-sm text-muted">{L(m.act[id], "reason")}</p></Card></div>;
-  }
-  if (vis === "hidden") {
-    return <div className="space-y-4">{back}{head}<Card className="p-6"><p className="font-medium">{t("report.hiddenTitle")}</p>
-      <p className="mt-1 text-sm text-muted">{t("report.hiddenText", { fit: report.fit_score ?? "—", th: m.screening.threshold })}</p>
-      <CreateReportButton className="mt-4" noticeId={id} via="notice_browser" /></Card></div>;
-  }
-  if (processing && localAdds.includes(id)) return <div className="space-y-4">{back}{head}<Processing onDone={() => { setProcessing(false); setParam("added", null); }} /></div>;
+  if (vis === "pending") return <div className="anim-page">{head}<div className="rounded-xl border border-border p-6"><FlagChip /><p className="mt-3 text-body">{t("report.pendingText")}</p><LinkButton className="mt-4" href={href("/prototype/adviser", { notice: id })}>{t("notice.toAdviser")}</LinkButton></div></div>;
+  if (vis === "not_screened" || !report) return <div className="anim-page">{head}<EmptyState title={t("notice.notScreened")} text={L(m.act[id], "reason")} /></div>;
+  if (vis === "hidden") return <div className="anim-page">{head}<EmptyState title={t("report.hiddenTitle")} text={t("report.hiddenText", { fit: report.fit_score ?? "—", th: m.screening.threshold })} action={<CreateReportButton noticeId={id} via="notice_browser" />} /></div>;
+  if (added && localAdds.includes(id)) return <div className="anim-page">{head}<Processing onDone={() => setAdded(null)} /></div>;
   if (!lot) return <Loading />;
-  const sr = m.rank[id];
+
   const dl = daysLeft(report.deadline);
-  const notRelevant = report.state === "forwarded" ? report.lots.filter((l) => !l.relevant && lots.length < report.lots.length) : [];
+  const notRelevant = vis === "forwarded" ? report.lots.filter((l) => !l.relevant && lots.length < report.lots.length) : [];
   const docs = m.index.docs[id];
   const missingRows = lot.rows.filter((r) => lot.missing_documents.includes(r.req_id));
+  const n = (s: string) => lot.rows.filter((r) => r.match_status === s).length;
+  const highlights = lot.rows.filter((r) => r.highlight).map((r) => ({ id: r.req_id, page: r.highlight!.page, rects: r.highlight!.rects, label: L(r, "text_summary") }));
+  const toggle = (rid: string) => setActive(active === rid ? null : rid, "push");
+  const pick = (rid: string) => { setActive(rid, "push"); setTimeout(() => document.getElementById(`req-${rid}`)?.scrollIntoView({ block: "start", behavior: "smooth" }), 50); };
+  const show = (row: ReportRow) => { setActive(row.req_id); if (row.source) setPage(row.source.page_start); if (!desktop) setReader(true); };
   const stateLabel = vis === "forwarded" ? t("report.stateForwarded") : vis === "manual_recorded" ? t("report.stateManualRecorded") : t("report.stateManualLocal");
 
   return (
-    <div className="animate-fadein space-y-5">
-      {back}
+    <div className="anim-page">
       {head}
-      <div className="flex flex-wrap items-center gap-2 text-sm">
+      <div className="-mt-4 mb-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-muted">
         <Chip tone={vis === "forwarded" ? "accent" : "proto"}>{stateLabel}</Chip>
-        <RouteChip v={report.route} /><ConfidenceChip v={report.confidence} prefix />
-        <span className="w-40"><FitBar value={report.fit_score} threshold={m.screening.threshold} compact /></span>
-        <span className="inline-flex items-center gap-1 text-muted"><Clock className="h-4 w-4" aria-hidden />{t("notices.col.deadline")}: {fmtDate(report.deadline, lang, true)}{dl !== null ? ` · ${t("common.daysLeft", { n: dl })}` : ""}</span>
-        <span className="text-muted">· {t("notices.col.value")}: {rec.derived.estimated_value_nok === null ? t("common.unknown") : nok(rec.derived.estimated_value_nok, lang)}</span>
+        <span>{t("screening.fit")} <b className="tnum text-fg">{report.fit_score}</b></span>
+        <ConfidenceChip v={report.confidence} prefix />
+        <span className="tnum">{t("notices.col.deadline")} <b className="text-fg">{fmtDate(report.deadline, lang, true)}</b>{dl !== null ? ` · ${t("common.daysLeft", { n: dl })}` : ""}</span>
+        <span>{t("notices.col.value")} <b className="tnum text-fg">{rec.derived.estimated_value_nok === null ? t("common.unknown") : nok(rec.derived.estimated_value_nok, lang)}</b></span>
       </div>
-      {report.manual_addition && vis === "manual_recorded" && <p className="text-sm text-muted">{L(report.manual_addition, "note")}</p>}
+      {report.manual_addition && vis === "manual_recorded" && <p className="-mt-4 mb-8 text-[13px] text-muted">{L(report.manual_addition, "note")}</p>}
 
-      {lots.length > 1 || notRelevant.length ? (
-        <div className="flex flex-wrap items-center gap-3">
-          {lots.length > 1 && <Tabs tabs={lots.map((l) => ({ id: l.lot_id ?? "-", label: <span className="flex items-center gap-1.5">{t("report.lot")} {l.lot_id}<IndicationChip v={l.indication} /></span> }))} value={lot.lot_id ?? "-"} onChange={(v) => setParam("lot", v)} />}
-          {lots.length === 1 && <Chip tone="info">{t("report.lot")} {lot.lot_id}</Chip>}
-          {notRelevant.map((l) => <span key={l.lot_id} className="text-sm text-muted">{t("report.lotNotRelevant", { lot: l.lot_id ?? "", fit: l.fit_score ?? "—" })}</span>)}
+      {(lots.length > 1 || notRelevant.length > 0) && (
+        <div className="mb-6">
+          {lots.length > 1 && <Tabs value={lot.lot_id ?? ""} onChange={(v) => setLot(v, "push")} tabs={lots.map((l) => ({ id: l.lot_id ?? "", label: <>{t("report.lot")} {l.lot_id}<IndicationChip v={l.indication} /></> }))} />}
+          {lots.length === 1 && <div className="text-[14px] font-medium">{t("report.lot")} {lot.lot_id}</div>}
+          {notRelevant.map((l) => <p key={l.lot_id} className="mt-1 text-meta text-muted">{t("report.lotNotRelevant", { lot: l.lot_id ?? "", fit: l.fit_score ?? "—" })}</p>)}
         </div>
-      ) : null}
+      )}
 
-      <Banner lot={lot} onPick={(r) => setParam("req", r)} />
+      <div className="space-y-6">
+        <Summary lot={lot} onPick={pick} />
+        <StatStrip items={[
+          { label: t("report.kRequirements"), value: lot.rows.length },
+          { label: t("match.met"), value: n("met"), tone: n("met") ? "go" : undefined },
+          { label: t("report.kPartlyNot"), value: n("partly_met") + n("not_met"), tone: n("not_met") ? "nogo" : n("partly_met") ? "warn" : undefined },
+          { label: t("match.lacks_data"), value: n("lacks_data"), tone: n("lacks_data") ? "flag" : undefined },
+          { label: t("report.missingDocs"), value: missingRows.length, tone: missingRows.length ? "warn" : undefined },
+        ]} />
+      </div>
 
-      <div className="grid gap-5 [&>*]:min-w-0 xl:grid-cols-[1.25fr_1fr]">
-        <Card className="min-w-0">
-          <CardHeader title={t("report.checklist")} sub={t("report.checklistSub", { n: lot.rows.length })} />
-          <Checklist m={m} report={report} lot={lot} active={active} setActive={(r) => setParam("req", active === r ? null : r)} />
-        </Card>
-        <div className="space-y-5 xl:sticky xl:top-4 xl:self-start">
-          {docs && (
-            <div className="h-[440px] sm:h-[560px]">
-              <PdfViewer url={docUrl(id, docs.files[0])} title={`${docs.files[0]}${docs.source === "placeholder" ? " (MOCK)" : ""}`} page={page} onPageChange={setPage}
-                activeId={active} onSelect={(r) => setParam("req", r)}
-                highlights={lot.rows.filter((r) => r.highlight).map((r) => ({ id: r.req_id, page: r.highlight!.page, rects: r.highlight!.rects, label: L(r, "text_summary") }))} />
+      <div className="mt-10 grid gap-6 [&>*]:min-w-0 xl:grid-cols-[minmax(0,1.3fr)_minmax(0,0.9fr)]">
+        <div className="space-y-8">
+          <section>
+            <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
+              <h2 className="text-section font-semibold">{t("report.checklist")}</h2>
+              <span className="text-meta text-muted">{t("report.checklistSub", { n: lot.rows.length })}</span>
             </div>
-          )}
-          <Card>
-            <CardHeader title={t("report.missingDocs")} icon={<FileWarning className="h-5 w-5" />} sub={t("report.missingDocsSub")} />
-            <ul className="divide-y divide-border">
-              {missingRows.length === 0 && <li className="px-5 py-3 text-sm text-muted">{t("report.noMissing")}</li>}
-              {missingRows.map((r) => (
-                <li key={r.req_id}><button onClick={() => setParam("req", r.req_id)} className="flex w-full items-center justify-between gap-2 px-5 py-2.5 text-left text-sm hover:bg-surface-2">
-                  <span><b>{r.req_id}</b> · {r.proof_type ?? L(r, "text_summary")}</span><ReadinessChip v={r.readiness} /></button></li>
-              ))}
-            </ul>
-          </Card>
+            <Checklist m={m} report={report} lot={lot} active={active} toggle={toggle} show={show} docAvailable={!!docs} />
+          </section>
+          <section>
+            <h2 className="mb-1 text-section font-semibold">{t("report.missingDocs")}</h2>
+            <p className="mb-3 text-[13px] text-muted">{t("report.missingDocsSub")}</p>
+            {missingRows.length === 0 ? <p className="text-body text-muted">{t("report.noMissing")}</p> : (
+              <ul className="overflow-hidden rounded-xl border border-border">
+                {missingRows.map((r) => (
+                  <li key={r.req_id} className="border-t border-border first:border-0">
+                    <button type="button" onClick={() => pick(r.req_id)} className="t-fast flex w-full flex-wrap items-center justify-between gap-2 px-4 py-3 text-left hover:bg-surface-2/50">
+                      <span className="min-w-0"><b className="tnum">{r.req_id}</b> <span className="text-muted">·</span> {r.proof_type ?? L(r, "text_summary")}</span>
+                      <ReadinessChip v={r.readiness} />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
         </div>
+        {docs && desktop && (
+          <aside className="xl:sticky xl:top-4 xl:self-start">
+            <div className="h-[calc(100vh-120px)] min-h-[520px]">
+              <PdfViewer url={docUrl(id, docs.files[0])} title={`${docs.files[0]}${docs.source === "placeholder" ? " · MOCK" : ""}`} page={page} onPageChange={setPage}
+                activeId={active || null} onSelect={(r) => pick(r)} highlights={highlights} />
+            </div>
+          </aside>
+        )}
       </div>
+      {docs && !desktop && <Button className="mt-6 w-full" onClick={() => setReader(true)}><FileText className="h-4 w-4" aria-hidden />{t("report.openDocument")}</Button>}
+      {reader && docs && <DocReader url={docUrl(id, docs.files[0])} title={docs.files[0]} page={page} highlights={highlights} activeId={active || null} onClose={() => setReader(false)} caption={activeRow ? `${activeRow.req_id} · ${L(activeRow, "text_summary")}` : undefined} />}
 
-      <Disclosure summary={t("common.underlying")}>
-        <JsonView data={{
-          notice_fields_used: { tender_deadline_utc: rec.original.tender_deadline_utc, lot_count: rec.original.lot_count, estimated_value: rec.original.estimated_value, currency: rec.original.currency },
-          screening: sr ? { fit_score: sr.fit_score, confidence: sr.confidence, sub_scores: sr.sub_scores, lot_results: sr.lot_results } : null,
-          lot: { lot_id: lot.lot_id, indication: lot.indication, indication_reasons: lot.indication_reasons, missing_documents: lot.missing_documents },
-          requirements_with_comparison: lot.rows,
-        }} />
-      </Disclosure>
-      <div className="flex items-start gap-2 rounded-xl border border-border bg-surface p-4 text-sm">
-        <Lock className="mt-0.5 h-4 w-4 shrink-0 text-muted" aria-hidden />
-        <p><b>{t("report.disclaimer")}</b> <span className="text-muted">{report.mock ? t("report.mockNote") : ""}</span></p>
+      <div className="mt-10 space-y-3">
+        <Disclosure summary={t("report.technical")}>
+          <JsonView data={{
+            notice_fields_used: { tender_deadline_utc: rec.original.tender_deadline_utc, lot_count: rec.original.lot_count, estimated_value: rec.original.estimated_value, currency: rec.original.currency },
+            screening: m.rank[id] ? { fit_score: m.rank[id].fit_score, confidence: m.rank[id].confidence, sub_scores: m.rank[id].sub_scores, lot_results: m.rank[id].lot_results } : null,
+            lot: { lot_id: lot.lot_id, indication: lot.indication, indication_reasons: lot.indication_reasons, missing_documents: lot.missing_documents, ignored_uncited: lot.ignored_uncited },
+            requirements_with_comparison: lot.rows,
+          }} />
+        </Disclosure>
+        <p className="flex items-start gap-2 pt-3 text-[13px] text-muted"><Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden /><span><b className="font-medium text-fg">{t("report.disclaimer")}</b> {report.mock ? t("report.mockNote") : ""} {t("report.footnote")}</span></p>
       </div>
-      <p className="flex items-start gap-2 text-xs text-muted"><Info className="mt-0.5 h-3.5 w-3.5" aria-hidden />{t("report.footnote")}</p>
     </div>
   );
 }
