@@ -121,9 +121,51 @@ function NoticeTable({ m, rows, sorting, setSorting }: { m: Model; rows: Row[]; 
     onSortingChange: (u) => setSorting(typeof u === "function" ? u(sorting) : u),
     getCoreRowModel: getCoreRowModel(), getSortedRowModel: getSortedRowModel(), enableSortingRemoval: true,
   });
+  const sortOpts = ["deadline", "fit", "value", "title", "status"];
+  const cur = sorting[0] ? `${sorting[0].desc ? "-" : ""}${sorting[0].id}` : "";
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full text-left text-sm">
+    <>
+    {/* Phones: one card per notice, sorting via a menu (same TanStack row model). */}
+    <div className="md:hidden">
+      <div className="flex items-center gap-2 border-b border-border px-4 py-2.5 text-[13px]">
+        <label htmlFor="msort" className="text-muted">{t("notices.sortBy")}</label>
+        <select id="msort" className={`${inputCls} w-auto flex-1 py-1.5`} value={cur}
+          onChange={(e) => { const v = e.target.value; setSorting(v ? [{ id: v.replace(/^-/, ""), desc: v.startsWith("-") }] : []); }}>
+          <option value="">{t("notices.sortDefault")}</option>
+          {sortOpts.flatMap((id) => [
+            <option key={id} value={id}>{t(`notices.sort.${id}`)} ↑</option>,
+            <option key={`-${id}`} value={`-${id}`}>{t(`notices.sort.${id}`)} ↓</option>])}
+        </select>
+      </div>
+      <ul className="divide-y divide-border">
+        {table.getRowModel().rows.map(({ original: r }) => {
+          const o = r.rec.original;
+          const dl = daysLeft(r.deadline);
+          return (
+            <li key={r.rec.doffin_id}>
+              <Link href={href(`/notices/${r.rec.doffin_id}`)} className="block px-4 py-3 active:bg-surface-2">
+                <div className="flex items-start justify-between gap-2">
+                  <span className="font-medium">{lang === "en" && o.title_en ? o.title_en : o.title}</span>
+                  <StatusChip v={r.status} />
+                </div>
+                <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
+                  <span className="tnum">{r.rec.doffin_id}</span><span>·</span><span>{r.rec.derived.buyer_name_list[0]}</span>
+                  {r.rec.mock && <MockChip />}
+                </div>
+                <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs">
+                  {r.deadline && <span className="tnum">{fmtDate(r.deadline, lang)}{dl !== null && dl >= 0 && o.notice_type === "ANNOUNCEMENT_OF_COMPETITION" ? ` · ${t("common.daysLeft", { n: dl })}` : ""}</span>}
+                  <span className="tnum">{r.value === null ? t("common.unknown") : nok(r.value, lang)}</span>
+                  {o.contract_type && <span>{t(`ctype.${o.contract_type}`)}</span>}
+                </div>
+                {r.fit !== null && <div className="mt-2 max-w-[220px]"><FitBar value={r.fit} threshold={m.screening.threshold} compact /></div>}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+    <div className="hidden overflow-x-auto md:block">
+      <table className="w-full text-left text-sm [overflow-wrap:normal]">
         <thead className="border-b border-border text-xs text-muted">
           {table.getHeaderGroups().map((hg) => (
             <tr key={hg.id}>{hg.headers.map((h) => {
@@ -148,8 +190,9 @@ function NoticeTable({ m, rows, sorting, setSorting }: { m: Model; rows: Row[]; 
           ))}
         </tbody>
       </table>
-      {!rows.length && <div className="p-8 text-center text-sm text-muted">{t("notices.none")}</div>}
     </div>
+    {!rows.length && <div className="p-8 text-center text-sm text-muted">{t("notices.none")}</div>}
+    </>
   );
 }
 

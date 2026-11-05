@@ -258,6 +258,15 @@
       "v_multi": "Multi-lot",
       "clear": "Clear filters",
       "more": "Filters"
+    },
+    "sortBy": "Sort",
+    "sortDefault": "Default order",
+    "sort": {
+      "deadline": "Deadline",
+      "fit": "Fit",
+      "value": "Value",
+      "title": "Title",
+      "status": "Status"
     }
   },
   "notice": {

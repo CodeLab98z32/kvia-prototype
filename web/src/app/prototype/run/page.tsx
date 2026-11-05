@@ -81,7 +81,7 @@ export default function RunPage() {
         </div>
         {!csv ? <div className="p-4"><Loading /></div> : (
           <div className="max-h-[620px] overflow-auto">
-            <table className="text-left text-xs">
+            <table className="text-left text-xs [overflow-wrap:normal]">
               <thead className="sticky top-0 z-10 bg-surface-2">
                 <tr>{csv[0]?.map((h) => <th key={h} className="whitespace-nowrap border-b border-border px-3 py-2 font-mono font-medium text-muted">{h}</th>)}</tr>
               </thead>

@@ -34,7 +34,7 @@ export default function TestLogPage() {
       right={<div className="no-print flex gap-2"><Button onClick={csv}><Download className="h-4 w-4" aria-hidden />CSV</Button><Button onClick={() => window.print()}><Printer className="h-4 w-4" aria-hidden />{t("testlog.print")}</Button></div>}>
       <Card className="overflow-x-auto">
         <div className="border-b border-border px-4 py-3 text-sm"><b>Appendix A: Prototype Test Log</b> · {t("header.run")} {run.run_id}{run.mock ? " (MOCK)" : ""}</div>
-        <table className="w-full text-sm">
+        <table className="w-full min-w-[760px] text-sm [overflow-wrap:normal]">
           <thead className="border-b border-border bg-surface-2 text-left text-xs uppercase tracking-wide text-muted">
             <tr><th className="px-3 py-2">#</th><th className="px-3 py-2">Case type</th><th className="px-3 py-2">Scenario / input</th><th className="px-3 py-2">Expected outcome</th><th className="px-3 py-2">Observed result</th><th className="px-3 py-2">Learning / revision</th></tr>
           </thead>

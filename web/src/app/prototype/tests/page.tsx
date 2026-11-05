@@ -28,7 +28,18 @@ export default function TestsPage() {
     <ProtoPage title={t("tests.title")} sub={t("tests.sub")}>
       <Card className="overflow-hidden">
         <CardHeader title={t("tests.cases")} sub={t("tests.casesSub")} />
-        <div className="overflow-x-auto">
+        <ul className="divide-y divide-border md:hidden">
+          {tests.map((x) => (
+            <li key={x.id} className="space-y-1.5 px-4 py-3 text-sm">
+              <div className="flex flex-wrap items-center gap-2"><b>{x.id}</b><Chip>{x.type}</Chip><StatusChipTest s={x.status} /></div>
+              <div className="font-medium">{x.scenario}</div>
+              <div className="text-xs text-muted">{t("tests.expected")}: {x.expected}</div>
+              <div className="text-xs">{t("tests.observed")}: {L(x, "observed")}</div>
+              <div className="flex flex-wrap gap-x-3 text-xs">{x.evidence.map((e, i) => <Link key={i} href={evidenceHref(e, href, firm)} className="text-accent hover:underline">{String(e.page)}{e.notice ? ` ${e.notice}` : ""}{e.req ? ` ${e.req}` : ""}</Link>)}</div>
+            </li>
+          ))}
+        </ul>
+        <div className="hidden overflow-x-auto md:block">
           <table className="w-full text-sm">
             <thead className="border-b border-border bg-surface-2 text-left text-xs uppercase tracking-wide text-muted">
               <tr><th className="px-4 py-2">#</th><th className="px-4 py-2">{t("tests.type")}</th><th className="px-4 py-2">{t("tests.scenario")}</th><th className="px-4 py-2">{t("tests.status")}</th><th className="px-4 py-2">{t("tests.observed")}</th><th className="px-4 py-2">{t("tests.evidence")}</th></tr>

@@ -21,7 +21,7 @@ function Expanded({ m, r }: { m: Model; r: ScreenResult }) {
   const vis = m.visibility(r.notice_id);
   return (
     <div className="space-y-4 border-t border-border bg-surface-2/60 p-4">
-      <div className="grid gap-4 lg:grid-cols-[1fr_300px]">
+      <div className="grid gap-4 [&>*]:min-w-0 lg:grid-cols-[1fr_300px]">
         <div>
           <h4 className="mb-2 text-sm font-semibold">{t("screening.subscores")}</h4>
           <SubScoreTable m={m} r={r} />
@@ -116,10 +116,10 @@ export default function ScreeningPage() {
                 )}
                 <li className={cn("border-b border-border last:border-0", isOpen && "bg-surface-2/40")}>
                   <button onClick={() => toggle(r.notice_id)} aria-expanded={isOpen}
-                    className="grid w-full grid-cols-[40px_1fr] items-center gap-3 px-4 py-3 text-left hover:bg-surface-2/60 lg:grid-cols-[48px_1fr_170px_110px_110px_130px_28px]">
+                    className="grid w-full grid-cols-[28px_1fr] items-center gap-x-3 gap-y-2 px-3 py-3 sm:grid-cols-[40px_1fr] sm:px-4 text-left hover:bg-surface-2/60 lg:grid-cols-[48px_1fr_170px_110px_110px_130px_28px]">
                     <span className="tnum text-lg font-bold text-muted">{r.rank}</span>
                     <span className="min-w-0">
-                      <span className="block truncate font-semibold">{title(m, r.notice_id, lang)}</span>
+                      <span className="block font-semibold lg:truncate">{title(m, r.notice_id, lang)}</span>
                       <span className="mt-0.5 flex flex-wrap items-center gap-1.5 text-xs text-muted">
                         <span className="truncate">{buyer(m, r.notice_id)}</span>
                         {m.notices[r.notice_id].mock && <MockChip />}

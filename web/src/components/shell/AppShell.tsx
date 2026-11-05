@@ -254,7 +254,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       {open && <div id="mobile-nav" className="no-print border-b border-border bg-surface px-4 py-3 lg:hidden"><Sidebar onNavigate={() => setOpen(false)} /></div>}
       <div className={cn(COLS, "flex gap-6")}>
         <aside className={cn("no-print sticky top-0 hidden h-screen shrink-0 overflow-y-auto py-8 lg:block", SIDEBAR_W)}><Sidebar /></aside>
-        <main id="main" className="print-full min-w-0 max-w-content flex-1 py-8">{children}</main>
+        <main id="main" className="print-full min-w-0 max-w-content flex-1 py-6 [overflow-wrap:anywhere] lg:py-8">{children}</main>
       </div>
       <footer className="no-print mt-16 border-t border-border">
         <div className={cn(COLS, "flex flex-wrap items-center gap-3 py-5 text-xs text-muted")}>

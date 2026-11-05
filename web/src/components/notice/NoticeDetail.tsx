@@ -55,10 +55,10 @@ export function NoticeDetail({ id }: { id: string }) {
         {o.doffin_url && <a href={o.doffin_url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-2 text-sm font-medium hover:bg-surface-2"><ExternalLink className="h-4 w-4" aria-hidden />{t("notice.doffin")}</a>}
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-3">
+      <div className="grid gap-4 [&>*]:min-w-0 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardHeader title={t("notice.facts")} icon={<Info className="h-5 w-5" />} />
-          <dl className="grid gap-x-6 gap-y-3 p-5 text-sm sm:grid-cols-3">
+          <dl className="grid grid-cols-2 gap-x-6 gap-y-3 p-5 text-sm sm:grid-cols-3">
             <div><dt className="text-xs text-muted">{t("notices.col.deadline")}</dt><dd className="tnum font-semibold">{fmtDate(d.tender_deadline, lang, true)}{dl !== null && dl >= 0 && o.notice_type === "ANNOUNCEMENT_OF_COMPETITION" ? ` · ${t("common.daysLeft", { n: dl })}` : ""}</dd></div>
             <div><dt className="text-xs text-muted">{t("notices.col.value")}</dt><dd className="tnum font-semibold">{d.estimated_value_nok === null ? t("common.unknown") : nok(d.estimated_value_nok, lang)}</dd></div>
             <div><dt className="text-xs text-muted">CPV</dt><dd className="tnum font-semibold">{o.cpv_main || "—"}{d.cpv_additional_list.length ? ` +${d.cpv_additional_list.length}` : ""}</dd></div>
@@ -109,8 +109,8 @@ export function NoticeDetail({ id }: { id: string }) {
       {docs && (
         <Card>
           <CardHeader title={t("notice.documents")} sub={docs.source === "placeholder" ? t("notice.placeholderDocs") : t("notice.originalDocs")} icon={<FileText className="h-5 w-5" />} />
-          <div className="grid gap-4 p-4 lg:grid-cols-[1fr_1.1fr]">
-            <div className="max-h-[640px] space-y-2 overflow-auto">
+          <div className="grid gap-4 p-4 [&>*]:min-w-0 lg:grid-cols-[1fr_1.1fr]">
+            <div className="max-h-[320px] space-y-2 overflow-auto lg:max-h-[640px]">
               <div className="text-xs text-muted">{t("notice.extractedNote", { n: reqs.length })}</div>
               {reqs.length === 0 && <p className="text-sm text-muted">{t("notice.noExtraction")}</p>}
               {reqs.map((r) => (
@@ -121,7 +121,7 @@ export function NoticeDetail({ id }: { id: string }) {
                 </button>
               ))}
             </div>
-            <div className="h-[640px]">
+            <div className="h-[440px] lg:h-[640px]">
               <PdfViewer url={docUrl(id, docs.files[0])} title={docs.files[0]} page={page} onPageChange={setPage} activeId={active}
                 onSelect={setActive} highlights={reqs.filter((r) => r.highlight).map((r) => ({ id: r.req_id, page: r.highlight!.page, rects: r.highlight!.rects }))} />
             </div>
@@ -135,9 +135,9 @@ export function NoticeDetail({ id }: { id: string }) {
           <table className="w-full text-sm">
             <tbody>
               {m.store.columns.map((c) => (
-                <tr key={c} className="border-b border-border last:border-0">
-                  <th scope="row" className="w-56 bg-surface-2/50 px-4 py-2 text-left align-top font-mono text-xs font-medium text-muted">{c}{CONTACT.has(c) && <span className="block font-sans text-[10px]">{t("notice.contactNote")}</span>}</th>
-                  <td className="whitespace-pre-line break-words px-4 py-2 align-top">{o[c] === "" ? <span className="text-muted">{t("notice.empty")}</span> : o[c]}{derivedNote[c] && <div className="mt-1 text-xs text-accent">{t("notice.derived")}: {derivedNote[c]}</div>}</td>
+                <tr key={c} className="block border-b border-border last:border-0 sm:table-row">
+                  <th scope="row" className="block bg-surface-2/50 px-4 pb-0 pt-2 text-left align-top font-mono text-xs font-medium text-muted sm:table-cell sm:w-56 sm:pb-2">{c}{CONTACT.has(c) && <span className="block font-sans text-[10px]">{t("notice.contactNote")}</span>}</th>
+                  <td className="block whitespace-pre-line px-4 py-2 align-top sm:table-cell">{o[c] === "" ? <span className="text-muted">{t("notice.empty")}</span> : o[c]}{derivedNote[c] && <div className="mt-1 text-xs text-accent">{t("notice.derived")}: {derivedNote[c]}</div>}</td>
                 </tr>
               ))}
             </tbody>

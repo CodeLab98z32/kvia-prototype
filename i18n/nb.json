@@ -258,6 +258,15 @@
       "v_multi": "Flere",
       "clear": "Nullstill filtre",
       "more": "Filtre"
+    },
+    "sortBy": "Sorter",
+    "sortDefault": "Standard rekkefølge",
+    "sort": {
+      "deadline": "Frist",
+      "fit": "Treff",
+      "value": "Verdi",
+      "title": "Tittel",
+      "status": "Status"
     }
   },
   "notice": {

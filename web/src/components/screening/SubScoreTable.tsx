@@ -21,7 +21,7 @@ export function SubScoreTable({ m, r }: { m: Model; r: ScreenResult }) {
                 <><div className="h-2 w-24 overflow-hidden rounded-full bg-surface-2"><div className="h-full rounded-full bg-accent" style={{ width: `${s.value}%` }} /></div><span className="tnum text-sm font-bold">{s.value}</span></>
               )}
             </div>
-            <div className="text-sm text-muted">{L(s, "reason")}<span className="ml-1 text-xs">({s?.data_points.join(", ")})</span></div>
+            <div className="min-w-0 text-sm text-muted">{L(s, "reason")}<span className="ml-1 text-xs">({s?.data_points.join(", ")})</span></div>
           </div>
         );
       })}
