@@ -1,0 +1,84 @@
+{
+  "pages_total": 6,
+  "retrieved_page_ids": [
+    "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p3",
+    "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p4",
+    "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p5"
+  ],
+  "by_heading_match": [
+    "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p3",
+    "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p4",
+    "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p5"
+  ],
+  "per_category_top": {
+    "qualification": [
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p3",
+        "score": 5.659
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p4",
+        "score": 2.038
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p5",
+        "score": 0.886
+      }
+    ],
+    "technical": [
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p5",
+        "score": 2.856
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p3",
+        "score": 1.121
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p4",
+        "score": 0.82
+      }
+    ],
+    "financial": [
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p3",
+        "score": 1.209
+      }
+    ],
+    "certification": [],
+    "hms": [
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p4",
+        "score": 9.763
+      }
+    ],
+    "reference": [
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p3",
+        "score": 4.836
+      }
+    ],
+    "capacity": [
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p5",
+        "score": 1.97
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p3",
+        "score": 1.209
+      }
+    ],
+    "formal": [
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p4",
+        "score": 1.822
+      },
+      {
+        "page_id": "PLACEHOLDER_2026-116581_konkurransegrunnlag.pdf#p3",
+        "score": 1.209
+      }
+    ]
+  },
+  "unreadable_pages": [],
+  "retrieval_misses": []
+}

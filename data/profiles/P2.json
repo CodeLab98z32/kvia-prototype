@@ -1,0 +1,666 @@
+{
+  "profile_id": "P2",
+  "synthetic": true,
+  "source": "docs/Synthetic company profiles.docx, Table B2",
+  "data_model": "Table A1, docs/Company profile data.docx",
+  "firm": {
+    "name": "Synthetic Company 2",
+    "initials": "SC2",
+    "sector_en": "Water, sewer and road engineering consultancy · Rogaland",
+    "sector_nb": "Rådgivende ingeniør for vann, avløp og vei · Rogaland",
+    "name_note_en": "The profile tables give no firm name; the table title is used as display name.",
+    "name_note_nb": "Profiltabellene oppgir ikke firmanavn; tabelltittelen brukes som visningsnavn."
+  },
+  "search_profile": [
+    {
+      "id": "main_cpv",
+      "label_en": "Main CPV",
+      "label_nb": "Hoved-CPV",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Main and secondary CPV codes",
+      "value": "71322000 Engineering-design services for the construction of civil engineering works",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "71322000"
+        ]
+      }
+    },
+    {
+      "id": "secondary_cpv",
+      "label_en": "Secondary CPV",
+      "label_nb": "Sekundære CPV-koder",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Main and secondary CPV codes",
+      "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "71300000",
+          "71311000",
+          "71311300",
+          "71320000"
+        ]
+      }
+    },
+    {
+      "id": "region_nuts",
+      "label_en": "Region (NUTS)",
+      "label_nb": "Region (NUTS)",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Region (NUTS codes)",
+      "value": "NO0A1 Rogaland",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "NO0A1"
+        ]
+      }
+    },
+    {
+      "id": "contract_subject",
+      "label_en": "Contract subject",
+      "label_nb": "Kontraktstype",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract subject (works, supplies, services)",
+      "value": "Services",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "subjects": [
+          "Services"
+        ]
+      }
+    },
+    {
+      "id": "contract_form",
+      "label_en": "Contract form",
+      "label_nb": "Kontraktsform",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract form",
+      "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "execution": null,
+        "design_and_build": null,
+        "general_contract": null,
+        "subcontractor": true,
+        "note": "not applicable to a consultancy except sub-consultant"
+      }
+    },
+    {
+      "id": "size_band",
+      "label_en": "Contract-size band",
+      "label_nb": "Kontraktsstørrelse",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract-size band (min-max NOK)",
+      "value": "NOK 0.2–5 million per contract or expected call-off volume",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "min_nok": 200000.0,
+        "max_nok": 5000000,
+        "basis": "per contract or expected call-off volume"
+      }
+    },
+    {
+      "id": "framework_dps",
+      "label_en": "Framework agreements and DPS",
+      "label_nb": "Rammeavtaler og DPS",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Willingness to bid on framework agreements and DPS",
+      "value": "Framework: yes, including parallel frameworks. DPS: yes",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "framework": true,
+        "parallel_framework": true,
+        "dps": true
+      }
+    },
+    {
+      "id": "lot_preferences",
+      "label_en": "Lot preferences",
+      "label_nb": "Delkontrakter",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Lot preferences for multi-lot notices",
+      "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "max_lots": 2,
+        "disciplines": [
+          "water",
+          "sewer",
+          "road"
+        ]
+      }
+    }
+  ],
+  "capability_locker": [
+    {
+      "id": "org_nr",
+      "label_en": "Organisation number",
+      "label_nb": "Organisasjonsnummer",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Organization number",
+      "value": "000 000 102 (synthetic)",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "employee_count",
+      "label_en": "Employee count",
+      "label_nb": "Antall ansatte",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Employee count",
+      "value": "9",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "count": 9
+      }
+    },
+    {
+      "id": "founding_year",
+      "label_en": "Founding year",
+      "label_nb": "Stiftelsesår",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Founding year",
+      "value": "2017",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "year": 2017
+      }
+    },
+    {
+      "id": "staff",
+      "label_en": "Staff by role and qualification",
+      "label_nb": "Ansatte etter rolle og kvalifikasjon",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Staff by role and qualification",
+      "value": "1 managing director (MSc civil engineering, water and sewer); 4 water and sewer engineers (2 MSc, 2 BSc); 2 road engineers (BSc); 1 BIM and drafting technician (vocational college); 1 finance and administration officer (60 % position)",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "key_personnel_cvs",
+      "label_en": "Key personnel CVs",
+      "label_nb": "CV-er for nøkkelpersonell",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Key personnel CVs",
+      "value": "Managing director and four lead engineers",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-08-28",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "held": [
+          "managing director",
+          "four lead engineers"
+        ],
+        "missing": []
+      }
+    },
+    {
+      "id": "working_languages",
+      "label_en": "Working languages",
+      "label_nb": "Arbeidsspråk",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Working languages (Norwegian/English)",
+      "value": "Norwegian and English (all engineers)",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "languages": [
+          "nb",
+          "en"
+        ],
+        "all_staff_norwegian": true
+      }
+    },
+    {
+      "id": "insurance",
+      "label_en": "Insurance type and coverage",
+      "label_nb": "Forsikring og dekning",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Insurance type and coverage",
+      "value": "Professional liability, NOK 20 million per claim",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-20",
+      "expiry_original": "2027-03-31",
+      "proof_status": "Documented",
+      "expiry_date": "2027-03-31",
+      "structured": {
+        "type": "professional liability",
+        "coverage_nok": 20000000
+      }
+    },
+    {
+      "id": "tax_vat_certificate",
+      "label_en": "Tax and VAT certificate",
+      "label_nb": "Skatteattest (skatt og mva.)",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "Tax and VAT certificate with issue date",
+      "value": "Issued 2026-10-12",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-12",
+      "expiry_original": "Six months from issue: 2027-04-12",
+      "proof_status": "Documented",
+      "expiry_date": "2027-04-12",
+      "structured": {
+        "issue_date": "2026-10-12",
+        "validity_rule": "six_months_from_issue"
+      }
+    },
+    {
+      "id": "hms_declaration",
+      "label_en": "HMS self-declaration",
+      "label_nb": "HMS-egenerklæring",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "HMS self-declaration",
+      "value": "Stated as in place; no signed document uploaded",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "signed": null
+      }
+    },
+    {
+      "id": "startbank_achilles",
+      "label_en": "StartBANK / Achilles",
+      "label_nb": "StartBANK / Achilles",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "StartBANK/Achilles registration where relevant",
+      "value": "StartBANK: registered, renewal not completed. Achilles: not registered, not relevant to current markets",
+      "proof_status_original": "Documented / Not applicable",
+      "last_updated": "2025-09-30",
+      "expiry_original": "StartBANK: 2026-09-30 (expired)",
+      "proof_status": "Mixed",
+      "parts": [
+        {
+          "part": "StartBANK",
+          "proof_status": "Documented",
+          "expiry_date": "2026-09-30",
+          "registered": true
+        },
+        {
+          "part": "Achilles",
+          "proof_status": "Not applicable",
+          "expiry_date": null,
+          "registered": false
+        }
+      ],
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "approved_apprentice",
+      "label_en": "Approved apprentice company",
+      "label_nb": "Godkjent lærebedrift",
+      "table_a1_category": "certificates_and_approvals",
+      "table_a1_category_nb": "Sertifikater og godkjenninger",
+      "table_a1_data_point": "Approved apprentice company",
+      "value": "Firm employs no apprentices in a trade",
+      "proof_status_original": "Not applicable",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Not applicable",
+      "expiry_date": null,
+      "structured": {
+        "approved": false
+      }
+    },
+    {
+      "id": "sector_approval",
+      "label_en": "Sector approval",
+      "label_nb": "Sentral godkjenning",
+      "table_a1_category": "certificates_and_approvals",
+      "table_a1_category_nb": "Sertifikater og godkjenninger",
+      "table_a1_data_point": "Sector approvals (issuer, scope, expiry)",
+      "value": "Central approval for building works (DiBK); scope: design (prosjektering) of water and sewer and of roads, tiltaksklasse 2",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-20",
+      "expiry_original": "2028-04-30",
+      "proof_status": "Documented",
+      "expiry_date": "2028-04-30",
+      "structured": {
+        "issuer": "DiBK",
+        "scope": [
+          "design of water and sewer",
+          "design of roads"
+        ],
+        "tiltaksklasse": 2,
+        "design_approval": true
+      }
+    },
+    {
+      "id": "quality_certificate",
+      "label_en": "Quality management certificate",
+      "label_nb": "Kvalitetssertifikat",
+      "table_a1_category": "certificates_and_approvals",
+      "table_a1_category_nb": "Sertifikater og godkjenninger",
+      "table_a1_data_point": "Sector approvals (issuer, scope, expiry)",
+      "value": "ISO 9001 not held",
+      "proof_status_original": "Not applicable",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Not applicable",
+      "expiry_date": null,
+      "structured": {
+        "standard": "ISO 9001",
+        "held": false
+      }
+    },
+    {
+      "id": "turnover",
+      "label_en": "Turnover 2021–2025",
+      "label_nb": "Omsetning 2021–2025",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Turnover for the last five years",
+      "value": "NOK 8.2 / 9.6 / 11.3 / 12.7 / 13.4 million",
+      "proof_status_original": "Documented (annual accounts)",
+      "last_updated": "2026-06-30",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "by_year_nok": {
+          "2021": 8199999.999999999,
+          "2022": 9600000.0,
+          "2023": 11300000.0,
+          "2024": 12700000.0,
+          "2025": 13400000.0
+        }
+      }
+    },
+    {
+      "id": "profit",
+      "label_en": "Profit before tax 2021–2025",
+      "label_nb": "Resultat før skatt",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Profit",
+      "value": "NOK 0.9 / 1.2 / 1.5 / 1.7 / 1.9 million",
+      "proof_status_original": "Documented (annual accounts)",
+      "last_updated": "2026-06-30",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "by_year_nok": {
+          "2021": 900000.0,
+          "2022": 1200000.0,
+          "2023": 1500000.0,
+          "2024": 1700000.0,
+          "2025": 1900000.0
+        }
+      }
+    },
+    {
+      "id": "equity_ratio",
+      "label_en": "Equity ratio",
+      "label_nb": "Egenkapitalandel",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Equity ratio",
+      "value": "41 % (2025)",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-06-30",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "percent": 41,
+        "year": 2025
+      }
+    },
+    {
+      "id": "credit_rating",
+      "label_en": "Credit rating",
+      "label_nb": "Kredittvurdering",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Credit rating",
+      "value": "Coordinator declined to obtain a rating",
+      "proof_status_original": "Declared missing",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Declared missing",
+      "expiry_date": null,
+      "structured": {
+        "rating": null
+      }
+    },
+    {
+      "id": "reference_1",
+      "label_en": "Reference 1",
+      "label_nb": "Referanse 1",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Municipality, Rogaland (public); 2025; NOK 1.8 million; CPV 71322000; detailed design of water and sewer renewal, about 1.2 km",
+      "proof_status_original": "Documented (reference letter)",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "public",
+        "year": 2025,
+        "value_nok": 1800000.0,
+        "cpv": "71322000",
+        "region": "Rogaland"
+      }
+    },
+    {
+      "id": "reference_2",
+      "label_en": "Reference 2",
+      "label_nb": "Referanse 2",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Residential developer, Rogaland (private); 2024; NOK 0.9 million; CPV 71320000; water and sewer framework plan for a 60-unit housing area",
+      "proof_status_original": "Documented (reference letter)",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "private",
+        "year": 2024,
+        "value_nok": 900000.0,
+        "cpv": "71320000",
+        "region": "Rogaland"
+      }
+    },
+    {
+      "id": "reference_3",
+      "label_en": "Reference 3",
+      "label_nb": "Referanse 3",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Contractor in a municipal design-and-build project, Vestland (private, public end client); 2023; NOK 1.4 million; CPV 71322000; detailed design of a sewage pumping station, as sub-consultant",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "private (public end client)",
+        "year": 2023,
+        "value_nok": 1400000.0,
+        "cpv": "71322000",
+        "region": "Vestland"
+      }
+    },
+    {
+      "id": "reference_4",
+      "label_en": "Reference 4",
+      "label_nb": "Referanse 4",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Inter-municipal water company, Rogaland (public); 2022; NOK 0.6 million; CPV 71311300; condition assessment of trunk water mains",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "public",
+        "year": 2022,
+        "value_nok": 600000.0,
+        "cpv": "71311300",
+        "region": "Rogaland"
+      }
+    }
+  ],
+  "account_and_baseline": [
+    {
+      "id": "bid_coordinator",
+      "label_en": "Bid coordinator",
+      "label_nb": "Tilbudsansvarlig",
+      "table_a1_category": "account",
+      "table_a1_category_nb": "Konto",
+      "table_a1_data_point": "Named bid coordinator and contact details",
+      "value": "Silje Rasmussen (fictional), managing director; silje.rasmussen@haugaland-va.example; +47 000 00 102",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "bidding_history",
+      "label_en": "Bidding history",
+      "label_nb": "Tilbudshistorikk",
+      "table_a1_category": "account",
+      "table_a1_category_nb": "Konto",
+      "table_a1_data_point": "Bidding history (number of past bids and wins)",
+      "value": "2 public bids since 2024 (both frameworks); 0 wins",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "finding_tenders",
+      "label_en": "Current way of finding tenders",
+      "label_nb": "Slik finner firmaet konkurranser i dag",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Current way of finding tenders",
+      "value": "Saved Doffin search with e-mail alerts on two CPV codes",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "time_spent",
+      "label_en": "Time spent on past bid attempts",
+      "label_nb": "Tidsbruk på tidligere tilbud",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Time spent on past bid attempts",
+      "value": "About 60 hours per framework bid",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "ai_experience",
+      "label_en": "Starting experience with AI tools",
+      "label_nb": "Erfaring med KI-verktøy",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Starting experience with AI tools",
+      "value": "Staff use a general chatbot for drafting text; no structured use in bids",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-20",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    }
+  ]
+}

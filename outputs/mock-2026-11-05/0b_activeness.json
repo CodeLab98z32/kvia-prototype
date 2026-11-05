@@ -1,0 +1,205 @@
+{
+  "2026-115654": {
+    "active": false,
+    "category": "award",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); screenes aldri, uansett datoer."
+  },
+  "2026-115833": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116107": {
+    "active": false,
+    "category": "intent",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_INTENT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_INTENT); screenes aldri, uansett datoer."
+  },
+  "2026-116235": {
+    "active": false,
+    "category": "advisory",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ADVISORY_NOTICE); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ADVISORY_NOTICE); screenes aldri, uansett datoer."
+  },
+  "2026-116314": {
+    "active": false,
+    "category": "award",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); screenes aldri, uansett datoer."
+  },
+  "2026-116318": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116334": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116386": {
+    "active": false,
+    "category": "award",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); screenes aldri, uansett datoer."
+  },
+  "2026-116470": {
+    "active": false,
+    "category": "award",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); screenes aldri, uansett datoer."
+  },
+  "2026-116531": {
+    "active": false,
+    "category": "award",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); screenes aldri, uansett datoer."
+  },
+  "2026-116544": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active_empty_status",
+    "reason_en": "Competition notice with deadline after the reference date (status field is empty and ignored).",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen (statusfeltet er tomt og ignoreres)."
+  },
+  "2026-116547": {
+    "active": false,
+    "category": "advisory",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ADVISORY_NOTICE); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ADVISORY_NOTICE); screenes aldri, uansett datoer."
+  },
+  "2026-116566": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116567": {
+    "active": false,
+    "category": "advisory",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ADVISORY_NOTICE); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ADVISORY_NOTICE); screenes aldri, uansett datoer."
+  },
+  "2026-116568": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116574": {
+    "active": false,
+    "category": "advisory",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ADVISORY_NOTICE); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ADVISORY_NOTICE); screenes aldri, uansett datoer."
+  },
+  "2026-116577": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116578": {
+    "active": false,
+    "category": "award",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); screenes aldri, uansett datoer."
+  },
+  "2026-116579": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116580": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116581": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116587": {
+    "active": false,
+    "category": "award",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT); screenes aldri, uansett datoer."
+  },
+  "2026-116600": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "2026-116608": {
+    "active": false,
+    "category": "intent",
+    "reason_code": "not_competition_notice",
+    "reason_en": "Not a competition notice (ANNOUNCEMENT_OF_INTENT); never screened, whatever its dates.",
+    "reason_nb": "Ikke en konkurransekunngjøring (ANNOUNCEMENT_OF_INTENT); screenes aldri, uansett datoer."
+  },
+  "2026-116619": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active_empty_status",
+    "reason_en": "Competition notice with deadline after the reference date (status field is empty and ignored).",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen (statusfeltet er tomt og ignoreres)."
+  },
+  "MOCK-0001": {
+    "active": false,
+    "category": "closed",
+    "reason_code": "deadline_passed",
+    "reason_en": "Competition notice whose tender deadline has passed: inactive, not screened.",
+    "reason_nb": "Konkurransekunngjøring med passert tilbudsfrist: inaktiv, screenes ikke."
+  },
+  "MOCK-0002": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  },
+  "MOCK-0003": {
+    "active": true,
+    "category": "competition_missing_deadline",
+    "reason_code": "missing_deadline",
+    "reason_en": "Competition notice without tender deadline: not treated as inactive; flagged for adviser review.",
+    "reason_nb": "Konkurransekunngjøring uten tilbudsfrist: regnes ikke som inaktiv; flagges for rådgivergjennomgang."
+  },
+  "MOCK-0004": {
+    "active": true,
+    "category": "active_competition",
+    "reason_code": "active",
+    "reason_en": "Competition notice with deadline after the reference date.",
+    "reason_nb": "Konkurransekunngjøring med frist etter referansedatoen."
+  }
+}

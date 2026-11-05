@@ -1,0 +1,66 @@
+{
+  "pages_total": 6,
+  "retrieved_page_ids": [
+    "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p3",
+    "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p4",
+    "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p5"
+  ],
+  "by_heading_match": [
+    "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p3",
+    "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p4",
+    "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p5"
+  ],
+  "per_category_top": {
+    "qualification": [
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p3",
+        "score": 5.682
+      },
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p4",
+        "score": 2.414
+      }
+    ],
+    "technical": [
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p5",
+        "score": 1.639
+      },
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p3",
+        "score": 1.401
+      },
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p4",
+        "score": 1.207
+      }
+    ],
+    "financial": [],
+    "certification": [],
+    "hms": [
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p4",
+        "score": 9.68
+      }
+    ],
+    "reference": [
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p3",
+        "score": 5.76
+      }
+    ],
+    "capacity": [],
+    "formal": [
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p4",
+        "score": 1.805
+      },
+      {
+        "page_id": "PLACEHOLDER_MOCK-0003_konkurransegrunnlag.pdf#p3",
+        "score": 1.44
+      }
+    ]
+  },
+  "unreadable_pages": [],
+  "retrieval_misses": []
+}

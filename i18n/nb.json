@@ -1,0 +1,655 @@
+{
+  "brand": {
+    "tagline": "Anbudsmatching for SMB-er"
+  },
+  "nav": {
+    "label": "Hovednavigasjon",
+    "menu": "Meny",
+    "skip": "Hopp til innhold",
+    "groupA": "Tjenesten",
+    "groupB": "Prototype",
+    "overview": "Oversikt",
+    "notices": "Kunngjøringer",
+    "screening": "Screening",
+    "reports": "Diagnoserapporter",
+    "company": "Firmaprofil",
+    "logic": "Intern logikk",
+    "prompts": "Prompter og I/O",
+    "adviser": "Rådgiversiden",
+    "tests": "Testtilfeller",
+    "testlog": "Testlogg",
+    "run": "Data og kjøring"
+  },
+  "proto": {
+    "badge": "Prototype",
+    "viewingAs": "Vis som",
+    "viewingAsHint": "Demokontroll for sensor: bytter firmaet hvis konto du ser. Ikke en del av tjenesten."
+  },
+  "header": {
+    "coordinator": "Tilbudsansvarlig",
+    "today": "I dag",
+    "run": "Kjøring",
+    "language": "Språk",
+    "theme": "Fargetema",
+    "theme_light": "Lyst",
+    "theme_dark": "Mørkt",
+    "theme_system": "Følg systemet"
+  },
+  "mock": {
+    "banner": "MOCK-DATA — konkurransedokumentene er ikke behandlet ennå",
+    "bannerSub": "Kunngjøringer og profiler er reelle/syntetiske inndata; krav, delscorer og klassifiseringer er generert av kode og beskriver ingen reell konkurranse."
+  },
+  "footer": {
+    "attribution": "Kvia — prototype for senteret for KI-adopsjon og innovasjon. Syntetiske firmadata, ekte Doffin-kunngjøringer (uttrekk 2026-10-26)."
+  },
+  "common": {
+    "any": "Alle",
+    "back": "Tilbake",
+    "confidence": "Sikkerhet",
+    "daysLeft": "{n, plural, =0 {frist i dag} one {# dag igjen} other {# dager igjen}}",
+    "passed": "fristen er ute",
+    "notFound": "Finnes ikke i denne kjøringen.",
+    "synthetic": "syntetisk",
+    "underlying": "Vis underliggende data",
+    "unknown": "Ukjent"
+  },
+  "status": {
+    "active": "Aktiv konkurranse",
+    "closed": "Lukket (frist passert)",
+    "award": "Tildeling",
+    "advisory": "Veiledende",
+    "intent": "Intensjon",
+    "flagged": "Flagget for rådgivergjennomgang",
+    "other": "Annet"
+  },
+  "indication": {
+    "go": "Go",
+    "borderline": "Grensetilfelle",
+    "no-go": "No-go"
+  },
+  "match": {
+    "met": "Oppfylt",
+    "partly_met": "Delvis oppfylt",
+    "not_met": "Ikke oppfylt",
+    "lacks_data": "Mangler data"
+  },
+  "readiness": {
+    "documented": "Dokumentert",
+    "self_declared_proof_needed": "Egenerklært — bevis trengs",
+    "expired": "Utløpt",
+    "no_proof_on_file": "Ingen dokumentasjon",
+    "not_demanded": "Bevis ikke krevd",
+    "expiring_soon": "Utløper kort etter fristen"
+  },
+  "level": {
+    "high": "Høy",
+    "medium": "Middels",
+    "low": "Lav"
+  },
+  "route": {
+    "forwarded": "Videresendt",
+    "below_threshold": "Under terskel"
+  },
+  "ctype": {
+    "Works": "Bygge- og anleggsarbeid",
+    "Supplies": "Varer",
+    "Services": "Tjenester"
+  },
+  "category": {
+    "qualification": "Kvalifikasjon",
+    "technical": "Teknisk",
+    "financial": "Økonomi",
+    "certification": "Sertifisering",
+    "hms": "HMS",
+    "reference": "Referanse",
+    "capacity": "Kapasitet",
+    "formal": "Formelt"
+  },
+  "sub": {
+    "subject_relevance": "Faglig relevans",
+    "region": "Region",
+    "contract_subject": "Kontraktstype",
+    "size": "Størrelse",
+    "contract_form": "Kontraktsform",
+    "framework_dps": "Rammeavtale / DPS",
+    "lots": "Delkontrakter"
+  },
+  "gate": {
+    "released_automatically": "Frigitt automatisk",
+    "released_by_adviser": "Frigitt av rådgiver etter gjennomgang",
+    "flagged_pending": "Flagget — venter på rådgivergjennomgang"
+  },
+  "health": {
+    "expired": "Utløpt",
+    "expiring": "Utløper snart",
+    "declared_missing": "Erklært manglende"
+  },
+  "overview": {
+    "kicker": "Anbudsmatching · flaggskiptjeneste",
+    "title": "Finn offentlige konkurranser dere kan vinne — og se hva dere fortsatt må dokumentere",
+    "lead": "Kvia screener hver ny Doffin-kunngjøring mot søkeprofilen deres, leser konkurransedokumentene én gang for alle firmaer og sammenligner kravene med Capability Locker. Hvert resultat viser kildene, slik at dere kan kontrollere det selv.",
+    "provides": {
+      "screening": {
+        "title": "Rangert screening",
+        "text": "Én liste over alle aktive kunngjøringer, rangert etter treff, med sikkerhetsindikator."
+      },
+      "report": {
+        "title": "Diagnoserapport",
+        "text": "Kravsjekkliste med sidehenvisninger, manglende dokumenter og indikasjonen go / grensetilfelle / no-go."
+      },
+      "review": {
+        "title": "Menneskelig kontroll",
+        "text": "Rådgivere kontrollerer usikre uttrekk; dere kan flagge ethvert resultat; dere bestemmer om dere skal gi tilbud."
+      }
+    },
+    "forWhom": "For hvem:",
+    "forWhomText": "firmaer med 5–50 ansatte og liten eller ingen tilbudserfaring, brukt av en navngitt tilbudsansvarlig.",
+    "yourView": "Deres beste treff",
+    "topNote": "Topp 5 i den rangerte screeninglisten.",
+    "keyFigures": "Nøkkeltall for gjeldende kjøring",
+    "kpi": {
+      "screened": "Screenede kunngjøringer",
+      "screenedSub": "{n} til venter på rådgivergjennomgang",
+      "forwarded": "Videresendt",
+      "forwardedSub": "treffscore ≥ {th}",
+      "reports": "Diagnoserapporter",
+      "reportsSub": "videresendt + lagt til manuelt",
+      "missing": "Manglende dokumenter",
+      "missingSub": "bevis trengs, utløpt eller mangler"
+    },
+    "distribution": "Indikasjoner i rapportene",
+    "how": "Slik fungerer det",
+    "howSub": "Tre steg som skiller seg i hva de behandler og hvordan kostnaden skalerer. Oransje = KI-steg, blått = menneskelig beslutning.",
+    "step": "Steg",
+    "human": {
+      "adviser": {
+        "title": "Rådgiver frigir",
+        "text": "flaggede kunngjøringer først etter å ha kontrollert eller rettet uttrekket."
+      },
+      "flag": {
+        "title": "Dere kan flagge",
+        "text": "ethvert KI-resultat med en kort beskrivelse (avklaringsdesken)."
+      },
+      "decide": {
+        "title": "Dere bestemmer",
+        "text": "om dere skal gi tilbud. Ingenting sendes inn automatisk."
+      }
+    },
+    "nextTitle": "Videresendt til diagnoserapport",
+    "openReport": "Åpne rapport",
+    "disclaimerTitle": "Hva indikasjonen betyr",
+    "disclaimerMore": "Go, grensetilfelle og no-go utledes med faste regler fra kravsjekklisten — aldri av KI-modellen."
+  },
+  "chain": {
+    "pre": {
+      "title": "Forbehandling",
+      "text": "Én gang per kunngjøring, ved ankomst: gjenfinning finner relevante avsnitt i konkurransedokumentene; uttrekk lister hvert obligatoriske krav og dokumentasjonskrav med kildeside. Gjenbrukes for alle firmaer.",
+      "ai": "Gjenfinning + uttrekk",
+      "human": "Rådgiver frigir flaggede kunngjøringer",
+      "cta": "Se rådgiverkøen"
+    },
+    "screen": {
+      "title": "Screening",
+      "text": "Per firma: hvert datapunkt i en frigitt kunngjøring, inkludert tittel og beskrivelse, matches mot søkeprofilen. Kode kombinerer delscorene til en treffscore fra 0 til 100.",
+      "ai": "Matching + rangering",
+      "human": "Koordinator kan legge til hvilken som helst kunngjøring",
+      "cta": "Åpne den rangerte listen"
+    },
+    "report": {
+      "title": "Diagnoserapport",
+      "text": "Per firma: hvert lagrede krav kobles til Capability Locker og vurderes som oppfylt / delvis / ikke oppfylt / mangler data. Kode sjekker dokumentasjonens gyldighet på fristen og utleder indikasjonen.",
+      "ai": "Matching + klassifisering",
+      "human": "Koordinator bestemmer om det skal gis tilbud",
+      "cta": "Åpne rapportene"
+    }
+  },
+  "notices": {
+    "title": "Kunngjøringer",
+    "sub": "Alle {real} kunngjøringer i Doffin-uttrekket, uendret, pluss {mock} tydelig merkede MOCK-kunngjøringer som bare finnes for å vise tilstander de ekte dataene ikke kan vise.",
+    "statusFilter": "Filtrer etter status",
+    "of": "av",
+    "rule": "Bare regelbaserte filtre — screeningen forhåndsfiltrerer aldri på CPV eller nøkkelord.",
+    "none": "Ingen kunngjøring passer filtrene.",
+    "noFitFlagged": "Ingen treffscore før frigiving",
+    "notScreened": "Ikke screenet",
+    "col": {
+      "notice": "Kunngjøring",
+      "status": "Status",
+      "type": "Type",
+      "deadline": "Frist",
+      "value": "Estimert verdi",
+      "region": "Sted (NUTS)",
+      "fit": "Treff"
+    },
+    "f": {
+      "text": "Fritekst (tittel, engelsk tittel, beskrivelse, oppdragsgiver)",
+      "textPh": "f.eks. slam, rammeavtale …",
+      "cpv": "CPV (hoved eller tillegg, per hovedgruppe)",
+      "division": "Hovedgruppe",
+      "trade": "Bransje",
+      "ctype": "Kontraktstype",
+      "nuts": "Region (NUTS)",
+      "anyw": "anyw (hele Norge)",
+      "dfrom": "Frist fra",
+      "dto": "Frist til",
+      "vmin": "Verdi min (NOK mill.)",
+      "vmax": "Verdi maks (NOK mill.)",
+      "vunknown": "Ukjent verdi",
+      "vunknownExclude": "Utelat når et intervall er satt",
+      "vunknownInclude": "Ta med",
+      "vunknownOnly": "Bare ukjent",
+      "fw": "Rammeavtale",
+      "dps": "DPS",
+      "lots": "Delkontrakter",
+      "v_yes": "Ja",
+      "v_no": "Nei",
+      "v_single": "Én",
+      "v_multi": "Flere",
+      "clear": "Nullstill filtre"
+    }
+  },
+  "notice": {
+    "doffin": "Åpne på doffin.no",
+    "facts": "Nøkkelfakta",
+    "lots": "Delkontrakter",
+    "fwdps": "Rammeavtale / DPS",
+    "framework": "Rammeavtale",
+    "description": "Beskrivelse (original)",
+    "forFirm": "For {firm}",
+    "flaggedText": "Kunngjøringen er flagget for rådgivergjennomgang. Den har ingen treffscore og ingen rapport for noe firma før en rådgiver frigir den.",
+    "toAdviser": "Se i rådgiverkøen",
+    "inList": "Vis i rangert liste",
+    "notScreened": "Ikke screenet",
+    "activeness": "Aktivitet",
+    "gate": "Frigivingsport",
+    "documents": "Konkurransedokumenter",
+    "placeholderDocs": "PLASSHOLDER (MOCK) — generert dokument, ikke konkurransegrunnlaget. Erstattes av originalene i fase 2.",
+    "originalDocs": "Originaldokumenter fra oppdragsgivers plattform",
+    "extractedNote": "{n} krav lagret av forbehandlingen (felles for alle firmaer). Klikk for å vise det siterte avsnittet.",
+    "noExtraction": "Ingen frigitte krav for denne kunngjøringen.",
+    "allFields": "Alle originalfelt",
+    "allFieldsSub": "Alle {n} felt nøyaktig som i Doffin-eksporten — ingenting fjernet eller endret. Avledede verdier vises separat.",
+    "contactNote": "beholdt uendret; sendes ikke til noen KI-prompt",
+    "empty": "(tomt)",
+    "derived": "Avledet",
+    "value_missing": "mangler → holdes utenfor treffscoren, senker sikkerheten",
+    "value_zero_treated_as_unknown": "0 behandles som ukjent, aldri som NOK 0",
+    "anyw": "anyw = utførelse hvor som helst i Norge → forenlig med alle regioner",
+    "statusIgnored": "status er tomt; aktivitet bestemmes av kunngjøringstype + frist",
+    "versionHash": "Versjonshash"
+  },
+  "screening": {
+    "title": "Screening",
+    "sub": "Én rangert liste over alle {n} screenede kunngjøringer, sortert etter treffscore. Kunngjøringer på eller over {th} videresendes til diagnoserapport; ingenting under linjen skjules.",
+    "fit": "Treffscore",
+    "routeInd": "Rute · indikasjon",
+    "thresholdLine": "Terskel {th}",
+    "nearMisses": "under: nesten-treff først — legg til hvilken som helst manuelt",
+    "pendingNote": "{n} kunngjøringer er flagget for rådgivergjennomgang og screenes ikke før de er frigitt.",
+    "pendingLink": "Se dem",
+    "subscores": "Delscorer per datapunkt",
+    "excluded": "mangler → utelatt",
+    "howFit": "Slik beregnes treffscoren",
+    "howFitText": "Av kode, ikke av modellen: vektet gjennomsnitt av tilgjengelige delscorer; manglende utelates og senker sikkerheten.",
+    "bestLot": "beste delkontrakt",
+    "noConfReasons": "Ingen manglende datapunkter og ingen motstrid.",
+    "dataNotes": "Merknader om datakvalitet",
+    "lots": "Delkontrakter",
+    "lotRelevant": "relevant",
+    "lotNotRelevant": "ikke relevant",
+    "lotBadge": "{n} delkontrakter · {rel} relevant",
+    "contradiction": "motstridende data",
+    "openNotice": "Åpne kunngjøring",
+    "promptIO": "Prompt og I/O",
+    "footnote": "Mock-kjøring: delscorene er generert av kode fra CPV/NUTS/verdi-overlapp (teambeslutning for fase 1); aggregering, sikkerhet og ruting er den reelle koden."
+  },
+  "reports": {
+    "title": "Diagnoserapporter",
+    "sub": "Rapporter for kunngjøringer videresendt av screeningen eller lagt til av dere. Flaggede kunngjøringer venter først på rådgivergjennomgang.",
+    "forwarded": "Videresendt automatisk",
+    "forwardedSub": "Treffscore ≥ {th}",
+    "manual": "Lagt til manuelt",
+    "manualSub": "Kunngjøringer under terskelen som tilbudsansvarlig la til; logges som tapte treff for forbedringssløyfen.",
+    "awaiting": "Venter på rådgivergjennomgang",
+    "awaitingSub": "Ingen treffscore og ingen rapport for noe firma før en rådgiver frigir kunngjøringen.",
+    "awaitingChip": "Venter på gjennomgang",
+    "missingN": "{n} mangler",
+    "noneForwarded": "Ingen kunngjøring nådde terskelen.",
+    "noneManual": "Ingen ennå. Bruk «Lag diagnoserapport» i den rangerte listen eller på en kunngjøring.",
+    "noneAwaiting": "Ingen kunngjøring venter på gjennomgang.",
+    "hint": "Mangler en konkurranse? Legg til en kunngjøring under terskelen fra"
+  },
+  "report": {
+    "create": "Lag diagnoserapport",
+    "open": "Åpne diagnoserapport",
+    "manual": "lagt til manuelt",
+    "processing": "Lager diagnoserapporten …",
+    "proc0": "Henter lagrede krav (forbehandlingen gjenbrukes)",
+    "proc1": "Matcher krav mot Capability Locker",
+    "proc2": "Sjekker dokumentasjon på fristen og bruker indikasjonsreglene",
+    "procNote": "Spilles av fra den frosne kjøringen — nettsiden kaller aldri en KI-modell.",
+    "pendingText": "Kunngjøringen venter på rådgivergjennomgang. Ingen rapport lages for noe firma før den er frigitt.",
+    "hiddenTitle": "Ingen diagnoserapport ennå",
+    "hiddenText": "Kunngjøringen fikk {fit} for firmaet, under terskelen på {th}, og ble derfor ikke videresendt automatisk. Dere kan legge den til manuelt.",
+    "stateForwarded": "Videresendt automatisk",
+    "stateManualRecorded": "Lagt til manuelt (registrert i mock-kjøringen)",
+    "stateManualLocal": "Lagt til manuelt i denne nettleseren",
+    "lot": "Delkontrakt",
+    "lotNotRelevant": "Delkontrakt {lot} ikke relevant (treff {fit})",
+    "indication": "Samlet indikasjon",
+    "computedByCode": "Beregnet med faste regler fra sjekklisten",
+    "checklist": "Kravsjekkliste",
+    "checklistSub": "{n} krav, hvert med kildeside. Klikk en rad for å se avsnittet i dokumentet.",
+    "mandatory": "Obligatorisk",
+    "optional": "Ikke obligatorisk",
+    "noField": "Intet felt i Capability Locker",
+    "expiry": "Utløp",
+    "why": "Hvorfor denne vurderingen",
+    "readinessRule": "Dokumentasjonsstatus på tilbudsfristen",
+    "validUntil": "Gyldig til {d}.",
+    "expiringText": "Gyldig på fristen, men utløper innen 30 dager etter — forny før kontraktsstart.",
+    "notHighlighted": "avsnittet er ikke markert",
+    "noCitation": "ingen kilde",
+    "adviserCorrected": "Rettet av rådgiver",
+    "flag": "Flagg for gjennomgang",
+    "flagDisabled": "Bare eksempel — avklaringsdesken er ikke aktiv i prototypen.",
+    "flagExample": "Eksempel på flagg fra firma",
+    "adviserAnswer": "Rådgiver",
+    "missingDocs": "Manglende dokumenter",
+    "missingDocsSub": "Krevd dokumentasjon som er egenerklært, utløpt eller mangler",
+    "noMissing": "Ingen manglende dokumenter.",
+    "disclaimer": "Kun en indikasjon. Firmaet bestemmer om det skal gi tilbud. Ingenting sendes inn.",
+    "mockNote": "MOCK: kravene kommer fra et generert plassholderdokument og beskriver ingen reell konkurranse.",
+    "footnote": "Krav uten kildehenvisning påvirker aldri indikasjonen. Dokumentasjonsstatus, utløpsflagg og indikasjon beregnes av kode."
+  },
+  "readinessText": {
+    "documented": "Dokumentasjonen er dokumentert og gyldig på tilbudsfristen.",
+    "self_declared_proof_needed": "Bare egenerklært eller delvis dokumentert — bevis trengs.",
+    "expired": "Dokumentasjonen utløper før tilbudsfristen (eller er for gammel).",
+    "no_proof_on_file": "Ingen dokumentasjon: verdien er erklært manglende eller feltet finnes ikke.",
+    "not_demanded": "Konkurransen krever ikke dokumentasjon for dette kravet."
+  },
+  "indicationReason": {
+    "mandatory_not_met": "Obligatorisk krav ikke oppfylt",
+    "optional_not_met": "Ikke-obligatorisk krav ikke oppfylt (behandles som grensetilfelle)",
+    "partly_met": "Delvis oppfylt",
+    "lacks_data": "Mangler data",
+    "low_confidence": "Lav matchesikkerhet",
+    "proof_not_documented_valid": "Krevd dokumentasjon ikke dokumentert og gyldig på fristen",
+    "met_below_high_confidence": "Oppfylt, men ikke med høy sikkerhet (behandles som grensetilfelle)",
+    "no_cited_requirements": "Ingen krav med kilde å vurdere",
+    "all_met_high_and_documented": "Alle krav oppfylt med høy sikkerhet; all krevd dokumentasjon dokumentert og gyldig på fristen"
+  },
+  "company": {
+    "sub": "skrivebeskyttet visning av profilen (datamodell tabell A1)",
+    "health": "Helsesjekk av profilen",
+    "healthSub": "Regelbaserte flagg (ingen KI): utløpt, utløper innen {days} dager, erklært manglende.",
+    "search": "Søkeprofil",
+    "searchSub": "Hva firmaet ser etter — styrer screeningen.",
+    "locker": "Capability Locker",
+    "lockerSub": "Hva firmaet kan tilby og dokumentere — styrer diagnoserapporten.",
+    "account": "Konto og utgangspunkt",
+    "accountSub": "Sendes ikke til noe KI-steg.",
+    "dataPoint": "Datapunkt",
+    "value": "Verdi",
+    "proof": "Dokumentasjonsstatus",
+    "updated": "Sist oppdatert",
+    "source": "Kilde: {src}; datamodell: {model}."
+  },
+  "pdf": {
+    "page": "Side",
+    "prev": "Forrige side",
+    "next": "Neste side",
+    "open": "Åpne PDF i ny fane",
+    "error": "Kunne ikke laste dokumentet",
+    "highlight": "Markert avsnitt"
+  },
+  "logic": {
+    "title": "Intern logikk",
+    "sub": "Mekanismekjeden steg for steg: hvilke steg som er KI og hvilke som er fast kode, og de deterministiske reglene med antakelser.",
+    "chain": "Mekanismekjede",
+    "chainSub": "Samsvarer med figur 2 i dokumentet om KI-mekanismekjeden.",
+    "step": "Steg",
+    "what": "Hva / inndata",
+    "by": "Utføres av",
+    "output": "Resultat",
+    "human": "Menneskelig beslutning",
+    "ai": "KI",
+    "code": "Kode",
+    "assumption": "ANTAKELSE",
+    "phase1Note": "Spesifisert modell for alle KI-steg: {model}. I denne mock-kjøringen i fase 1 er KI-resultatene generert av kode fra maler; i fase 2 lages de i en utviklingschat på teamets kommando. Nettsiden kaller aldri en modell.",
+    "steps": {
+      "0": {
+        "name": "Innlesing",
+        "input": "Doffin-eksport, konkurransedokumenter",
+        "tool": "versjonshash per kunngjøring",
+        "output": "Uforanderlig kunngjøringslager; KI-data lagres separat",
+        "humanText": ""
+      },
+      "0b": {
+        "name": "Aktivitet",
+        "input": "Kunngjøringslager, referansedato",
+        "tool": "regel",
+        "output": "Aktive konkurransekunngjøringer",
+        "humanText": ""
+      },
+      "1a": {
+        "name": "Gjenfinning",
+        "input": "Konkurransedokumenter",
+        "tool": "sidebiter + BM25",
+        "output": "Kandidatavsnitt per kunngjøring (logget side-ID)",
+        "humanText": ""
+      },
+      "1b": {
+        "name": "Uttrekk",
+        "input": "Avsnitt + kunngjøringsdata",
+        "tool": "LLM med kildehenvisninger, to pass",
+        "output": "Kravliste per kunngjøringsversjon + ekstraksjonssikkerhet",
+        "humanText": ""
+      },
+      "1c": {
+        "name": "Frigivingsport",
+        "input": "Ekstraksjonssikkerhet, kompletthetskontroller",
+        "tool": "regler (§9)",
+        "output": "frigitt / flagget",
+        "humanText": "Rådgiver gjennomgår flaggede kunngjøringer og frigir dem"
+      },
+      "2a": {
+        "name": "Screening",
+        "input": "Frigitte kunngjøringer (alle felt) + søkeprofil",
+        "tool": "LLM-matching",
+        "output": "Delscorer, begrunnelser, datakvalitetsmerknader",
+        "humanText": ""
+      },
+      "2b": {
+        "name": "Rangering",
+        "input": "Delscorer",
+        "tool": "vektet aggregering",
+        "output": "Én rangert liste per firma; treff 0–100, sikkerhet, rute",
+        "humanText": "Koordinator kan legge til kunngjøringer under terskelen"
+      },
+      "3a": {
+        "name": "Matching + klassifisering",
+        "input": "Lagrede krav + Capability Locker + kunngjøringsdata",
+        "tool": "LLM",
+        "output": "Per krav: felt, vurdering, sikkerhet",
+        "humanText": "Firmaet kan flagge ethvert resultat"
+      },
+      "3b": {
+        "name": "Dokumentasjonsstatus",
+        "input": "Dokumentasjonsstatus / utløp + tilbudsfrist",
+        "tool": "regler",
+        "output": "Dokumentasjonsstatus, manglende dokumenter, utløpsflagg",
+        "humanText": ""
+      },
+      "3c": {
+        "name": "Indikasjon",
+        "input": "Klassifiseringer + dokumentasjonsstatus",
+        "tool": "faste regler",
+        "output": "go / grensetilfelle / no-go + begrunnelser",
+        "humanText": "Koordinator bestemmer om det skal gis tilbud"
+      }
+    },
+    "r": {
+      "activeness": {
+        "title": "Aktivitetsregel",
+        "text": "Statusfeltet ignoreres (det er tomt for noen konkurransekunngjøringer). Tildelinger har fremtidige datoer, så fristen alene er ikke nok. En konkurranse uten frist flagges, den forkastes ikke."
+      },
+      "gate": {
+        "title": "Frigivingsport (flaggutløsere)",
+        "text": "Én utløser er nok til å flagge kunngjøringen. En flagget kunngjøring er synlig, men får ingen treffscore og ingen rapport før en rådgiver frigir den.",
+        "documents": "Konkurransedokumenter mangler eller er uleselige",
+        "deadline": "Tilbudsfrist mangler",
+        "uncited": "Lav ekstraksjonssikkerhet: et krav uten gyldig kildehenvisning",
+        "conflict": "Lav ekstraksjonssikkerhet: motstridende verdier mellom dokumenter",
+        "schema": "Lav ekstraksjonssikkerhet: skjemavalidering feiler",
+        "rating": "Lav ekstraksjonssikkerhet: lav egenvurdering fra modellen",
+        "not": "Ikke utløsere: manglende CPV, kontraktstype, estimert verdi eller andre strukturerte felt — de holdes utenfor treffscoren og senker sikkerheten."
+      },
+      "weights": {
+        "title": "Vekter i treffscoren",
+        "text": "over delscorene som ikke mangler, med vekt på faglig relevans."
+      },
+      "threshold": {
+        "title": "Terskel og ruting",
+        "text": "Videresendt hvis treff ≥ {th}; ellers under terskel. Alle screenede kunngjøringer står i én rangert liste; nesten-treffene er toppen av delen under terskelen.",
+        "lots": "Flere delkontrakter: kunngjøringen videresendes hvis en delkontrakt når terskelen; de andre vises som ikke relevante."
+      },
+      "confidence": {
+        "title": "Sikkerhetsnivåer",
+        "text": "Starter på høy og synker ett nivå per manglende datapunkt med vekt ≥ 0,10 og per motstrid modellen rapporterer (f.eks. utførelsessted mot oppdragsgivers adresse, samlet verdi mot avropsverdi): høy → middels → lav."
+      },
+      "readiness": {
+        "title": "Dokumentasjonsstatus",
+        "documented": "Dokumentert: status Dokumentert og gyldig på tilbudsfristen.",
+        "self": "Egenerklært — bevis trengs: egenerklært eller bare delvis dokumentert (f.eks. 2 av 3).",
+        "expired": "Utløpt: utløpsdato før tilbudsfristen.",
+        "none": "Ingen dokumentasjon: verdi erklært manglende eller felt mangler (standardvalg; logget for teamet).",
+        "tax": "Skatteattest gyldig hvis utstedt høyst {months} måneder før fristen.",
+        "soon": "Gyldig på fristen, men utløper innen {days} dager etter: forblir dokumentert, raden får et synlig flagg."
+      },
+      "indication": {
+        "title": "Indikasjonsregler (ordrett fra tjenesteporteføljen)",
+        "nogo": "minst ett obligatorisk krav er ikke oppfylt.",
+        "borderline": "ingen krav er ikke oppfylt, men minst ett er delvis oppfylt, mangler data, har lav matchesikkerhet, eller krevd dokumentasjon er ikke dokumentert og gyldig på tilbudsfristen.",
+        "go": "alle krav oppfylt med høy sikkerhet, og all krevd dokumentasjon dokumentert og gyldig på tilbudsfristen.",
+        "gap": "Hull i formuleringen (logget for teamet): et ikke-obligatorisk krav som ikke er oppfylt, eller et krav oppfylt med middels sikkerhet, passer verken grensetilfelle eller go. Standardvalg: grensetilfelle."
+      },
+      "health": {
+        "title": "Helsesjekk av profilen (tjeneste 3)",
+        "text": "Flagger utløpte oppføringer, oppføringer som utløper innen {days} dager fra referansedatoen, og verdier erklært manglende."
+      }
+    },
+    "assumptionsTitle": "Antakelser i denne kjøringen"
+  },
+  "prompts": {
+    "title": "Prompter og I/O",
+    "sub": "For hver KI-oppgave: prompttekst og versjon, nøyaktig inndata, råresultat, validert resultat og skjema- og kildekontroller.",
+    "t": {
+      "extraction": "1b Uttrekk",
+      "screening": "2a Screening",
+      "matching": "3a Matching + klassifisering"
+    },
+    "notice": "Kunngjøring",
+    "req": "Krav",
+    "firmNote": "Firma: {firm} (bytt med «Vis som»)",
+    "mockNote": "Fase 1: promptene er skrevet og versjonert, men er IKKE kjørt. Inndata er nøyaktig det hver prompt ville fått; resultatene er generert av kode i samme skjema.",
+    "prompt": "Prompttekst",
+    "input": "Nøyaktig inndata",
+    "inputSub": "Kontaktfelt og konto-/utgangspunktdelene sendes aldri.",
+    "raw": "Råresultat",
+    "validated": "Validert resultat",
+    "schema": "Skjemakontroll",
+    "citations": "Kilder {ok}/{n}",
+    "citationTable": "Kildekontroll og markering per krav",
+    "citationOk": "sitert tekst på sitert side",
+    "highlighted": "markert"
+  },
+  "adviser": {
+    "title": "Rådgiversiden (simulert)",
+    "sub": "Køen fra frigivingsporten med flaggårsaker, registrerte beslutninger og effekten på screening og rapporter. Skrivebeskyttet: beslutningene registreres av teamet i data/adviser_decisions.json.",
+    "auto": "Frigitt automatisk",
+    "pending": "Venter på gjennomgang",
+    "released": "Frigitt av rådgiver",
+    "statusPending": "Venter",
+    "statusReleased": "Frigitt",
+    "reasons": "Flaggårsaker",
+    "decision": "Registrert beslutning",
+    "effect": "Effekt",
+    "noDecision": "Ingen beslutning registrert.",
+    "correction": "Retting",
+    "dec": {
+      "released": "Frigitt",
+      "pending": "Venter"
+    },
+    "src": {
+      "data_requirements": "utløser fra Datakrav",
+      "mechanism_chain": "utløser fra KI-mekanismekjeden (lav ekstraksjonssikkerhet)"
+    },
+    "effectReleased": "Screenet for alle firmaer etter frigiving; rapport der den er videresendt eller lagt til.",
+    "effectFit": "{firm}: treff {fit}",
+    "effectPending": "Synlig i kunngjøringssøket med merke; ingen treffscore og ingen rapport for noe firma.",
+    "footnote": "Feiltilstanden for flaggede kunngjøringer (T7) vises her bare på mock-kjøringen. Kunngjøringsdataene endres aldri for å fremprovosere et flagg."
+  },
+  "tests": {
+    "title": "Testtilfeller",
+    "sub": "Påkrevde tester T1–T11 med status på gjeldende kjøring, og dekningsmatrisen for mock-kjøringen.",
+    "cases": "T1–T11",
+    "casesSub": "Status beregnes av kode fra resultatene i kjøringen.",
+    "type": "Type",
+    "scenario": "Scenario",
+    "expected": "Forventet",
+    "status": "Status",
+    "observed": "Observert",
+    "evidence": "Belegg",
+    "mockWarning": "«passed (mock)» viser at kodestiene oppfører seg som spesifisert på mock-innhold. Det er ikke testbelegg om reelle konkurranser og skal ikke rapporteres slik.",
+    "coverage": "Dekning av tilstander i mock-kjøringen",
+    "coverageSub": "{c} av {n} definerte tilstander har minst ett eksempel (ellers feiler bygget)."
+  },
+  "testlog": {
+    "title": "Testlogg",
+    "sub": "Testlogg for prototypen i formatet til vedlegg A i oppgaven. Eksporter som CSV eller skriv ut.",
+    "print": "Skriv ut",
+    "note": "Læring/revisjon hentes fra data/test_log_notes.json og skrives av teamet. Observasjonene i fase 1 er mock-observasjoner."
+  },
+  "run": {
+    "title": "Data og kjøring",
+    "sub": "Datakilder, datoer, kjøringens identitet, modell, manifest med sjekksummer og kjente begrensninger.",
+    "facts": "Kjøring",
+    "runId": "Kjørings-ID",
+    "created": "Opprettet (UTC)",
+    "reference": "Referansedato",
+    "snapshot": "Uttrekk av kunngjøringer",
+    "modelSpecified": "Modell i prosjektdokumentene",
+    "modelUsed": "Modell brukt i denne kjøringen",
+    "prompts": "Promptversjoner",
+    "manifestSha": "Manifestets sjekksum",
+    "sources": "Datakilder",
+    "src": {
+      "notices": "Doffin-kunngjøringer",
+      "noticesN": "{n} kunngjøringer, uendret",
+      "mockNotices": "Oppfunne MOCK-kunngjøringer",
+      "profiles": "Syntetiske profiler",
+      "docs": "Konkurransedokumenter",
+      "docsText": "Fase 1: genererte plassholder-PDF-er (data/mock/tender_docs); fase 2: originaler (data/raw/tender_docs)",
+      "adviser": "Rådgiverbeslutninger"
+    },
+    "inputChecksums": "Sjekksummer for inndata (SHA-256)",
+    "steps": "Kjørte steg",
+    "limitations": "Kjente begrensninger",
+    "lim": {
+      "mock": "Mock-kjøring i fase 1: krav, delscorer og klassifiseringer er generert av kode fra maler og beskriver ingen reell konkurranse.",
+      "docs": "Konkurransedokumentene er plassholdere til teamet leverer originalene (fase 2).",
+      "model": "KI-kjøringen i fase 2 skjer i en chatøkt som ikke kan låse modellen; modellen som rapporteres der registreres og kan avvike fra modellen i dokumentene.",
+      "repro": "Genereringen er ikke bit-for-bit reproduserbar; nettsiden spiller av én frossen kjøring.",
+      "flags": "Tilstandene for flaggede kunngjøringer og manglende frist vises med mock-flagg og MOCK-kunngjøringer; den ekte eksporten endres aldri.",
+      "data": "Firmaene er syntetiske. Kontaktfeltene i kunngjøringene er uendret som på doffin.no, men sendes aldri til en KI-prompt."
+    },
+    "manifest": "Manifest",
+    "manifestSub": "{n} resultatfiler med SHA-256-sjekksummer.",
+    "file": "Fil",
+    "reset": "Nullstill demo",
+    "resetSub": "Fjerner rapportene du har lagt til manuelt i denne nettleseren (lagres bare i nettleseren).",
+    "resetDone": "Demo nullstilt"
+  }
+}

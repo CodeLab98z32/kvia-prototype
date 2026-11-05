@@ -1,0 +1,16 @@
+{
+  "profile_id": "FX",
+  "search_profile": [],
+  "capability_locker": [
+    {"id": "tax_vat_certificate", "proof_status": "Documented", "expiry_date": null,
+     "structured": {"issue_date": "2026-05-01"}},
+    {"id": "insurance", "proof_status": "Documented", "expiry_date": "2026-12-10", "structured": {}},
+    {"id": "hms_declaration", "proof_status": "Self-declared", "expiry_date": null, "structured": {}},
+    {"id": "key_personnel_cvs", "proof_status": "Documented (n of m)", "documented_n": 1, "documented_m": 2,
+     "expiry_date": null, "structured": {}},
+    {"id": "credit_rating", "proof_status": "Declared missing", "expiry_date": null, "structured": {}},
+    {"id": "startbank_achilles", "proof_status": "Mixed", "expiry_date": null, "structured": {},
+     "parts": [{"part": "StartBANK", "proof_status": "Documented", "expiry_date": "2026-09-30"},
+               {"part": "Achilles", "proof_status": "Not applicable", "expiry_date": null}]}
+  ]
+}

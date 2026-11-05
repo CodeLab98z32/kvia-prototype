@@ -1,0 +1,11 @@
+{
+  "status": "placeholder",
+  "expected_documents": [
+    "konkurransegrunnlag",
+    "kravspesifikasjon",
+    "annexes"
+  ],
+  "generated_pdf": "PLACEHOLDER_2026-116580_konkurransegrunnlag.pdf",
+  "phase_1_rule": "counts as 'available (mock)', not as missing (SPEC §18)",
+  "mock": true
+}

@@ -1,0 +1,663 @@
+{
+  "profile_id": "P1",
+  "synthetic": true,
+  "source": "docs/Synthetic company profiles.docx, Table B1",
+  "data_model": "Table A1, docs/Company profile data.docx",
+  "firm": {
+    "name": "Synthetic Company 1",
+    "initials": "SC1",
+    "sector_en": "Carpentry and renovation · Telemark / Vestfold",
+    "sector_nb": "Tømrer og rehabilitering · Telemark / Vestfold",
+    "name_note_en": "The profile tables give no firm name; the table title is used as display name.",
+    "name_note_nb": "Profiltabellene oppgir ikke firmanavn; tabelltittelen brukes som visningsnavn."
+  },
+  "search_profile": [
+    {
+      "id": "main_cpv",
+      "label_en": "Main CPV",
+      "label_nb": "Hoved-CPV",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Main and secondary CPV codes",
+      "value": "45453000 Inspection and renovation work",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "45453000"
+        ]
+      }
+    },
+    {
+      "id": "secondary_cpv",
+      "label_en": "Secondary CPV",
+      "label_nb": "Sekundære CPV-koder",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Main and secondary CPV codes",
+      "value": "45000000 Construction work; 45210000 Building construction work; 45262700 Building alteration work; 45421000 Joinery work",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "45000000",
+          "45210000",
+          "45262700",
+          "45421000"
+        ]
+      }
+    },
+    {
+      "id": "region_nuts",
+      "label_en": "Region (NUTS)",
+      "label_nb": "Region (NUTS)",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Region (NUTS codes)",
+      "value": "NO094 Telemark; NO093 Vestfold",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "codes": [
+          "NO094",
+          "NO093"
+        ]
+      }
+    },
+    {
+      "id": "contract_subject",
+      "label_en": "Contract subject",
+      "label_nb": "Kontraktstype",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract subject (works, supplies, services)",
+      "value": "Works",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "subjects": [
+          "Works"
+        ]
+      }
+    },
+    {
+      "id": "contract_form",
+      "label_en": "Contract form",
+      "label_nb": "Kontraktsform",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract form",
+      "value": "Execution contract: yes. Design-and-build: yes, up to NOK 8 million, with an external designer. General contract: no. Subcontractor: yes",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "execution": true,
+        "design_and_build": true,
+        "design_and_build_max_nok": 8000000,
+        "design_and_build_note": "with an external designer",
+        "general_contract": false,
+        "subcontractor": true
+      }
+    },
+    {
+      "id": "size_band",
+      "label_en": "Contract-size band",
+      "label_nb": "Kontraktsstørrelse",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Contract-size band (min-max NOK)",
+      "value": "NOK 0.3–8 million",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "min_nok": 300000.0,
+        "max_nok": 8000000,
+        "basis": "per contract"
+      }
+    },
+    {
+      "id": "framework_dps",
+      "label_en": "Framework agreements and DPS",
+      "label_nb": "Rammeavtaler og DPS",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Willingness to bid on framework agreements and DPS",
+      "value": "Framework: yes (maintenance and small-works frameworks). DPS: no",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "framework": true,
+        "dps": false
+      }
+    },
+    {
+      "id": "lot_preferences",
+      "label_en": "Lot preferences",
+      "label_nb": "Delkontrakter",
+      "table_a1_category": "search_criteria",
+      "table_a1_category_nb": "Søkekriterier",
+      "table_a1_data_point": "Lot preferences for multi-lot notices",
+      "value": "At most two lots per notice; prefers lots of NOK 4 million or less",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "max_lots": 2,
+        "preferred_max_lot_value_nok": 4000000,
+        "disciplines": null
+      }
+    }
+  ],
+  "capability_locker": [
+    {
+      "id": "org_nr",
+      "label_en": "Organisation number",
+      "label_nb": "Organisasjonsnummer",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Organization number",
+      "value": "000 000 101 (synthetic)",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "employee_count",
+      "label_en": "Employee count",
+      "label_nb": "Antall ansatte",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Employee count",
+      "value": "14",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "count": 14
+      }
+    },
+    {
+      "id": "founding_year",
+      "label_en": "Founding year",
+      "label_nb": "Stiftelsesår",
+      "table_a1_category": "identity_and_size",
+      "table_a1_category_nb": "Identitet og størrelse",
+      "table_a1_data_point": "Founding year",
+      "value": "2009",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "year": 2009
+      }
+    },
+    {
+      "id": "staff",
+      "label_en": "Staff by role and qualification",
+      "label_nb": "Ansatte etter rolle og kvalifikasjon",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Staff by role and qualification",
+      "value": "1 managing director (master craftsman certificate, carpentry); 1 project manager (BSc construction engineering); 9 carpenters with trade certificate; 2 carpenters without trade certificate; 1 apprentice",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "key_personnel_cvs",
+      "label_en": "Key personnel CVs",
+      "label_nb": "CV-er for nøkkelpersonell",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Key personnel CVs",
+      "value": "Managing director and project manager held; no CV for the external designer",
+      "proof_status_original": "Documented (2 of 3)",
+      "last_updated": "2026-09-22",
+      "expiry_original": "–",
+      "proof_status": "Documented (n of m)",
+      "documented_n": 2,
+      "documented_m": 3,
+      "expiry_date": null,
+      "structured": {
+        "held": [
+          "managing director",
+          "project manager"
+        ],
+        "missing": [
+          "external designer"
+        ]
+      }
+    },
+    {
+      "id": "working_languages",
+      "label_en": "Working languages",
+      "label_nb": "Arbeidsspråk",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Working languages (Norwegian/English)",
+      "value": "Norwegian (all staff); English (managing director, project manager); Polish (2 carpenters)",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "languages": [
+          "nb",
+          "en",
+          "pl"
+        ],
+        "all_staff_norwegian": true
+      }
+    },
+    {
+      "id": "insurance",
+      "label_en": "Insurance type and coverage",
+      "label_nb": "Forsikring og dekning",
+      "table_a1_category": "capacity",
+      "table_a1_category_nb": "Kapasitet",
+      "table_a1_data_point": "Insurance type and coverage",
+      "value": "General liability, NOK 10 million per claim; contractor's all-risk cover arranged per project",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-14",
+      "expiry_original": "2026-12-31",
+      "proof_status": "Documented",
+      "expiry_date": "2026-12-31",
+      "structured": {
+        "type": "general liability",
+        "coverage_nok": 10000000
+      }
+    },
+    {
+      "id": "tax_vat_certificate",
+      "label_en": "Tax and VAT certificate",
+      "label_nb": "Skatteattest (skatt og mva.)",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "Tax and VAT certificate with issue date",
+      "value": "Issued 2026-03-10",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-03-10",
+      "expiry_original": "Older than six months on 2026-11-04",
+      "proof_status": "Documented",
+      "expiry_date": "2026-09-10",
+      "structured": {
+        "issue_date": "2026-03-10",
+        "validity_rule": "six_months_from_issue"
+      }
+    },
+    {
+      "id": "hms_declaration",
+      "label_en": "HMS self-declaration",
+      "label_nb": "HMS-egenerklæring",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "HMS self-declaration",
+      "value": "Signed 2026-01-15",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-01-15",
+      "expiry_original": "Review due 2027-01-15",
+      "proof_status": "Documented",
+      "expiry_date": "2027-01-15",
+      "expiry_kind": "review_due",
+      "structured": {
+        "signed": "2026-01-15"
+      }
+    },
+    {
+      "id": "startbank_achilles",
+      "label_en": "StartBANK / Achilles",
+      "label_nb": "StartBANK / Achilles",
+      "table_a1_category": "tax_and_compliance",
+      "table_a1_category_nb": "Skatt og etterlevelse",
+      "table_a1_data_point": "StartBANK/Achilles registration where relevant",
+      "value": "StartBANK: registered. Achilles: not registered, not relevant to current markets",
+      "proof_status_original": "Documented / Not applicable",
+      "last_updated": "2026-05-31",
+      "expiry_original": "StartBANK: 2027-05-31",
+      "proof_status": "Mixed",
+      "parts": [
+        {
+          "part": "StartBANK",
+          "proof_status": "Documented",
+          "expiry_date": "2027-05-31",
+          "registered": true
+        },
+        {
+          "part": "Achilles",
+          "proof_status": "Not applicable",
+          "expiry_date": null,
+          "registered": false
+        }
+      ],
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "approved_apprentice",
+      "label_en": "Approved apprentice company",
+      "label_nb": "Godkjent lærebedrift",
+      "table_a1_category": "certificates_and_approvals",
+      "table_a1_category_nb": "Sertifikater og godkjenninger",
+      "table_a1_data_point": "Approved apprentice company",
+      "value": "Issuer: county authority, Telemark; scope: carpentry trade",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-14",
+      "expiry_original": "No expiry",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "approved": true,
+        "issuer": "county authority, Telemark",
+        "scope": "carpentry trade"
+      }
+    },
+    {
+      "id": "sector_approval",
+      "label_en": "Sector approval",
+      "label_nb": "Sentral godkjenning",
+      "table_a1_category": "certificates_and_approvals",
+      "table_a1_category_nb": "Sertifikater og godkjenninger",
+      "table_a1_data_point": "Sector approvals (issuer, scope, expiry)",
+      "value": "Central approval for building works (DiBK); scope: execution, carpentry and building envelope, tiltaksklasse 2; no approval for design (prosjektering)",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-10-14",
+      "expiry_original": "2027-02-28",
+      "proof_status": "Documented",
+      "expiry_date": "2027-02-28",
+      "structured": {
+        "issuer": "DiBK",
+        "scope": [
+          "execution",
+          "carpentry",
+          "building envelope"
+        ],
+        "tiltaksklasse": 2,
+        "design_approval": false
+      }
+    },
+    {
+      "id": "turnover",
+      "label_en": "Turnover 2021–2025",
+      "label_nb": "Omsetning 2021–2025",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Turnover for the last five years",
+      "value": "NOK 17.9 / 20.4 / 22.8 / 21.6 / 24.1 million",
+      "proof_status_original": "Documented (annual accounts)",
+      "last_updated": "2026-06-30",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "by_year_nok": {
+          "2021": 17900000.0,
+          "2022": 20400000.0,
+          "2023": 22800000.0,
+          "2024": 21600000.0,
+          "2025": 24100000.0
+        }
+      }
+    },
+    {
+      "id": "profit",
+      "label_en": "Profit before tax",
+      "label_nb": "Resultat før skatt",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Profit",
+      "value": "2025: NOK 1.3 million; 2021–2024 declared missing",
+      "proof_status_original": "Documented (2025); Declared missing (2021–2024)",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Mixed",
+      "parts": [
+        {
+          "part": "2025",
+          "proof_status": "Documented",
+          "expiry_date": null
+        },
+        {
+          "part": "2021–2024",
+          "proof_status": "Declared missing",
+          "expiry_date": null
+        }
+      ],
+      "expiry_date": null,
+      "structured": {
+        "by_year_nok": {
+          "2025": 1300000.0
+        }
+      }
+    },
+    {
+      "id": "equity_ratio",
+      "label_en": "Equity ratio",
+      "label_nb": "Egenkapitalandel",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Equity ratio",
+      "value": "24 % (2025)",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-06-30",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "percent": 24,
+        "year": 2025
+      }
+    },
+    {
+      "id": "credit_rating",
+      "label_en": "Credit rating",
+      "label_nb": "Kredittvurdering",
+      "table_a1_category": "financial_standing",
+      "table_a1_category_nb": "Økonomi",
+      "table_a1_data_point": "Credit rating",
+      "value": "A",
+      "proof_status_original": "Documented",
+      "last_updated": "2026-06-02",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "rating": "A"
+      }
+    },
+    {
+      "id": "reference_1",
+      "label_en": "Reference 1",
+      "label_nb": "Referanse 1",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Municipality, Telemark (public); 2025; NOK 3.4 million; CPV 45453000; refurbishment of a kindergarten wing, execution contract won through Doffin",
+      "proof_status_original": "Documented (reference letter)",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "public",
+        "year": 2025,
+        "value_nok": 3400000.0,
+        "cpv": "45453000",
+        "region": "Telemark"
+      }
+    },
+    {
+      "id": "reference_2",
+      "label_en": "Reference 2",
+      "label_nb": "Referanse 2",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Housing cooperative, Vestfold (private); 2024; NOK 5.2 million; CPV 45262700; balcony and facade renovation, 36 units",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "private",
+        "year": 2024,
+        "value_nok": 5200000.0,
+        "cpv": "45262700",
+        "region": "Vestfold"
+      }
+    },
+    {
+      "id": "reference_3",
+      "label_en": "Reference 3",
+      "label_nb": "Referanse 3",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Inter-municipal company, Telemark (public); 2023; NOK 1.1 million; CPV 45421000; joinery package in a school extension, as subcontractor",
+      "proof_status_original": "Documented (reference letter)",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Documented",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "public",
+        "year": 2023,
+        "value_nok": 1100000.0,
+        "cpv": "45421000",
+        "region": "Telemark"
+      }
+    },
+    {
+      "id": "reference_4",
+      "label_en": "Reference 4",
+      "label_nb": "Referanse 4",
+      "table_a1_category": "references",
+      "table_a1_category_nb": "Referanser",
+      "table_a1_data_point": "References (client, public/private, year, value, CPV, description)",
+      "value": "Commercial property owner, Telemark (private); 2022; NOK 2.6 million; CPV 45210000; new storage building, about 280 m²",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {
+        "client_type": "private",
+        "year": 2022,
+        "value_nok": 2600000.0,
+        "cpv": "45210000",
+        "region": "Telemark"
+      }
+    }
+  ],
+  "account_and_baseline": [
+    {
+      "id": "bid_coordinator",
+      "label_en": "Bid coordinator",
+      "label_nb": "Tilbudsansvarlig",
+      "table_a1_category": "account",
+      "table_a1_category_nb": "Konto",
+      "table_a1_data_point": "Named bid coordinator and contact details",
+      "value": "Jonas Berg (fictional), project manager; jonas.berg@grenland-rehab.example; +47 000 00 101",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "bidding_history",
+      "label_en": "Bidding history",
+      "label_nb": "Tilbudshistorikk",
+      "table_a1_category": "account",
+      "table_a1_category_nb": "Konto",
+      "table_a1_data_point": "Bidding history (number of past bids and wins)",
+      "value": "3 public bids since 2023; 1 win",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "finding_tenders",
+      "label_en": "Current way of finding tenders",
+      "label_nb": "Slik finner firmaet konkurranser i dag",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Current way of finding tenders",
+      "value": "Manual Doffin search about once a month; tips from suppliers",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "time_spent",
+      "label_en": "Time spent on past bid attempts",
+      "label_nb": "Tidsbruk på tidligere tilbud",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Time spent on past bid attempts",
+      "value": "About 35 and 50 hours for the two most recent bids",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    },
+    {
+      "id": "ai_experience",
+      "label_en": "Starting experience with AI tools",
+      "label_nb": "Erfaring med KI-verktøy",
+      "table_a1_category": "baseline",
+      "table_a1_category_nb": "Utgangspunkt",
+      "table_a1_data_point": "Starting experience with AI tools",
+      "value": "Occasional use of a general chatbot for e-mails; no use in bids",
+      "proof_status_original": "Self-declared",
+      "last_updated": "2026-10-14",
+      "expiry_original": "–",
+      "proof_status": "Self-declared",
+      "expiry_date": null,
+      "structured": {}
+    }
+  ]
+}

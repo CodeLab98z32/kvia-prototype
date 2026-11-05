@@ -1,0 +1,27 @@
+[
+  {
+    "field": "insurance",
+    "part": null,
+    "kind": "expiring",
+    "label_en": "Insurance type and coverage",
+    "label_nb": "Forsikring og dekning",
+    "date": "2026-12-31",
+    "days_left": 57
+  },
+  {
+    "field": "tax_vat_certificate",
+    "part": null,
+    "kind": "expired",
+    "label_en": "Tax and VAT certificate",
+    "label_nb": "Skatteattest (skatt og mva.)",
+    "date": "2026-09-10"
+  },
+  {
+    "field": "profit",
+    "part": "2021–2024",
+    "kind": "declared_missing",
+    "label_en": "Profit before tax — 2021–2024",
+    "label_nb": "Resultat før skatt — 2021–2024",
+    "date": null
+  }
+]

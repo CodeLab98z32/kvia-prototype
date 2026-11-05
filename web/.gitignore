@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+public/data/
+public/docs/
+public/brand/
+public/pdf.worker.min.mjs
+src/app/icon.svg
+next-env.d.ts
+*.tsbuildinfo
+src/messages/

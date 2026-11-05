@@ -1,0 +1,1526 @@
+{
+  "modes": [
+    {
+      "group": "activeness",
+      "mode": "active competition notice",
+      "examples": [
+        {
+          "notice_id": "2026-115833"
+        },
+        {
+          "notice_id": "2026-116318"
+        },
+        {
+          "notice_id": "2026-116334"
+        },
+        {
+          "notice_id": "2026-116566"
+        },
+        {
+          "notice_id": "2026-116568"
+        },
+        {
+          "notice_id": "2026-116577"
+        }
+      ]
+    },
+    {
+      "group": "activeness",
+      "mode": "competition notice with empty status (screened)",
+      "examples": [
+        {
+          "notice_id": "2026-116544"
+        },
+        {
+          "notice_id": "2026-116619"
+        }
+      ]
+    },
+    {
+      "group": "activeness",
+      "mode": "award / advisory / intent notice excluded",
+      "examples": [
+        {
+          "notice_id": "2026-115654",
+          "note": "award"
+        },
+        {
+          "notice_id": "2026-116107",
+          "note": "intent"
+        },
+        {
+          "notice_id": "2026-116235",
+          "note": "advisory"
+        },
+        {
+          "notice_id": "2026-116314",
+          "note": "award"
+        },
+        {
+          "notice_id": "2026-116386",
+          "note": "award"
+        },
+        {
+          "notice_id": "2026-116470",
+          "note": "award"
+        }
+      ]
+    },
+    {
+      "group": "activeness",
+      "mode": "competition notice with passed deadline excluded",
+      "examples": [
+        {
+          "notice_id": "MOCK-0001"
+        }
+      ]
+    },
+    {
+      "group": "release_gate",
+      "mode": "released automatically",
+      "examples": [
+        {
+          "notice_id": "2026-115833"
+        },
+        {
+          "notice_id": "2026-116318"
+        },
+        {
+          "notice_id": "2026-116334"
+        },
+        {
+          "notice_id": "2026-116544"
+        },
+        {
+          "notice_id": "2026-116566"
+        },
+        {
+          "notice_id": "2026-116568"
+        }
+      ]
+    },
+    {
+      "group": "release_gate",
+      "mode": "flagged – low extraction confidence, pending",
+      "examples": [
+        {
+          "notice_id": "2026-116577"
+        }
+      ]
+    },
+    {
+      "group": "release_gate",
+      "mode": "flagged – low extraction confidence, released by adviser with correction",
+      "examples": [
+        {
+          "notice_id": "2026-116600"
+        }
+      ]
+    },
+    {
+      "group": "release_gate",
+      "mode": "flagged – documents missing or unreadable",
+      "examples": [
+        {
+          "notice_id": "MOCK-0002"
+        }
+      ]
+    },
+    {
+      "group": "release_gate",
+      "mode": "flagged – deadline missing",
+      "examples": [
+        {
+          "notice_id": "MOCK-0003"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "forwarded (>= threshold)",
+      "examples": [
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P3"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "below threshold",
+      "examples": [
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "MOCK-0004",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116580",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116581",
+          "firm_id": "P1"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "confidence high",
+      "examples": [
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116580",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116581",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116600",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P2"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "confidence medium",
+      "examples": [
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "MOCK-0004",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116318",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116334",
+          "firm_id": "P1"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "confidence low",
+      "examples": [
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "missing value excluded from score",
+      "examples": [
+        {
+          "notice_id": "MOCK-0004",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116318",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116334",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116334",
+          "firm_id": "P2"
+        },
+        {
+          "notice_id": "MOCK-0004",
+          "firm_id": "P2"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "contradictory data lowering confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1",
+          "note": "aggregate_vs_calloff_value"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P1",
+          "note": "aggregate_vs_calloff_value"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "note": "aggregate_vs_calloff_value"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2",
+          "note": "nuts_vs_buyer_location,aggregate_vs_calloff_value"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P2",
+          "note": "aggregate_vs_calloff_value"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P2",
+          "note": "aggregate_vs_calloff_value"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "multi-lot with one relevant lot",
+      "examples": [
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2",
+          "lot_id": "B"
+        }
+      ]
+    },
+    {
+      "group": "screening",
+      "mode": "'anyw' place of performance",
+      "examples": [
+        {
+          "notice_id": "MOCK-0004",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "MOCK-0004",
+          "firm_id": "P2"
+        },
+        {
+          "notice_id": "MOCK-0004",
+          "firm_id": "P3"
+        }
+      ]
+    },
+    {
+      "group": "manual",
+      "mode": "below-threshold notice added via ranked list",
+      "examples": [
+        {
+          "notice_id": "2026-116600",
+          "firm_id": "P3"
+        }
+      ]
+    },
+    {
+      "group": "manual",
+      "mode": "added via notice browser",
+      "examples": [
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "met / high confidence",
+      "examples": [
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R01",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R02",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R03",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R05",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R01",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R02",
+          "lot_id": "2"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "met / medium confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P1",
+          "req_id": "R09"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P2",
+          "req_id": "R02",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P2",
+          "req_id": "R02",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P2",
+          "req_id": "R02",
+          "lot_id": "3"
+        },
+        {
+          "notice_id": "2026-116318",
+          "firm_id": "P2",
+          "req_id": "R02"
+        },
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P2",
+          "req_id": "R02"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "met / low confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2",
+          "req_id": "R10",
+          "lot_id": "B"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "partly_met / high confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1",
+          "req_id": "R06",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1",
+          "req_id": "R06",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1",
+          "req_id": "R06",
+          "lot_id": "3"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P1",
+          "req_id": "R08"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P1",
+          "req_id": "R07",
+          "lot_id": "A"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P1",
+          "req_id": "R07",
+          "lot_id": "B"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "partly_met / medium confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2",
+          "req_id": "R06",
+          "lot_id": "A"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2",
+          "req_id": "R06",
+          "lot_id": "B"
+        },
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P2",
+          "req_id": "R11"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "partly_met / low confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P1",
+          "req_id": "R08"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "not_met / high confidence",
+      "examples": [
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R04",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R04",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R04",
+          "lot_id": "3"
+        },
+        {
+          "notice_id": "2026-116318",
+          "firm_id": "P1",
+          "req_id": "R05"
+        },
+        {
+          "notice_id": "2026-116334",
+          "firm_id": "P1",
+          "req_id": "R05"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1",
+          "req_id": "R05",
+          "lot_id": "1"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "not_met / medium confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P2",
+          "req_id": "R03"
+        },
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P2",
+          "req_id": "R09"
+        },
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P3",
+          "req_id": "R09"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "not_met / low confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1",
+          "req_id": "R05"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "lacks_data / high confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116334",
+          "firm_id": "P1",
+          "req_id": "R03"
+        },
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1",
+          "req_id": "R06"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P1",
+          "req_id": "R05"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P1",
+          "req_id": "R06"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P1",
+          "req_id": "R07"
+        },
+        {
+          "notice_id": "2026-116580",
+          "firm_id": "P1",
+          "req_id": "R02"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "lacks_data / medium confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116334",
+          "firm_id": "P2",
+          "req_id": "R02"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P2",
+          "req_id": "R03",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P2",
+          "req_id": "R03",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P2",
+          "req_id": "R03",
+          "lot_id": "3"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2",
+          "req_id": "R03",
+          "lot_id": "A"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2",
+          "req_id": "R03",
+          "lot_id": "B"
+        }
+      ]
+    },
+    {
+      "group": "match_status",
+      "mode": "lacks_data / low confidence",
+      "examples": [
+        {
+          "notice_id": "2026-116318",
+          "firm_id": "P1",
+          "req_id": "R04"
+        }
+      ]
+    },
+    {
+      "group": "readiness",
+      "mode": "documented",
+      "examples": [
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R02",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R03",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R02",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R03",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R02",
+          "lot_id": "3"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R03",
+          "lot_id": "3"
+        }
+      ]
+    },
+    {
+      "group": "readiness",
+      "mode": "self_declared_proof_needed",
+      "examples": [
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1",
+          "req_id": "R06",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1",
+          "req_id": "R06",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-116566",
+          "firm_id": "P1",
+          "req_id": "R06",
+          "lot_id": "3"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P1",
+          "req_id": "R08"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P1",
+          "req_id": "R07",
+          "lot_id": "A"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P1",
+          "req_id": "R07",
+          "lot_id": "B"
+        }
+      ]
+    },
+    {
+      "group": "readiness",
+      "mode": "expired",
+      "examples": [
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R01",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R01",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R01",
+          "lot_id": "3"
+        },
+        {
+          "notice_id": "2026-116318",
+          "firm_id": "P1",
+          "req_id": "R01"
+        },
+        {
+          "notice_id": "2026-116334",
+          "firm_id": "P1",
+          "req_id": "R01"
+        },
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1",
+          "req_id": "R01"
+        }
+      ]
+    },
+    {
+      "group": "readiness",
+      "mode": "proof not demanded",
+      "examples": [
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R05",
+          "lot_id": "1"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R05",
+          "lot_id": "2"
+        },
+        {
+          "notice_id": "2026-115833",
+          "firm_id": "P1",
+          "req_id": "R05",
+          "lot_id": "3"
+        },
+        {
+          "notice_id": "2026-116318",
+          "firm_id": "P1",
+          "req_id": "R06"
+        },
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1",
+          "req_id": "R06"
+        },
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1",
+          "req_id": "R07"
+        }
+      ]
+    },
+    {
+      "group": "readiness",
+      "mode": "documented + expiring-soon flag",
+      "examples": [
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P3",
+          "req_id": "R05"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P3",
+          "req_id": "R07"
+        }
+      ]
+    },
+    {
+      "group": "indication",
+      "mode": "go",
+      "examples": [
+        {
+          "notice_id": "2026-116600",
+          "firm_id": "P3",
+          "note": "manually_added"
+        }
+      ]
+    },
+    {
+      "group": "indication",
+      "mode": "borderline",
+      "examples": [
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2",
+          "lot_id": "B",
+          "note": "forwarded"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P3",
+          "note": "forwarded"
+        }
+      ]
+    },
+    {
+      "group": "indication",
+      "mode": "no-go",
+      "examples": [
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1",
+          "note": "manually_added"
+        },
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P1",
+          "note": "forwarded"
+        }
+      ]
+    },
+    {
+      "group": "report_states",
+      "mode": "awaiting adviser review",
+      "examples": [
+        {
+          "notice_id": "2026-116577",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "MOCK-0002",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "MOCK-0003",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116577",
+          "firm_id": "P2"
+        },
+        {
+          "notice_id": "MOCK-0002",
+          "firm_id": "P2"
+        },
+        {
+          "notice_id": "MOCK-0003",
+          "firm_id": "P2"
+        }
+      ]
+    },
+    {
+      "group": "report_states",
+      "mode": "available",
+      "examples": [
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116579",
+          "firm_id": "P2"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P3"
+        }
+      ]
+    },
+    {
+      "group": "report_states",
+      "mode": "manually added",
+      "examples": [
+        {
+          "notice_id": "2026-116544",
+          "firm_id": "P1"
+        },
+        {
+          "notice_id": "2026-116600",
+          "firm_id": "P3"
+        }
+      ]
+    },
+    {
+      "group": "review_and_s3",
+      "mode": "adviser queue entry – pending",
+      "examples": [
+        {
+          "notice_id": "2026-116577"
+        },
+        {
+          "notice_id": "MOCK-0002"
+        },
+        {
+          "notice_id": "MOCK-0003"
+        }
+      ]
+    },
+    {
+      "group": "review_and_s3",
+      "mode": "adviser queue entry – released",
+      "examples": [
+        {
+          "notice_id": "2026-116600"
+        }
+      ]
+    },
+    {
+      "group": "review_and_s3",
+      "mode": "firm-flag example",
+      "examples": [
+        {
+          "notice_id": "2026-116619",
+          "firm_id": "P1",
+          "note": "F-001"
+        },
+        {
+          "notice_id": "2026-116568",
+          "firm_id": "P3",
+          "note": "F-002"
+        }
+      ]
+    },
+    {
+      "group": "review_and_s3",
+      "mode": "profile health-check flag – expired",
+      "examples": [
+        {
+          "firm_id": "P1",
+          "note": "tax_vat_certificate"
+        },
+        {
+          "firm_id": "P2",
+          "note": "startbank_achilles (StartBANK)"
+        }
+      ]
+    },
+    {
+      "group": "review_and_s3",
+      "mode": "profile health-check flag – expiring",
+      "examples": [
+        {
+          "firm_id": "P1",
+          "note": "insurance"
+        },
+        {
+          "firm_id": "P3",
+          "note": "environmental_certificate"
+        },
+        {
+          "firm_id": "P3",
+          "note": "driver_competence_ysk"
+        }
+      ]
+    },
+    {
+      "group": "review_and_s3",
+      "mode": "profile health-check flag – declared_missing",
+      "examples": [
+        {
+          "firm_id": "P1",
+          "note": "profit (2021–2024)"
+        },
+        {
+          "firm_id": "P2",
+          "note": "credit_rating"
+        },
+        {
+          "firm_id": "P3",
+          "note": "framework_dps (DPS)"
+        },
+        {
+          "firm_id": "P3",
+          "note": "key_personnel_cvs"
+        }
+      ]
+    },
+    {
+      "group": "ui",
+      "mode": "English and Norwegian texts for every generated string",
+      "examples": [
+        {
+          "note": "all *_en strings in screening, reports, gate and activeness have *_nb siblings"
+        }
+      ]
+    },
+    {
+      "group": "ui",
+      "mode": "every filter returns at least one result",
+      "examples": [
+        {
+          "note": "status:active: 12 notices"
+        },
+        {
+          "note": "status:closed: 1 notices"
+        },
+        {
+          "note": "status:award: 7 notices"
+        },
+        {
+          "note": "status:advisory: 4 notices"
+        },
+        {
+          "note": "status:intent: 2 notices"
+        },
+        {
+          "note": "status:flagged: 3 notices"
+        }
+      ]
+    }
+  ],
+  "bilingual_violations": [],
+  "filter_examples": {
+    "status:award": [
+      "2026-115654",
+      "2026-116314",
+      "2026-116386",
+      "2026-116470",
+      "2026-116531",
+      "2026-116578",
+      "2026-116587"
+    ],
+    "contract_type:Supplies": [
+      "2026-115654",
+      "2026-115833",
+      "2026-116107",
+      "2026-116235",
+      "2026-116314",
+      "2026-116318",
+      "2026-116386",
+      "2026-116470",
+      "2026-116544",
+      "2026-116547",
+      "2026-116567",
+      "2026-116578",
+      "2026-116580",
+      "2026-116608",
+      "MOCK-0004"
+    ],
+    "framework:no": [
+      "2026-115654",
+      "2026-116107",
+      "2026-116235",
+      "2026-116318",
+      "2026-116334",
+      "2026-116531",
+      "2026-116544",
+      "2026-116547",
+      "2026-116567",
+      "2026-116568",
+      "2026-116574",
+      "2026-116577",
+      "2026-116580",
+      "2026-116600",
+      "2026-116608",
+      "2026-116619",
+      "MOCK-0001",
+      "MOCK-0002",
+      "MOCK-0003",
+      "MOCK-0004"
+    ],
+    "dps:no": [
+      "2026-115654",
+      "2026-115833",
+      "2026-116107",
+      "2026-116235",
+      "2026-116314",
+      "2026-116318",
+      "2026-116334",
+      "2026-116386",
+      "2026-116470",
+      "2026-116531",
+      "2026-116544",
+      "2026-116547",
+      "2026-116566",
+      "2026-116567",
+      "2026-116568",
+      "2026-116574",
+      "2026-116577",
+      "2026-116578",
+      "2026-116579",
+      "2026-116580",
+      "2026-116581",
+      "2026-116587",
+      "2026-116600",
+      "2026-116608",
+      "2026-116619",
+      "MOCK-0001",
+      "MOCK-0002",
+      "MOCK-0003"
+    ],
+    "lots:single": [
+      "2026-115654",
+      "2026-116107",
+      "2026-116235",
+      "2026-116314",
+      "2026-116318",
+      "2026-116334",
+      "2026-116386",
+      "2026-116470",
+      "2026-116531",
+      "2026-116544",
+      "2026-116547",
+      "2026-116567",
+      "2026-116568",
+      "2026-116574",
+      "2026-116577",
+      "2026-116578",
+      "2026-116580",
+      "2026-116581",
+      "2026-116587",
+      "2026-116600",
+      "2026-116608",
+      "2026-116619",
+      "MOCK-0001",
+      "MOCK-0002",
+      "MOCK-0003",
+      "MOCK-0004"
+    ],
+    "value:unknown": [
+      "2026-115654",
+      "2026-116107",
+      "2026-116235",
+      "2026-116314",
+      "2026-116318",
+      "2026-116334",
+      "2026-116547",
+      "2026-116567",
+      "2026-116568",
+      "2026-116578",
+      "2026-116608",
+      "MOCK-0004"
+    ],
+    "deadline:missing": [
+      "2026-115654",
+      "2026-116107",
+      "2026-116235",
+      "2026-116314",
+      "2026-116386",
+      "2026-116547",
+      "2026-116567",
+      "2026-116574",
+      "2026-116578",
+      "2026-116587",
+      "2026-116608",
+      "MOCK-0003"
+    ],
+    "cpv_division:03": [
+      "2026-115654"
+    ],
+    "nuts:NO081": [
+      "2026-115654",
+      "2026-116566",
+      "2026-116581"
+    ],
+    "status:active": [
+      "2026-115833",
+      "2026-116318",
+      "2026-116334",
+      "2026-116544",
+      "2026-116566",
+      "2026-116568",
+      "2026-116579",
+      "2026-116580",
+      "2026-116581",
+      "2026-116600",
+      "2026-116619",
+      "MOCK-0004"
+    ],
+    "framework:yes": [
+      "2026-115833",
+      "2026-116314",
+      "2026-116386",
+      "2026-116470",
+      "2026-116566",
+      "2026-116578",
+      "2026-116579",
+      "2026-116581",
+      "2026-116587"
+    ],
+    "lots:multi": [
+      "2026-115833",
+      "2026-116566",
+      "2026-116579"
+    ],
+    "value:known": [
+      "2026-115833",
+      "2026-116386",
+      "2026-116470",
+      "2026-116531",
+      "2026-116544",
+      "2026-116566",
+      "2026-116574",
+      "2026-116577",
+      "2026-116579",
+      "2026-116580",
+      "2026-116581",
+      "2026-116587",
+      "2026-116600",
+      "2026-116619",
+      "MOCK-0001",
+      "MOCK-0002",
+      "MOCK-0003"
+    ],
+    "deadline:present": [
+      "2026-115833",
+      "2026-116318",
+      "2026-116334",
+      "2026-116470",
+      "2026-116531",
+      "2026-116544",
+      "2026-116566",
+      "2026-116568",
+      "2026-116577",
+      "2026-116579",
+      "2026-116580",
+      "2026-116581",
+      "2026-116600",
+      "2026-116619",
+      "MOCK-0001",
+      "MOCK-0002",
+      "MOCK-0004"
+    ],
+    "cpv_division:22": [
+      "2026-115833"
+    ],
+    "nuts:NO0A2": [
+      "2026-115833",
+      "2026-116318",
+      "2026-116566",
+      "2026-116579"
+    ],
+    "status:intent": [
+      "2026-116107",
+      "2026-116608"
+    ],
+    "cpv_division:42": [
+      "2026-116107"
+    ],
+    "nuts:NO060": [
+      "2026-116107",
+      "2026-116566"
+    ],
+    "status:advisory": [
+      "2026-116235",
+      "2026-116547",
+      "2026-116567",
+      "2026-116574"
+    ],
+    "cpv_division:48": [
+      "2026-116235"
+    ],
+    "nuts:NO083": [
+      "2026-116235",
+      "2026-116566",
+      "2026-116581"
+    ],
+    "cpv_division:35": [
+      "2026-116314"
+    ],
+    "nuts:anyw": [
+      "2026-116314",
+      "2026-116470",
+      "2026-116547",
+      "2026-116567",
+      "2026-116574",
+      "2026-116587",
+      "MOCK-0004"
+    ],
+    "cpv_division:32": [
+      "2026-116318"
+    ],
+    "contract_type:Services": [
+      "2026-116334",
+      "2026-116531",
+      "2026-116566",
+      "2026-116568",
+      "2026-116574",
+      "2026-116577",
+      "2026-116579",
+      "2026-116581",
+      "2026-116587",
+      "2026-116600",
+      "MOCK-0002",
+      "MOCK-0003"
+    ],
+    "cpv_division:66": [
+      "2026-116334"
+    ],
+    "nuts:NO0A1": [
+      "2026-116334",
+      "2026-116566",
+      "MOCK-0003"
+    ],
+    "cpv_division:30": [
+      "2026-116386",
+      "MOCK-0004"
+    ],
+    "nuts:NO0A3": [
+      "2026-116386",
+      "2026-116544",
+      "2026-116566",
+      "2026-116608"
+    ],
+    "cpv_division:31": [
+      "2026-116470"
+    ],
+    "cpv_division:55": [
+      "2026-116531"
+    ],
+    "nuts:NO073": [
+      "2026-116531",
+      "2026-116566",
+      "2026-116578"
+    ],
+    "cpv_division:39": [
+      "2026-116544"
+    ],
+    "cpv_division:34": [
+      "2026-116547"
+    ],
+    "cpv_division:79": [
+      "2026-116566"
+    ],
+    "nuts:NO020": [
+      "2026-116566",
+      "2026-116581"
+    ],
+    "nuts:NO085": [
+      "2026-116566"
+    ],
+    "nuts:NO084": [
+      "2026-116566",
+      "2026-116581",
+      "2026-116600"
+    ],
+    "nuts:NO072": [
+      "2026-116566",
+      "2026-116580"
+    ],
+    "nuts:NO094": [
+      "2026-116566",
+      "2026-116619",
+      "MOCK-0001"
+    ],
+    "nuts:NO071": [
+      "2026-116566",
+      "2026-116577"
+    ],
+    "nuts:NO093": [
+      "2026-116566"
+    ],
+    "nuts:NO092": [
+      "2026-116566",
+      "2026-116568",
+      "MOCK-0002"
+    ],
+    "cpv_division:15": [
+      "2026-116567"
+    ],
+    "cpv_division:90": [
+      "2026-116568",
+      "MOCK-0002"
+    ],
+    "cpv_division:72": [
+      "2026-116574"
+    ],
+    "status:flagged": [
+      "2026-116577",
+      "MOCK-0002",
+      "MOCK-0003"
+    ],
+    "cpv_division:85": [
+      "2026-116577"
+    ],
+    "cpv_division:44": [
+      "2026-116578"
+    ],
+    "cpv_division:71": [
+      "2026-116579",
+      "MOCK-0003"
+    ],
+    "cpv_division:33": [
+      "2026-116580"
+    ],
+    "cpv_division:80": [
+      "2026-116581"
+    ],
+    "cpv_division:50": [
+      "2026-116587"
+    ],
+    "cpv_division:60": [
+      "2026-116600"
+    ],
+    "cpv_division:09": [
+      "2026-116608"
+    ],
+    "contract_type:Works": [
+      "2026-116619",
+      "MOCK-0001"
+    ],
+    "cpv_division:45": [
+      "2026-116619",
+      "MOCK-0001"
+    ],
+    "status:closed": [
+      "MOCK-0001"
+    ],
+    "dps:yes": [
+      "MOCK-0004"
+    ]
+  },
+  "filters_without_result": [],
+  "released_notices": [
+    "2026-115833",
+    "2026-116318",
+    "2026-116334",
+    "2026-116544",
+    "2026-116566",
+    "2026-116568",
+    "2026-116579",
+    "2026-116580",
+    "2026-116581",
+    "2026-116600",
+    "2026-116619",
+    "MOCK-0004"
+  ]
+}

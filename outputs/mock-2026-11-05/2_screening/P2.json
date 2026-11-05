@@ -1,0 +1,4874 @@
+{
+  "firm_id": "P2",
+  "threshold": 60,
+  "weights": {
+    "subject_relevance": 0.5,
+    "region": 0.15,
+    "contract_subject": 0.1,
+    "size": 0.1,
+    "contract_form": 0.05,
+    "framework_dps": 0.05,
+    "lots": 0.05
+  },
+  "ranked": [
+    {
+      "notice_id": "2026-116579",
+      "fit_score": 82,
+      "confidence": "low",
+      "confidence_reasons": [
+        {
+          "code": "contradiction:nuts_vs_buyer_location",
+          "en": "Place of performance coded NO0A2 although the buyer is in NO0A1",
+          "nb": "Utførelsessted kodet NO0A2 selv om oppdragsgiver er i NO0A1"
+        },
+        {
+          "code": "contradiction:aggregate_vs_calloff_value",
+          "en": "Aggregate framework value NOK 60m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+          "nb": "Samlet rammeverdi NOK 60 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+        }
+      ],
+      "route": "forwarded",
+      "lot_results": [
+        {
+          "lot_id": "A",
+          "fit_score": 45,
+          "route": "below_threshold",
+          "relevant": false,
+          "subject_relevance": {
+            "value": 30,
+            "reason_en": "Lot A (Advice, planning and design in mobility, transport and zoning planning) is outside the firm's disciplines",
+            "reason_nb": "Delkontrakt A (Rådgivning, planlegging og prosjektering innen mobilitets-, transport- og reguleringsplanlegging) er utenfor firmaets fagområder",
+            "data_points": [
+              "description",
+              "cpv_additional"
+            ]
+          },
+          "lots": {
+            "value": 0,
+            "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+            "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+            "data_points": [
+              "description"
+            ]
+          }
+        },
+        {
+          "lot_id": "B",
+          "fit_score": 82,
+          "route": "forwarded",
+          "relevant": true,
+          "subject_relevance": {
+            "value": 92,
+            "reason_en": "Lot B (Advice, planning and design in road, water and sewer) is in the firm's disciplines (vann, avløp, vei)",
+            "reason_nb": "Delkontrakt B (Rådgivning, planlegging og prosjektering innen vei, vann og avløp) er innenfor firmaets fagområder (vann, avløp, vei)",
+            "data_points": [
+              "description",
+              "cpv_additional"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Lot matches the firm's lot preferences (only water, sewer or road)",
+            "reason_nb": "Delkontrakten passer firmaets preferanser (bare vann, avløp eller vei)",
+            "data_points": [
+              "description"
+            ]
+          }
+        }
+      ],
+      "weighted_contributions": {
+        "subject_relevance": 47.0,
+        "region": 9.0,
+        "contract_subject": 10.0,
+        "size": 3.3,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 3.5
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "size": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 94,
+          "reason_en": "CPV 71322000 equals the firm's main CPV; title/description mention vann, avløp, vei",
+          "reason_nb": "CPV 71322000 er lik firmaets hoved-CPV; tittel/beskrivelse nevner vann, avløp, vei",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 60,
+          "reason_en": "Place of performance NO0A2 lies outside the firm's region, but the buyer is located in it (NO0A1)",
+          "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region, men oppdragsgiver holder til der (NO0A1)",
+          "data_points": [
+            "place_of_performance_nuts",
+            "buyer_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 100,
+          "reason_en": "Contract type Services matches the firm's Services",
+          "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": 33,
+          "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 60m; interpreted ≈ NOK 15.0m per lot and supplier",
+          "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 60 mill.; tolket ≈ NOK 15.0 mill. per delkontrakt og leverandør",
+          "data_points": [
+            "estimated_value",
+            "framework_agreement",
+            "lot_count",
+            "description"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+          "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+          "data_points": [
+            "framework_agreement"
+          ]
+        },
+        "lots": {
+          "value": 70,
+          "reason_en": "2 lots; assessed per lot",
+          "reason_nb": "2 delkontrakter; vurdert per delkontrakt",
+          "data_points": [
+            "lot_count",
+            "description"
+          ]
+        }
+      },
+      "contradictions": [
+        {
+          "code": "nuts_vs_buyer_location",
+          "description_en": "Place of performance coded NO0A2 although the buyer is in NO0A1",
+          "description_nb": "Utførelsessted kodet NO0A2 selv om oppdragsgiver er i NO0A1"
+        },
+        {
+          "code": "aggregate_vs_calloff_value",
+          "description_en": "Aggregate framework value NOK 60m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+          "description_nb": "Samlet rammeverdi NOK 60 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+        }
+      ],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 1
+    },
+    {
+      "notice_id": "2026-116334",
+      "fit_score": 44,
+      "confidence": "medium",
+      "confidence_reasons": [
+        {
+          "code": "missing:size",
+          "en": "Missing data point excluded from the score: size",
+          "nb": "Manglende datapunkt holdt utenfor scoren: size"
+        }
+      ],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 15.0,
+        "contract_subject": 10.0,
+        "size": null,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 100,
+          "reason_en": "Place of performance NO0A1 is in the firm's region",
+          "reason_nb": "Utførelsessted NO0A1 ligger i firmaets region",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 100,
+          "reason_en": "Contract type Services matches the firm's Services",
+          "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": null,
+          "reason_en": "Estimated value missing: excluded from the score",
+          "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+          "data_points": [
+            "estimated_value"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Ordinary contract (no framework, no DPS)",
+          "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+          "data_points": [
+            "framework_agreement",
+            "dynamic_purchasing_system"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 2
+    },
+    {
+      "notice_id": "2026-116566",
+      "fit_score": 41,
+      "confidence": "medium",
+      "confidence_reasons": [
+        {
+          "code": "contradiction:aggregate_vs_calloff_value",
+          "en": "Aggregate framework value NOK 25m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+          "nb": "Samlet rammeverdi NOK 25 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+        }
+      ],
+      "route": "below_threshold",
+      "lot_results": [
+        {
+          "lot_id": "1",
+          "fit_score": 41,
+          "route": "below_threshold",
+          "relevant": false,
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "Lot 1 (Management positions) is outside the firm's disciplines",
+            "reason_nb": "Delkontrakt 1 (Lederstillinger) er utenfor firmaets fagområder",
+            "data_points": [
+              "description",
+              "cpv_additional"
+            ]
+          },
+          "lots": {
+            "value": 0,
+            "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+            "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+            "data_points": [
+              "description"
+            ]
+          }
+        },
+        {
+          "lot_id": "2",
+          "fit_score": 41,
+          "route": "below_threshold",
+          "relevant": false,
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "Lot 2 (Administrative, clerical and other support functions) is outside the firm's disciplines",
+            "reason_nb": "Delkontrakt 2 (Administrative, merkantile og øvrige støttefunksjoner) er utenfor firmaets fagområder",
+            "data_points": [
+              "description",
+              "cpv_additional"
+            ]
+          },
+          "lots": {
+            "value": 0,
+            "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+            "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+            "data_points": [
+              "description"
+            ]
+          }
+        },
+        {
+          "lot_id": "3",
+          "fit_score": 41,
+          "route": "below_threshold",
+          "relevant": false,
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "Lot 3 (Technical and professional positions) is outside the firm's disciplines",
+            "reason_nb": "Delkontrakt 3 (Tekniske og faglige stillinger) er utenfor firmaets fagområder",
+            "data_points": [
+              "description",
+              "cpv_additional"
+            ]
+          },
+          "lots": {
+            "value": 0,
+            "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+            "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+            "data_points": [
+              "description"
+            ]
+          }
+        }
+      ],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 15.0,
+        "contract_subject": 10.0,
+        "size": 6.0,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 3.5
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "size": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 100,
+          "reason_en": "Place of performance NO0A1 is in the firm's region",
+          "reason_nb": "Utførelsessted NO0A1 ligger i firmaets region",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 100,
+          "reason_en": "Contract type Services matches the firm's Services",
+          "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": 60,
+          "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 25m; interpreted ≈ NOK 8.3m per lot and supplier",
+          "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 25 mill.; tolket ≈ NOK 8.3 mill. per delkontrakt og leverandør",
+          "data_points": [
+            "estimated_value",
+            "framework_agreement",
+            "lot_count",
+            "description"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+          "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+          "data_points": [
+            "framework_agreement"
+          ]
+        },
+        "lots": {
+          "value": 70,
+          "reason_en": "3 lots; assessed per lot",
+          "reason_nb": "3 delkontrakter; vurdert per delkontrakt",
+          "data_points": [
+            "lot_count",
+            "description"
+          ]
+        }
+      },
+      "contradictions": [
+        {
+          "code": "aggregate_vs_calloff_value",
+          "description_en": "Aggregate framework value NOK 25m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+          "description_nb": "Samlet rammeverdi NOK 25 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+        }
+      ],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 3
+    },
+    {
+      "notice_id": "MOCK-0004",
+      "fit_score": 32,
+      "confidence": "medium",
+      "confidence_reasons": [
+        {
+          "code": "missing:size",
+          "en": "Missing data point excluded from the score: size",
+          "nb": "Manglende datapunkt holdt utenfor scoren: size"
+        }
+      ],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 15.0,
+        "contract_subject": 0.0,
+        "size": null,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 100,
+          "reason_en": "Place of performance 'anyw' = anywhere in Norway: compatible with every region",
+          "reason_nb": "Utførelsessted «anyw» = hele Norge: forenlig med alle regioner",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 0,
+          "reason_en": "Contract type Supplies differs from the firm's Services",
+          "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": null,
+          "reason_en": "Estimated value zero (0) is treated as unknown: excluded from the score",
+          "reason_nb": "Estimert verdi 0 behandles som ukjent: holdt utenfor scoren",
+          "data_points": [
+            "estimated_value"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Dynamic purchasing system; firm's DPS preference yes",
+          "reason_nb": "Dynamisk innkjøpsordning; firmaets DPS-preferanse ja",
+          "data_points": [
+            "dynamic_purchasing_system"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 4
+    },
+    {
+      "notice_id": "2026-116544",
+      "fit_score": 31,
+      "confidence": "high",
+      "confidence_reasons": [],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 6.75,
+        "contract_subject": 0.0,
+        "size": 10.0,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "size": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 45,
+          "reason_en": "Place of performance NO0A3 is outside the firm's region (same NUTS-2 area)",
+          "reason_nb": "Utførelsessted NO0A3 ligger utenfor firmaets region (samme NUTS-2-område)",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 0,
+          "reason_en": "Contract type Supplies differs from the firm's Services",
+          "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": 100,
+          "reason_en": "Value within the firm's band NOK 0.2–5m",
+          "reason_nb": "Verdien ligger innenfor firmaets intervall NOK 0.2–5 mill.",
+          "data_points": [
+            "estimated_value",
+            "framework_agreement",
+            "lot_count",
+            "description"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Ordinary contract (no framework, no DPS)",
+          "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+          "data_points": [
+            "framework_agreement",
+            "dynamic_purchasing_system"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [
+        "title_en is empty; Norwegian title used"
+      ],
+      "data_quality_notes_nb": [
+        "title_en er tomt; norsk tittel brukt"
+      ],
+      "mock": true,
+      "rank": 5
+    },
+    {
+      "notice_id": "2026-116581",
+      "fit_score": 28,
+      "confidence": "high",
+      "confidence_reasons": [],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 0.0,
+        "contract_subject": 10.0,
+        "size": 4.0,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "size": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 0,
+          "reason_en": "Place of performance NO020, NO084, NO083, NO081 is outside the firm's region",
+          "reason_nb": "Utførelsessted NO020, NO084, NO083, NO081 ligger utenfor firmaets region",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 100,
+          "reason_en": "Contract type Services matches the firm's Services",
+          "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": 40,
+          "reason_en": "Value above the firm's band (max NOK 5m)",
+          "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+          "data_points": [
+            "estimated_value",
+            "framework_agreement",
+            "lot_count",
+            "description"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+          "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+          "data_points": [
+            "framework_agreement"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 6
+    },
+    {
+      "notice_id": "2026-116568",
+      "fit_score": 26,
+      "confidence": "medium",
+      "confidence_reasons": [
+        {
+          "code": "missing:size",
+          "en": "Missing data point excluded from the score: size",
+          "nb": "Manglende datapunkt holdt utenfor scoren: size"
+        }
+      ],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 0.0,
+        "contract_subject": 10.0,
+        "size": null,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 0,
+          "reason_en": "Place of performance NO092 is outside the firm's region",
+          "reason_nb": "Utførelsessted NO092 ligger utenfor firmaets region",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 100,
+          "reason_en": "Contract type Services matches the firm's Services",
+          "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": null,
+          "reason_en": "Estimated value missing: excluded from the score",
+          "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+          "data_points": [
+            "estimated_value"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Ordinary contract (no framework, no DPS)",
+          "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+          "data_points": [
+            "framework_agreement",
+            "dynamic_purchasing_system"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 7
+    },
+    {
+      "notice_id": "2026-116600",
+      "fit_score": 25,
+      "confidence": "high",
+      "confidence_reasons": [],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 0.0,
+        "contract_subject": 10.0,
+        "size": 1.7,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "size": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 0,
+          "reason_en": "Place of performance NO084 is outside the firm's region",
+          "reason_nb": "Utførelsessted NO084 ligger utenfor firmaets region",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 100,
+          "reason_en": "Contract type Services matches the firm's Services",
+          "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": 17,
+          "reason_en": "Value above the firm's band (max NOK 5m)",
+          "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+          "data_points": [
+            "estimated_value",
+            "framework_agreement",
+            "lot_count",
+            "description"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Ordinary contract (no framework, no DPS)",
+          "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+          "data_points": [
+            "framework_agreement",
+            "dynamic_purchasing_system"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 8
+    },
+    {
+      "notice_id": "2026-116580",
+      "fit_score": 24,
+      "confidence": "high",
+      "confidence_reasons": [],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 0.0,
+        "contract_subject": 0.0,
+        "size": 10.0,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "size": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 0,
+          "reason_en": "Place of performance NO072 is outside the firm's region",
+          "reason_nb": "Utførelsessted NO072 ligger utenfor firmaets region",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 0,
+          "reason_en": "Contract type Supplies differs from the firm's Services",
+          "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": 100,
+          "reason_en": "Value within the firm's band NOK 0.2–5m",
+          "reason_nb": "Verdien ligger innenfor firmaets intervall NOK 0.2–5 mill.",
+          "data_points": [
+            "estimated_value",
+            "framework_agreement",
+            "lot_count",
+            "description"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Ordinary contract (no framework, no DPS)",
+          "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+          "data_points": [
+            "framework_agreement",
+            "dynamic_purchasing_system"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 9
+    },
+    {
+      "notice_id": "2026-116318",
+      "fit_score": 23,
+      "confidence": "medium",
+      "confidence_reasons": [
+        {
+          "code": "missing:size",
+          "en": "Missing data point excluded from the score: size",
+          "nb": "Manglende datapunkt holdt utenfor scoren: size"
+        }
+      ],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 6.75,
+        "contract_subject": 0.0,
+        "size": null,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 45,
+          "reason_en": "Place of performance NO0A2 is outside the firm's region (same NUTS-2 area)",
+          "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region (samme NUTS-2-område)",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 0,
+          "reason_en": "Contract type Supplies differs from the firm's Services",
+          "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": null,
+          "reason_en": "Estimated value missing: excluded from the score",
+          "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+          "data_points": [
+            "estimated_value"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Ordinary contract (no framework, no DPS)",
+          "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+          "data_points": [
+            "framework_agreement",
+            "dynamic_purchasing_system"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 10
+    },
+    {
+      "notice_id": "2026-116619",
+      "fit_score": 22,
+      "confidence": "high",
+      "confidence_reasons": [],
+      "route": "below_threshold",
+      "lot_results": [],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 0.0,
+        "contract_subject": 0.0,
+        "size": 8.3,
+        "contract_form": 1.5,
+        "framework_dps": 5.0,
+        "lots": 5.0
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "size": 0.1,
+        "contract_form": 0.05,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 0,
+          "reason_en": "Place of performance NO094 is outside the firm's region",
+          "reason_nb": "Utførelsessted NO094 ligger utenfor firmaets region",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 0,
+          "reason_en": "Contract type Works differs from the firm's Services",
+          "reason_nb": "Kontraktstype Works avviker fra firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": 30,
+          "reason_en": "Design-and-build contract; the firm only takes part as subcontractor",
+          "reason_nb": "Totalentreprise; firmaet deltar bare som underleverandør",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": 83,
+          "reason_en": "Value above the firm's band (max NOK 5m)",
+          "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+          "data_points": [
+            "estimated_value",
+            "framework_agreement",
+            "lot_count",
+            "description"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Ordinary contract (no framework, no DPS)",
+          "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+          "data_points": [
+            "framework_agreement",
+            "dynamic_purchasing_system"
+          ]
+        },
+        "lots": {
+          "value": 100,
+          "reason_en": "Single contract (no lots)",
+          "reason_nb": "Én kontrakt (ingen delkontrakter)",
+          "data_points": [
+            "lot_count"
+          ]
+        }
+      },
+      "contradictions": [],
+      "data_quality_notes_en": [
+        "buyer_nuts is empty; region scored from place of performance only",
+        "title_en is empty; Norwegian title used"
+      ],
+      "data_quality_notes_nb": [
+        "buyer_nuts er tomt; regionen er vurdert ut fra utførelsessted alene",
+        "title_en er tomt; norsk tittel brukt"
+      ],
+      "mock": true,
+      "rank": 11
+    },
+    {
+      "notice_id": "2026-115833",
+      "fit_score": 18,
+      "confidence": "medium",
+      "confidence_reasons": [
+        {
+          "code": "contradiction:aggregate_vs_calloff_value",
+          "en": "Aggregate framework value NOK 60m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+          "nb": "Samlet rammeverdi NOK 60 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+        }
+      ],
+      "route": "below_threshold",
+      "lot_results": [
+        {
+          "lot_id": "1",
+          "fit_score": 18,
+          "route": "below_threshold",
+          "relevant": false,
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "Lot 1 (Geographic lot 1 (details in the tender documents)) is outside the firm's disciplines",
+            "reason_nb": "Delkontrakt 1 (Geografisk delkontrakt 1 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+            "data_points": [
+              "description",
+              "cpv_additional"
+            ]
+          },
+          "lots": {
+            "value": 0,
+            "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+            "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+            "data_points": [
+              "description"
+            ]
+          }
+        },
+        {
+          "lot_id": "2",
+          "fit_score": 18,
+          "route": "below_threshold",
+          "relevant": false,
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "Lot 2 (Geographic lot 2 (details in the tender documents)) is outside the firm's disciplines",
+            "reason_nb": "Delkontrakt 2 (Geografisk delkontrakt 2 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+            "data_points": [
+              "description",
+              "cpv_additional"
+            ]
+          },
+          "lots": {
+            "value": 0,
+            "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+            "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+            "data_points": [
+              "description"
+            ]
+          }
+        },
+        {
+          "lot_id": "3",
+          "fit_score": 18,
+          "route": "below_threshold",
+          "relevant": false,
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "Lot 3 (Geographic lot 3 (details in the tender documents)) is outside the firm's disciplines",
+            "reason_nb": "Delkontrakt 3 (Geografisk delkontrakt 3 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+            "data_points": [
+              "description",
+              "cpv_additional"
+            ]
+          },
+          "lots": {
+            "value": 0,
+            "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+            "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+            "data_points": [
+              "description"
+            ]
+          }
+        }
+      ],
+      "weighted_contributions": {
+        "subject_relevance": 2.5,
+        "region": 6.75,
+        "contract_subject": 0.0,
+        "size": 2.5,
+        "contract_form": null,
+        "framework_dps": 5.0,
+        "lots": 3.5
+      },
+      "weights_used": {
+        "subject_relevance": 0.5,
+        "region": 0.15,
+        "contract_subject": 0.1,
+        "size": 0.1,
+        "framework_dps": 0.05,
+        "lots": 0.05
+      },
+      "sub_scores": {
+        "subject_relevance": {
+          "value": 5,
+          "reason_en": "No CPV overlap with the profile",
+          "reason_nb": "Ingen CPV-overlapp med profilen",
+          "data_points": [
+            "title",
+            "title_en",
+            "description",
+            "cpv_main",
+            "cpv_additional",
+            "trade"
+          ]
+        },
+        "region": {
+          "value": 45,
+          "reason_en": "Place of performance NO0A2 is outside the firm's region (same NUTS-2 area)",
+          "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region (samme NUTS-2-område)",
+          "data_points": [
+            "place_of_performance_nuts"
+          ]
+        },
+        "contract_subject": {
+          "value": 0,
+          "reason_en": "Contract type Supplies differs from the firm's Services",
+          "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+          "data_points": [
+            "contract_type"
+          ]
+        },
+        "contract_form": {
+          "value": null,
+          "reason_en": "Contract form not applicable to a supplies/services contract",
+          "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+          "data_points": [
+            "description"
+          ]
+        },
+        "size": {
+          "value": 25,
+          "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 60m; interpreted ≈ NOK 20.0m per lot and supplier",
+          "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 60 mill.; tolket ≈ NOK 20.0 mill. per delkontrakt og leverandør",
+          "data_points": [
+            "estimated_value",
+            "framework_agreement",
+            "lot_count",
+            "description"
+          ]
+        },
+        "framework_dps": {
+          "value": 100,
+          "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+          "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+          "data_points": [
+            "framework_agreement"
+          ]
+        },
+        "lots": {
+          "value": 70,
+          "reason_en": "3 lots; assessed per lot",
+          "reason_nb": "3 delkontrakter; vurdert per delkontrakt",
+          "data_points": [
+            "lot_count",
+            "description"
+          ]
+        }
+      },
+      "contradictions": [
+        {
+          "code": "aggregate_vs_calloff_value",
+          "description_en": "Aggregate framework value NOK 60m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+          "description_nb": "Samlet rammeverdi NOK 60 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+        }
+      ],
+      "data_quality_notes_en": [],
+      "data_quality_notes_nb": [],
+      "mock": true,
+      "rank": 12
+    }
+  ],
+  "prompt_io": {
+    "2026-115833": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-115833",
+          "doffin_url": "https://doffin.no/notices/2026-115833",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "cmuyhdc3l000404l603r2qjt8",
+          "issue_date": "2026-10-08",
+          "publication_date": "2026-10-12",
+          "tender_deadline_utc": "2026-11-12 11:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "Kinn kommune | Askvoll kommune | Aurland kommune | Bremanger kommune | Fjaler kommune | Gloppen kommune | Gulen kommune | Høyanger kommune | Luster kommune | Lærdal kommune | Sogndal kommune | Stad kommune | Stryn kommune | Årdal kommune | Solund kommune | Vik kommune",
+          "buyer_org_nr": "820956532 | 964968330 | 964968063 | 959318166 | 864968422 | 964969124 | 938497524 | 944439838 | 964968241 | 954681890 | 922121893 | 921060157 | 963989202 | 954679721 | 964967458 | 937498764",
+          "buyer_type": "body-pl-la",
+          "buyer_activity": "gen-pub",
+          "buyer_city": "Måløy | Askvoll | Aurland | Svelgen | Dale i Sunnfjord | Sandane | Eivindvik | Høyanger | Gaupne | Lærdal | Leikanger | Nordfjordeid | Stryn | Årdalstangen | Hardbakke | Vik i Sogn",
+          "buyer_postal_code": "6702 | 6980 | 5745 | 6723 | 6963 | 6823 | 5966 | 6993 | 6868 | 6887 | 6863 | 6770 | 6783 | 6885 | 6924 | 6891",
+          "buyer_nuts": "NO0A2",
+          "title": "Læremiddel til grunnskulen - INSS",
+          "title_en": "Teaching aids for the basic ball - INSS",
+          "description": "INSS vil med denne anskaffinga inngå rammeavtalar for kjøp av trykte læremiddel til grunnskulen, 1.–10. trinn. Anskaffinga er delt i tre geografiske delkontraktar.\n\nDeltakarar i rammeavtale etter denne anskaffinga er følgande kommunar:\n\nAskvoll, Aurland, Bremanger, Fjaler, Gloppen, Gulen, Høyanger, Kinn, Luster, Lærdal, Sogndal, Solund, Stad, Stryn, Vik og Årdal.\n\nSjå vedlegg \"Konkurransegrunnlag Læremidler\" samt følgande vedlegg for informasjon om konkurransen:\n\nVedlegg 1 – Kravspesifikasjon\n\nVedlegg 2 – Prisskjema\n\nVedlegg 3 – Oversikt over deltakarar på avtala\n\nVedlegg 4 - Referanseliste – relevante leveransar\n\nVedlegg 5 – Kontraktsvilkår\n\nVedlegg 6 – Forpliktelseserklæring\n\nVedlegg 7 – Tilbodsbrev og tilbydars atterhald",
+          "contract_type": "Supplies",
+          "procedure": "Open",
+          "legislation": "Anskaffelsesforskriften",
+          "framework_agreement": "True",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "3",
+          "trade": "Printed matter and related products",
+          "cpv_main": "22111000",
+          "cpv_additional": "22112000",
+          "place_of_performance_nuts": "NO0A2",
+          "currency": "NOK",
+          "estimated_value": "60000000.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-115833",
+        "notice_version_hash": "a8f35fe8880844756f3909e9e45792eee0850b7ad4fc8c551c64c0982371700d",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 45,
+            "reason_en": "Place of performance NO0A2 is outside the firm's region (same NUTS-2 area)",
+            "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region (samme NUTS-2-område)",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 25,
+            "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 60m; interpreted ≈ NOK 20.0m per lot and supplier",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 60 mill.; tolket ≈ NOK 20.0 mill. per delkontrakt og leverandør",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+            "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+            "data_points": [
+              "framework_agreement"
+            ]
+          },
+          "lots": {
+            "value": 70,
+            "reason_en": "3 lots; assessed per lot",
+            "reason_nb": "3 delkontrakter; vurdert per delkontrakt",
+            "data_points": [
+              "lot_count",
+              "description"
+            ]
+          }
+        },
+        "lot_scores": [
+          {
+            "lot_id": "1",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 1 (Geographic lot 1 (details in the tender documents)) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 1 (Geografisk delkontrakt 1 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "2",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 2 (Geographic lot 2 (details in the tender documents)) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 2 (Geografisk delkontrakt 2 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "3",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 3 (Geographic lot 3 (details in the tender documents)) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 3 (Geografisk delkontrakt 3 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          }
+        ],
+        "contradictions": [
+          {
+            "code": "aggregate_vs_calloff_value",
+            "description_en": "Aggregate framework value NOK 60m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+            "description_nb": "Samlet rammeverdi NOK 60 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+          }
+        ],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-115833",
+        "notice_version_hash": "a8f35fe8880844756f3909e9e45792eee0850b7ad4fc8c551c64c0982371700d",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 45,
+            "reason_en": "Place of performance NO0A2 is outside the firm's region (same NUTS-2 area)",
+            "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region (samme NUTS-2-område)",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 25,
+            "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 60m; interpreted ≈ NOK 20.0m per lot and supplier",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 60 mill.; tolket ≈ NOK 20.0 mill. per delkontrakt og leverandør",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+            "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+            "data_points": [
+              "framework_agreement"
+            ]
+          },
+          "lots": {
+            "value": 70,
+            "reason_en": "3 lots; assessed per lot",
+            "reason_nb": "3 delkontrakter; vurdert per delkontrakt",
+            "data_points": [
+              "lot_count",
+              "description"
+            ]
+          }
+        },
+        "lot_scores": [
+          {
+            "lot_id": "1",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 1 (Geographic lot 1 (details in the tender documents)) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 1 (Geografisk delkontrakt 1 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "2",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 2 (Geographic lot 2 (details in the tender documents)) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 2 (Geografisk delkontrakt 2 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "3",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 3 (Geographic lot 3 (details in the tender documents)) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 3 (Geografisk delkontrakt 3 (detaljer i konkurransegrunnlaget)) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          }
+        ],
+        "contradictions": [
+          {
+            "code": "aggregate_vs_calloff_value",
+            "description_en": "Aggregate framework value NOK 60m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+            "description_nb": "Samlet rammeverdi NOK 60 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+          }
+        ],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116318": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116318",
+          "doffin_url": "https://doffin.no/notices/2026-116318",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "26/30",
+          "issue_date": "2026-10-19",
+          "publication_date": "2026-10-21",
+          "tender_deadline_utc": "2026-11-19 11:00:58",
+          "contract_signed_date": "",
+          "buyer_name": "Høgskulen på Vestlandet",
+          "buyer_org_nr": "917641404",
+          "buyer_type": "body-pl-cga",
+          "buyer_activity": "education",
+          "buyer_city": "Bergen",
+          "buyer_postal_code": "5020",
+          "buyer_nuts": "NO0A2",
+          "title": "Tolkekabiner",
+          "title_en": "Interpreter cabins",
+          "description": "Avtalen omfatter levering av åtte (8) stasjonære tolkekabiner med tilhørende tolkeutstyr, programvare og øvrige nødvendige komponenter for å etablere en komplett og operativ tolkeløsning for undervisning i simultantolkning ved Høgskulen på Vestlandet. Leveransen omfatter også nødvendig montering, installasjon, konfigurering, testing, dokumentasjon og opplæring.",
+          "contract_type": "Supplies",
+          "procedure": "Open",
+          "legislation": "",
+          "framework_agreement": "False",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "1",
+          "trade": "Radio, television and communication equipment",
+          "cpv_main": "32342410",
+          "cpv_additional": "32321200",
+          "place_of_performance_nuts": "NO0A2",
+          "currency": "",
+          "estimated_value": "",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116318",
+        "notice_version_hash": "8d4078f5c0ab3527493b8a2b3bb374b0eb476ee4eb3be0026193e7697d3e41ae",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 45,
+            "reason_en": "Place of performance NO0A2 is outside the firm's region (same NUTS-2 area)",
+            "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region (samme NUTS-2-område)",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": null,
+            "reason_en": "Estimated value missing: excluded from the score",
+            "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+            "data_points": [
+              "estimated_value"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116318",
+        "notice_version_hash": "8d4078f5c0ab3527493b8a2b3bb374b0eb476ee4eb3be0026193e7697d3e41ae",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 45,
+            "reason_en": "Place of performance NO0A2 is outside the firm's region (same NUTS-2 area)",
+            "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region (samme NUTS-2-område)",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": null,
+            "reason_en": "Estimated value missing: excluded from the score",
+            "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+            "data_points": [
+              "estimated_value"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116334": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116334",
+          "doffin_url": "https://doffin.no/notices/2026-116334",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "2027,2",
+          "issue_date": "2026-10-20",
+          "publication_date": "2026-10-21",
+          "tender_deadline_utc": "2026-11-23 10:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "Waco Forsikringsmegling AS",
+          "buyer_org_nr": "966844515",
+          "buyer_type": "pub-undert",
+          "buyer_activity": "gen-pub",
+          "buyer_city": "BRYNE",
+          "buyer_postal_code": "4340",
+          "buyer_nuts": "NO0A1",
+          "title": "Forsikring for Rogaland fylkeskommune",
+          "title_en": "Insurance for Rogaland County",
+          "description": "Gjelder forsikringer for Rogaland fylkeskommune.",
+          "contract_type": "Services",
+          "procedure": "Open",
+          "legislation": "Anskaffelsesforskriften",
+          "framework_agreement": "False",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "1",
+          "trade": "Financial and insurance services",
+          "cpv_main": "66510000",
+          "cpv_additional": "",
+          "place_of_performance_nuts": "NO0A1",
+          "currency": "",
+          "estimated_value": "",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116334",
+        "notice_version_hash": "e96b11718bfd60c46087d3fbbd91b8a6534c19ba462e4b9080efec50b7e8b23d",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 100,
+            "reason_en": "Place of performance NO0A1 is in the firm's region",
+            "reason_nb": "Utførelsessted NO0A1 ligger i firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": null,
+            "reason_en": "Estimated value missing: excluded from the score",
+            "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+            "data_points": [
+              "estimated_value"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116334",
+        "notice_version_hash": "e96b11718bfd60c46087d3fbbd91b8a6534c19ba462e4b9080efec50b7e8b23d",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 100,
+            "reason_en": "Place of performance NO0A1 is in the firm's region",
+            "reason_nb": "Utførelsessted NO0A1 ligger i firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": null,
+            "reason_en": "Estimated value missing: excluded from the score",
+            "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+            "data_points": [
+              "estimated_value"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116544": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116544",
+          "doffin_url": "https://doffin.no/notices/2026-116544",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "E3",
+          "status": "",
+          "case_number": "cmu6t8220003b04l2z9dmbrpq",
+          "issue_date": "2026-10-23",
+          "publication_date": "2026-10-24",
+          "tender_deadline_utc": "2026-11-23 11:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "Møre og Romsdal Fylkeskommune",
+          "buyer_org_nr": "944183779",
+          "buyer_type": "body-pl-ra",
+          "buyer_activity": "gen-pub",
+          "buyer_city": "Molde",
+          "buyer_postal_code": "6404",
+          "buyer_nuts": "NO0A3",
+          "title": "Møbler til Braatthallen",
+          "title_en": "",
+          "description": "1. Om Oppdragsgiver\n\nOppdragsgiver for denne konkurransen er Møre og Romsdal fylkeskommune ved Bygg og Eiendomsavdelingen.\n\n2. Bakgrunn og formål\n\nMøre og Romsdal fylkeskommune skal gjennomføre anskaffelse av levering, montering og plassering av møbler til Kristiansund videregående skole -lokasjon Braatthallen i Kristiansund (Sankthanshaugen 1, 6514 Kristiansund N)\n\nFormålet med anskaffelsen er å møblere nyrenoverte lokaler i Braatthallen Kristiansund. Lokalene benyttes av Kristiansund videregående skole for bl.a kantinetilbud og undervisning i restaurant og matfag.\n\nAnskaffelsen omfatter møbler til:\n\n· Foajé\n\n· Kantine\n\nSe mer informasjon om oppdraget i Oppdragsbeskrivelsen og vedlagte skisser / planer for nærmere beskrivelser av miljø og sammensetning av møbler mm.\n\n3. Tildelingskriterier \n\nViser her til fane Tildelingskriterier og tilhørende krav i fane Kravspesifikasjon.\n\n3.1 Evalueringsmodell\n\nVed evalueringen vil det for tildelingskriteriene bli satt karakter. I karaktersettingen blir det benyttet en karakterskala fra 1‐10, der 10 er beste score. Karakteren som blir gitt for hvert tildelingskriterium, multiplisert med vekt, blir til kriteriets poengsum.\n\nEvalueringen blir dessuten gjennomført på en slik måte at karaktersettingen sikrer at relevante forskjeller mellom tilbudene blir gjenspeilet i de poengene som tilbudene får.\n\n4. Kontrakt\n\nDet vil bli inngått kontrakt mellom oppdragsgiver og leverandør for levering av leveransen som er spesifisert i dette konkurransegrunnlaget med vedlegg.\n\nAvtalen som blir inngått vil være basert på Avtale varekjøp.",
+          "contract_type": "Supplies",
+          "procedure": "Open",
+          "legislation": "https://lovdata.no/eli/forskrift/2016/8/12/974",
+          "framework_agreement": "False",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "1",
+          "trade": "Furniture, furnishings, domestic appliances and cleaning products",
+          "cpv_main": "39110000",
+          "cpv_additional": "39143210 | 39150000 | 39112000 | 39156000 | 39151300 | 39143200",
+          "place_of_performance_nuts": "NO0A3",
+          "currency": "NOK",
+          "estimated_value": "1225000.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116544",
+        "notice_version_hash": "43f5a69153ee5da228f4f3b4cdbbd0f27ee11ded2849f8dbb4fda2668b99efb8",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 45,
+            "reason_en": "Place of performance NO0A3 is outside the firm's region (same NUTS-2 area)",
+            "reason_nb": "Utførelsessted NO0A3 ligger utenfor firmaets region (samme NUTS-2-område)",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 100,
+            "reason_en": "Value within the firm's band NOK 0.2–5m",
+            "reason_nb": "Verdien ligger innenfor firmaets intervall NOK 0.2–5 mill.",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [
+          "title_en is empty; Norwegian title used"
+        ],
+        "data_quality_notes_nb": [
+          "title_en er tomt; norsk tittel brukt"
+        ],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116544",
+        "notice_version_hash": "43f5a69153ee5da228f4f3b4cdbbd0f27ee11ded2849f8dbb4fda2668b99efb8",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 45,
+            "reason_en": "Place of performance NO0A3 is outside the firm's region (same NUTS-2 area)",
+            "reason_nb": "Utførelsessted NO0A3 ligger utenfor firmaets region (samme NUTS-2-område)",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 100,
+            "reason_en": "Value within the firm's band NOK 0.2–5m",
+            "reason_nb": "Verdien ligger innenfor firmaets intervall NOK 0.2–5 mill.",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [
+          "title_en is empty; Norwegian title used"
+        ],
+        "data_quality_notes_nb": [
+          "title_en er tomt; norsk tittel brukt"
+        ],
+        "mock": true
+      }
+    },
+    "2026-116566": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116566",
+          "doffin_url": "https://doffin.no/notices/2026-116566",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "10230",
+          "issue_date": "2026-10-22",
+          "publication_date": "2026-10-26",
+          "tender_deadline_utc": "2026-11-23 11:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "Statens vegvesen",
+          "buyer_org_nr": "971032081",
+          "buyer_type": "body-pl-cga",
+          "buyer_activity": "gen-pub",
+          "buyer_city": "Oslo",
+          "buyer_postal_code": "0663",
+          "buyer_nuts": "NO081",
+          "title": "Rammeavtale for kjøp av bistand til rekruttering",
+          "title_en": "Framework Agreement for Recruitment Assistance Services",
+          "description": "Statens vegvesen, Fellesfunksjoner og HR (heretter benevnt som Oppdragsgiver) ønsker tilbud på bistand til rekruttering. Statens vegvesen består i dag av Vegdirektoratet og seks divisjoner. Statens vegvesen går foran i utviklingen av et framtidsrettet, effektivt, miljøvennlig og trygt transportsystem. Vi bygger, drifter og vedlikeholder landets riksveger, og har nasjonalt ansvar for beredskap på veg gjennom å utvikle tydelige regelverk og standarder for alle. Gjennom samarbeid med og tilsyn av trafikanter og kjøretøy, ny teknologi og utvikling av digitale tjenester sørger vi for at trafikanter og næringsliv får en tryggere, enklere og grønnere reisehverdag. \n\nOppdragsgiver har behov for kompetanse innen en rekke fagområder og på ulike nivåer i organisasjonen. Rekrutteringsbehovet kan variere over tid og omfatte både operative, tekniske, administrative, merkantile, digitale, juridiske og ledende stillinger. Bistanden skal derfor kunne tilpasses den enkelte rekrutteringsprosessen og behovene i den aktuelle delen av etaten. \n\nRammeavtalen skal kunne benyttes av alle deler av etaten og omfatte rekruttering på tvers av fagområder, organisatoriske enheter, stillingskategorier og geografiske lokasjoner. Formålet med anskaffelsen er å dekke etatens behov for fleksibel og profesjonell rekrutteringsbistand og bidra til at Oppdragsgiver tiltrekker seg og rekrutterer kvalifiserte og motiverte søkere. Avtalen er ikke avgrenset til bestemte fagområder, roller eller stillingstyper.\n\nAnskaffelsen er derfor organisert i flere delkontrakter som dekker ulike tjenester og kompetanseområder. Enkelte delkontrakter kan være tilpasset særskilte behov i enkelte divisjoner eller fagmiljøer, der det er behov for spesialisert markedskunnskap, kandidatnettverk eller rekrutteringskompetanse.\n\nRammeavtalen skal inngås med inntil 6 leverandører.\n\nDelkontrakt 1 - Lederstillinger inntil 2 leverandører\n\nDelkontrakt 2 - Administrative, merkantile og øvrige støttefunksjoner inntil 2 leverandører\n\nDelkontrakt 3 - Tekniske og faglige stillinger inntil 2 leverandører",
+          "contract_type": "Services",
+          "procedure": "Open",
+          "legislation": "",
+          "framework_agreement": "True",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "3",
+          "trade": "Business services (legal, marketing, consulting, recruitment)",
+          "cpv_main": "79600000",
+          "cpv_additional": "79611000 | 79635000",
+          "place_of_performance_nuts": "NO020 | NO085 | NO073 | NO084 | NO072 | NO083 | NO094 | NO060 | NO071 | NO093 | NO081 | NO092 | NO0A3 | NO0A2 | NO0A1",
+          "currency": "NOK",
+          "estimated_value": "25000000.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116566",
+        "notice_version_hash": "9942b27228014eaef1af74fdbec89f082df8868aeecdaeee4c4f7f330032ba21",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 100,
+            "reason_en": "Place of performance NO0A1 is in the firm's region",
+            "reason_nb": "Utførelsessted NO0A1 ligger i firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 60,
+            "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 25m; interpreted ≈ NOK 8.3m per lot and supplier",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 25 mill.; tolket ≈ NOK 8.3 mill. per delkontrakt og leverandør",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+            "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+            "data_points": [
+              "framework_agreement"
+            ]
+          },
+          "lots": {
+            "value": 70,
+            "reason_en": "3 lots; assessed per lot",
+            "reason_nb": "3 delkontrakter; vurdert per delkontrakt",
+            "data_points": [
+              "lot_count",
+              "description"
+            ]
+          }
+        },
+        "lot_scores": [
+          {
+            "lot_id": "1",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 1 (Management positions) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 1 (Lederstillinger) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "2",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 2 (Administrative, clerical and other support functions) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 2 (Administrative, merkantile og øvrige støttefunksjoner) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "3",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 3 (Technical and professional positions) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 3 (Tekniske og faglige stillinger) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          }
+        ],
+        "contradictions": [
+          {
+            "code": "aggregate_vs_calloff_value",
+            "description_en": "Aggregate framework value NOK 25m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+            "description_nb": "Samlet rammeverdi NOK 25 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+          }
+        ],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116566",
+        "notice_version_hash": "9942b27228014eaef1af74fdbec89f082df8868aeecdaeee4c4f7f330032ba21",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 100,
+            "reason_en": "Place of performance NO0A1 is in the firm's region",
+            "reason_nb": "Utførelsessted NO0A1 ligger i firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 60,
+            "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 25m; interpreted ≈ NOK 8.3m per lot and supplier",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 25 mill.; tolket ≈ NOK 8.3 mill. per delkontrakt og leverandør",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+            "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+            "data_points": [
+              "framework_agreement"
+            ]
+          },
+          "lots": {
+            "value": 70,
+            "reason_en": "3 lots; assessed per lot",
+            "reason_nb": "3 delkontrakter; vurdert per delkontrakt",
+            "data_points": [
+              "lot_count",
+              "description"
+            ]
+          }
+        },
+        "lot_scores": [
+          {
+            "lot_id": "1",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 1 (Management positions) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 1 (Lederstillinger) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "2",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 2 (Administrative, clerical and other support functions) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 2 (Administrative, merkantile og øvrige støttefunksjoner) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "3",
+            "subject_relevance": {
+              "value": 5,
+              "reason_en": "Lot 3 (Technical and professional positions) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt 3 (Tekniske og faglige stillinger) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          }
+        ],
+        "contradictions": [
+          {
+            "code": "aggregate_vs_calloff_value",
+            "description_en": "Aggregate framework value NOK 25m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+            "description_nb": "Samlet rammeverdi NOK 25 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+          }
+        ],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116568": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116568",
+          "doffin_url": "https://doffin.no/notices/2026-116568",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "825",
+          "issue_date": "2026-10-22",
+          "publication_date": "2026-10-26",
+          "tender_deadline_utc": "2026-11-26 11:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "Agder Renovasjon IKS",
+          "buyer_org_nr": "997765494",
+          "buyer_type": "body-pl-la",
+          "buyer_activity": "gen-pub",
+          "buyer_city": "Arendal",
+          "buyer_postal_code": "4849",
+          "buyer_nuts": "NO092",
+          "title": "Slamtømming Agder Renovasjon",
+          "title_en": "Emptying sludge Agder Renovasjon",
+          "description": "Denne konkurransen gjelder tømming av slamavskillere i kommunene Arendal, Froland og Grimstad, totalt ca. 2100 – 2300 enheter/år.Avtalen har en varighet på 6 år, med ensidig opsjon for oppdragsgiver om forlengelse på 1+1 år.",
+          "contract_type": "Services",
+          "procedure": "Open",
+          "legislation": "Anskaffelsesforskriften",
+          "framework_agreement": "False",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "1",
+          "trade": "Sewage, refuse, cleaning and environmental services",
+          "cpv_main": "90460000",
+          "cpv_additional": "90512000 | 90513600 | 90513700",
+          "place_of_performance_nuts": "NO092",
+          "currency": "",
+          "estimated_value": "",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116568",
+        "notice_version_hash": "3629ac0b18727c39a2a1ee804a5a536503c31012ddbf424c8c7105cf927900b3",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO092 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO092 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": null,
+            "reason_en": "Estimated value missing: excluded from the score",
+            "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+            "data_points": [
+              "estimated_value"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116568",
+        "notice_version_hash": "3629ac0b18727c39a2a1ee804a5a536503c31012ddbf424c8c7105cf927900b3",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO092 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO092 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": null,
+            "reason_en": "Estimated value missing: excluded from the score",
+            "reason_nb": "Estimert verdi mangler: holdt utenfor scoren",
+            "data_points": [
+              "estimated_value"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116579": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116579",
+          "doffin_url": "https://doffin.no/notices/2026-116579",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "2026/26345",
+          "issue_date": "2026-10-23",
+          "publication_date": "2026-10-26",
+          "tender_deadline_utc": "2026-11-27 11:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "Haugesund Kommune",
+          "buyer_org_nr": "944073787",
+          "buyer_type": "body-pl-la",
+          "buyer_activity": "gen-pub",
+          "buyer_city": "HAUGESUND",
+          "buyer_postal_code": "5528",
+          "buyer_nuts": "NO0A1",
+          "title": "Rammeavtale for rådgivende konsulenttjenester til Haugesund kommune",
+          "title_en": "Framework agreement for consultancy services for Haugesund municipality.",
+          "description": "Haugesund kommune skal inngå avtaler for levering av rådgivende konsulenttjenester.Det skal inngås to delkontrakter, hvor hver delkontrakt utgjør parallelle rammeavtaler. Det skal inngås parallelle rammeavtaler med to leverandører per delkontrakt, forutsatt at det foreligger et tilstrekkelig antall egnede tilbud. En leverandør kan gi tilbud på en eller begge delkontraktene og kan tildeles begge delkontrakter.Delkontraktene omfatter følgende:Delkontrakt A: Rammeavtale for rådgivning, planlegging og prosjektering innen mobilitets-, transport- og reguleringsplanlegging.Delkontrakt B: Rammeavtale for rådgivning, planlegging og prosjektering innen vei, vann og avløp.For ytterligere informasjon om anskaffelsens formål og omfang vises det til kravspesifikasjonen, se konkurransegrunnlaget samt Bilag 1 Vedlegg 1A og Bilag 1 Vedlegg 1B.",
+          "contract_type": "Services",
+          "procedure": "Open",
+          "legislation": "Anskaffelsesforskriften",
+          "framework_agreement": "True",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "2",
+          "trade": "Architectural, engineering and inspection services",
+          "cpv_main": "71310000",
+          "cpv_additional": "71311000 | 71311210 | 71311220 | 71311300 | 71313000 | 71315210 | 71320000 | 71321300 | 71322000 | 71322200 | 71322500 | 71330000 | 71332000 | 71335000 | 71336000",
+          "place_of_performance_nuts": "NO0A2",
+          "currency": "NOK",
+          "estimated_value": "60000000.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116579",
+        "notice_version_hash": "716afc0bad2dabba1ddad734bbee60841ef4335635cafcc41f11504c0d3b33eb",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 94,
+            "reason_en": "CPV 71322000 equals the firm's main CPV; title/description mention vann, avløp, vei",
+            "reason_nb": "CPV 71322000 er lik firmaets hoved-CPV; tittel/beskrivelse nevner vann, avløp, vei",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 60,
+            "reason_en": "Place of performance NO0A2 lies outside the firm's region, but the buyer is located in it (NO0A1)",
+            "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region, men oppdragsgiver holder til der (NO0A1)",
+            "data_points": [
+              "place_of_performance_nuts",
+              "buyer_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 33,
+            "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 60m; interpreted ≈ NOK 15.0m per lot and supplier",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 60 mill.; tolket ≈ NOK 15.0 mill. per delkontrakt og leverandør",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+            "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+            "data_points": [
+              "framework_agreement"
+            ]
+          },
+          "lots": {
+            "value": 70,
+            "reason_en": "2 lots; assessed per lot",
+            "reason_nb": "2 delkontrakter; vurdert per delkontrakt",
+            "data_points": [
+              "lot_count",
+              "description"
+            ]
+          }
+        },
+        "lot_scores": [
+          {
+            "lot_id": "A",
+            "subject_relevance": {
+              "value": 30,
+              "reason_en": "Lot A (Advice, planning and design in mobility, transport and zoning planning) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt A (Rådgivning, planlegging og prosjektering innen mobilitets-, transport- og reguleringsplanlegging) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "B",
+            "subject_relevance": {
+              "value": 92,
+              "reason_en": "Lot B (Advice, planning and design in road, water and sewer) is in the firm's disciplines (vann, avløp, vei)",
+              "reason_nb": "Delkontrakt B (Rådgivning, planlegging og prosjektering innen vei, vann og avløp) er innenfor firmaets fagområder (vann, avløp, vei)",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 100,
+              "reason_en": "Lot matches the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten passer firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          }
+        ],
+        "contradictions": [
+          {
+            "code": "nuts_vs_buyer_location",
+            "description_en": "Place of performance coded NO0A2 although the buyer is in NO0A1",
+            "description_nb": "Utførelsessted kodet NO0A2 selv om oppdragsgiver er i NO0A1"
+          },
+          {
+            "code": "aggregate_vs_calloff_value",
+            "description_en": "Aggregate framework value NOK 60m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+            "description_nb": "Samlet rammeverdi NOK 60 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+          }
+        ],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116579",
+        "notice_version_hash": "716afc0bad2dabba1ddad734bbee60841ef4335635cafcc41f11504c0d3b33eb",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 94,
+            "reason_en": "CPV 71322000 equals the firm's main CPV; title/description mention vann, avløp, vei",
+            "reason_nb": "CPV 71322000 er lik firmaets hoved-CPV; tittel/beskrivelse nevner vann, avløp, vei",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 60,
+            "reason_en": "Place of performance NO0A2 lies outside the firm's region, but the buyer is located in it (NO0A1)",
+            "reason_nb": "Utførelsessted NO0A2 ligger utenfor firmaets region, men oppdragsgiver holder til der (NO0A1)",
+            "data_points": [
+              "place_of_performance_nuts",
+              "buyer_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 33,
+            "reason_en": "Value above the firm's band (max NOK 5m); aggregate NOK 60m; interpreted ≈ NOK 15.0m per lot and supplier",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.); samlet NOK 60 mill.; tolket ≈ NOK 15.0 mill. per delkontrakt og leverandør",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+            "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+            "data_points": [
+              "framework_agreement"
+            ]
+          },
+          "lots": {
+            "value": 70,
+            "reason_en": "2 lots; assessed per lot",
+            "reason_nb": "2 delkontrakter; vurdert per delkontrakt",
+            "data_points": [
+              "lot_count",
+              "description"
+            ]
+          }
+        },
+        "lot_scores": [
+          {
+            "lot_id": "A",
+            "subject_relevance": {
+              "value": 30,
+              "reason_en": "Lot A (Advice, planning and design in mobility, transport and zoning planning) is outside the firm's disciplines",
+              "reason_nb": "Delkontrakt A (Rådgivning, planlegging og prosjektering innen mobilitets-, transport- og reguleringsplanlegging) er utenfor firmaets fagområder",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 0,
+              "reason_en": "Lot outside the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten er utenfor firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          },
+          {
+            "lot_id": "B",
+            "subject_relevance": {
+              "value": 92,
+              "reason_en": "Lot B (Advice, planning and design in road, water and sewer) is in the firm's disciplines (vann, avløp, vei)",
+              "reason_nb": "Delkontrakt B (Rådgivning, planlegging og prosjektering innen vei, vann og avløp) er innenfor firmaets fagområder (vann, avløp, vei)",
+              "data_points": [
+                "description",
+                "cpv_additional"
+              ]
+            },
+            "lots": {
+              "value": 100,
+              "reason_en": "Lot matches the firm's lot preferences (only water, sewer or road)",
+              "reason_nb": "Delkontrakten passer firmaets preferanser (bare vann, avløp eller vei)",
+              "data_points": [
+                "description"
+              ]
+            },
+            "relevant": false
+          }
+        ],
+        "contradictions": [
+          {
+            "code": "nuts_vs_buyer_location",
+            "description_en": "Place of performance coded NO0A2 although the buyer is in NO0A1",
+            "description_nb": "Utførelsessted kodet NO0A2 selv om oppdragsgiver er i NO0A1"
+          },
+          {
+            "code": "aggregate_vs_calloff_value",
+            "description_en": "Aggregate framework value NOK 60m exceeds the band, while the expected call-off volume per supplier may fit; interpreted, not compared blindly",
+            "description_nb": "Samlet rammeverdi NOK 60 mill. er over intervallet, mens forventet avropsvolum per leverandør kan passe; tolket, ikke sammenlignet direkte"
+          }
+        ],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116580": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116580",
+          "doffin_url": "https://doffin.no/notices/2026-116580",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "",
+          "issue_date": "2026-10-23",
+          "publication_date": "2026-10-26",
+          "tender_deadline_utc": "2026-11-23 11:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "SYKEHUSINNKJØP HF",
+          "buyer_org_nr": "916879067",
+          "buyer_type": "body-pl",
+          "buyer_activity": "health",
+          "buyer_city": "Vadsø",
+          "buyer_postal_code": "9811",
+          "buyer_nuts": "NO073",
+          "title": "Vitrektomimaskin til Øyeavdelingen ved UNN HF Tromsø",
+          "title_en": "Vitrectomy machine for the Eye Department at UNN HF Tromsø",
+          "description": "Øyeavdelingen ved Universitetssykehuset Nord-Norge HF skal anskaffe en Vitrektomimaskin.",
+          "contract_type": "Supplies",
+          "procedure": "Open",
+          "legislation": "",
+          "framework_agreement": "False",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "1",
+          "trade": "Medical equipment, pharmaceuticals and personal care",
+          "cpv_main": "33100000",
+          "cpv_additional": "33169100",
+          "place_of_performance_nuts": "NO072",
+          "currency": "NOK",
+          "estimated_value": "800000.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116580",
+        "notice_version_hash": "96a4b979b7617ab6944fba6325c10ca1a14182f900ccdc4b4f9df6d89d7ba007",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO072 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO072 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 100,
+            "reason_en": "Value within the firm's band NOK 0.2–5m",
+            "reason_nb": "Verdien ligger innenfor firmaets intervall NOK 0.2–5 mill.",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116580",
+        "notice_version_hash": "96a4b979b7617ab6944fba6325c10ca1a14182f900ccdc4b4f9df6d89d7ba007",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO072 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO072 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 100,
+            "reason_en": "Value within the firm's band NOK 0.2–5m",
+            "reason_nb": "Verdien ligger innenfor firmaets intervall NOK 0.2–5 mill.",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116581": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116581",
+          "doffin_url": "https://doffin.no/notices/2026-116581",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "17",
+          "status": "ACTIVE",
+          "case_number": "10263",
+          "issue_date": "2026-10-23",
+          "publication_date": "2026-10-26",
+          "tender_deadline_utc": "2026-11-10 10:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "ELVIA AS",
+          "buyer_org_nr": "980489698",
+          "buyer_type": "spec-rights-entity",
+          "buyer_activity": "electricity",
+          "buyer_city": "HAMAR",
+          "buyer_postal_code": "2317",
+          "buyer_nuts": "NO020",
+          "title": "Rammeavtale for levering av kurs- og kompetansetjenester",
+          "title_en": "Framework agreement for the provision of courses and competence services.",
+          "description": "Konkurransen gjelder anskaffelse av rammeavtale for kurs- og kompetansetjenester.\n\nOppdragsgiver er Elvia AS. Formålet med rammeavtalen er å sikre tilgang til et bredt utvalg av kurs og kompetanse til konkurransedyktige betingelser, med god kvalitet og tilgjengelighet. Avtalen er primært rettet mot produksjon og drift i Elvia. Avtalen skal bidra til å effektivisere anskaffelser av kurs og kompetanse.\n\nDenne rammeavtalen gjelder kurs gjennomført i leverandørens lokaler, hos kunden eller digitale kurs med kursholder.\n\nØvrige selskaper i Eidsiva Energi AS skal kunne knytte seg til Avtalen etter eget ønske og behov. Avtalen skal også kunne tiltransporteres øvrige selskaper i Eidsiva konsernet.\n\nAnskaffelsens nærmere innhold er beskrevet i avtalens vedlegg A – Leveringsomfang, vedlegg E – Kundens kravspesifikasjon og vedlegg 02 - Tilbudsmatrise.",
+          "contract_type": "Services",
+          "procedure": "Negotiated with prior publication",
+          "legislation": "",
+          "framework_agreement": "True",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "1",
+          "trade": "Education and training services",
+          "cpv_main": "80590000",
+          "cpv_additional": "80560000 | 80511000",
+          "place_of_performance_nuts": "NO020 | NO084 | NO083 | NO081",
+          "currency": "NOK",
+          "estimated_value": "12500000.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116581",
+        "notice_version_hash": "4117b13740ebcb698c67ae451167edd18f569cb5e688bb60f8e2ee7e89612bbe",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO020, NO084, NO083, NO081 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO020, NO084, NO083, NO081 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 40,
+            "reason_en": "Value above the firm's band (max NOK 5m)",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+            "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+            "data_points": [
+              "framework_agreement"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116581",
+        "notice_version_hash": "4117b13740ebcb698c67ae451167edd18f569cb5e688bb60f8e2ee7e89612bbe",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO020, NO084, NO083, NO081 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO020, NO084, NO083, NO081 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 40,
+            "reason_en": "Value above the firm's band (max NOK 5m)",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Framework agreement; firm willing: yes; parallel frameworks accepted",
+            "reason_nb": "Rammeavtale; firmaet villig: ja; parallelle rammeavtaler akseptert",
+            "data_points": [
+              "framework_agreement"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116600": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116600",
+          "doffin_url": "https://doffin.no/notices/2026-116600",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "26/33088",
+          "issue_date": "2026-10-23",
+          "publication_date": "2026-10-26",
+          "tender_deadline_utc": "2026-11-27 11:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "NORDRE FOLLO KOMMUNE",
+          "buyer_org_nr": "922092648",
+          "buyer_type": "body-pl-la",
+          "buyer_activity": "gen-pub",
+          "buyer_city": "SKI",
+          "buyer_postal_code": "1400",
+          "buyer_nuts": "NO084",
+          "title": "Transport til og fra svømmeundervisning",
+          "title_en": "Transport to and from swimming lessons",
+          "description": "Nordre Follo kommune skal inngå tjenesteavtale om levering av transport til og fra svømmeundervisning.",
+          "contract_type": "Services",
+          "procedure": "Open",
+          "legislation": "Anskaffelsesforskriften",
+          "framework_agreement": "False",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "1",
+          "trade": "Transport services",
+          "cpv_main": "60140000",
+          "cpv_additional": "",
+          "place_of_performance_nuts": "NO084",
+          "currency": "NOK",
+          "estimated_value": "30000000.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116600",
+        "notice_version_hash": "f1843b848352c8f11755cbbf6a0603a7b0b761ec384c85822d415fa9966fcf43",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO084 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO084 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 17,
+            "reason_en": "Value above the firm's band (max NOK 5m)",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116600",
+        "notice_version_hash": "f1843b848352c8f11755cbbf6a0603a7b0b761ec384c85822d415fa9966fcf43",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO084 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO084 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 100,
+            "reason_en": "Contract type Services matches the firm's Services",
+            "reason_nb": "Kontraktstype Services samsvarer med firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 17,
+            "reason_en": "Value above the firm's band (max NOK 5m)",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    },
+    "2026-116619": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "2026-116619",
+          "doffin_url": "https://doffin.no/notices/2026-116619",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "ContractNotice",
+          "eforms_notice_subtype": "E3",
+          "status": "",
+          "case_number": "26/32",
+          "issue_date": "2026-10-23",
+          "publication_date": "2026-10-26",
+          "tender_deadline_utc": "2026-11-20 11:00:58",
+          "contract_signed_date": "",
+          "buyer_name": "Porsgrunn kommune",
+          "buyer_org_nr": "939991034",
+          "buyer_type": "ra",
+          "buyer_activity": "gen-pub",
+          "buyer_city": "Porsgrunn",
+          "buyer_postal_code": "3915",
+          "buyer_nuts": "",
+          "title": "Vaskeri Frednes - ombygging",
+          "title_en": "",
+          "description": "Porsgrunn kommune skal på grunn av økte leveranser av vasketøy bygge om vaskeriet på Frednes. \nArbeidene som består i nytt lagerbygg (ca. 36 m2) på nordsiden av bygget samt flytting av div rom intert i arealet.\nTilbudet omfatter prosjektering og gjennomføring av ombyggingen i underetasjen på Frednes sykehjem. Det er søk rammetillatelse for tiltket .",
+          "contract_type": "Works",
+          "procedure": "Open",
+          "legislation": "https://lovdata.no/eli/forskrift/2016/8/12/974",
+          "framework_agreement": "False",
+          "dynamic_purchasing_system": "False",
+          "lot_count": "1",
+          "trade": "Construction work",
+          "cpv_main": "45000000",
+          "cpv_additional": "",
+          "place_of_performance_nuts": "NO094",
+          "currency": "NOK",
+          "estimated_value": "6000000.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116619",
+        "notice_version_hash": "38fefb6f56da1ab2fc2142bc70ec3b25c8b0910cf22c6715fbf91efc09aa95e0",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO094 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO094 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Works differs from the firm's Services",
+            "reason_nb": "Kontraktstype Works avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": 30,
+            "reason_en": "Design-and-build contract; the firm only takes part as subcontractor",
+            "reason_nb": "Totalentreprise; firmaet deltar bare som underleverandør",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 83,
+            "reason_en": "Value above the firm's band (max NOK 5m)",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [
+          "buyer_nuts is empty; region scored from place of performance only",
+          "title_en is empty; Norwegian title used"
+        ],
+        "data_quality_notes_nb": [
+          "buyer_nuts er tomt; regionen er vurdert ut fra utførelsessted alene",
+          "title_en er tomt; norsk tittel brukt"
+        ],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "2026-116619",
+        "notice_version_hash": "38fefb6f56da1ab2fc2142bc70ec3b25c8b0910cf22c6715fbf91efc09aa95e0",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 0,
+            "reason_en": "Place of performance NO094 is outside the firm's region",
+            "reason_nb": "Utførelsessted NO094 ligger utenfor firmaets region",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Works differs from the firm's Services",
+            "reason_nb": "Kontraktstype Works avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": 30,
+            "reason_en": "Design-and-build contract; the firm only takes part as subcontractor",
+            "reason_nb": "Totalentreprise; firmaet deltar bare som underleverandør",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": 83,
+            "reason_en": "Value above the firm's band (max NOK 5m)",
+            "reason_nb": "Verdien er over firmaets intervall (maks NOK 5 mill.)",
+            "data_points": [
+              "estimated_value",
+              "framework_agreement",
+              "lot_count",
+              "description"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Ordinary contract (no framework, no DPS)",
+            "reason_nb": "Ordinær kontrakt (ikke rammeavtale eller DPS)",
+            "data_points": [
+              "framework_agreement",
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [
+          "buyer_nuts is empty; region scored from place of performance only",
+          "title_en is empty; Norwegian title used"
+        ],
+        "data_quality_notes_nb": [
+          "buyer_nuts er tomt; regionen er vurdert ut fra utførelsessted alene",
+          "title_en er tomt; norsk tittel brukt"
+        ],
+        "mock": true
+      }
+    },
+    "MOCK-0004": {
+      "prompt_version": "screening_v1",
+      "model": "none (mock generated by code)",
+      "input": {
+        "notice": {
+          "doffin_id": "MOCK-0004",
+          "doffin_url": "",
+          "notice_type": "ANNOUNCEMENT_OF_COMPETITION",
+          "eforms_notice_form": "competition",
+          "eforms_notice_subtype": "16",
+          "status": "ACTIVE",
+          "case_number": "",
+          "issue_date": "2026-10-20",
+          "publication_date": "2026-10-21",
+          "tender_deadline_utc": "2026-12-04 12:00:00",
+          "contract_signed_date": "",
+          "buyer_name": "MOCK Oppdragsgiver (invented)",
+          "buyer_org_nr": "",
+          "buyer_type": "body-pl-la",
+          "buyer_activity": "",
+          "buyer_city": "MOCK",
+          "buyer_postal_code": "",
+          "buyer_nuts": "NO081",
+          "title": "MOCK — Dynamisk innkjøpsordning for kontorrekvisita (oppfunnet kunngjøring)",
+          "title_en": "MOCK — Dynamic purchasing system for office supplies (invented notice)",
+          "description": "OPPFUNNET KUNNGJØRING FOR PROTOTYPEN. Viser utførelsessted «anyw» (hele Norge), en dynamisk innkjøpsordning og estimert verdi 0 (ukjent). Ikke en ekte konkurranse.",
+          "contract_type": "Supplies",
+          "procedure": "Open",
+          "legislation": "Anskaffelsesforskriften",
+          "framework_agreement": "False",
+          "dynamic_purchasing_system": "True",
+          "lot_count": "1",
+          "trade": "Office and computing equipment",
+          "cpv_main": "30192000",
+          "cpv_additional": "",
+          "place_of_performance_nuts": "anyw",
+          "currency": "NOK",
+          "estimated_value": "0.0",
+          "awarded_value": "",
+          "received_tenders": "",
+          "winner_name": "",
+          "winner_org_nr": ""
+        },
+        "search_profile": [
+          {
+            "id": "main_cpv",
+            "label": "Main CPV",
+            "value": "71322000 Engineering-design services for the construction of civil engineering works",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "secondary_cpv",
+            "label": "Secondary CPV",
+            "value": "71300000 Engineering services; 71311000 Civil engineering consultancy services; 71311300 Infrastructure works consultancy services; 71320000 Engineering design services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "region_nuts",
+            "label": "Region (NUTS)",
+            "value": "NO0A1 Rogaland",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_subject",
+            "label": "Contract subject",
+            "value": "Services",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "contract_form",
+            "label": "Contract form",
+            "value": "Subcontractor (sub-consultant to contractors in design-and-build): yes. Execution, design-and-build and general contract: not applicable to a consultancy",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "size_band",
+            "label": "Contract-size band",
+            "value": "NOK 0.2–5 million per contract or expected call-off volume",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "framework_dps",
+            "label": "Framework agreements and DPS",
+            "value": "Framework: yes, including parallel frameworks. DPS: yes",
+            "proof_status": "Self-declared"
+          },
+          {
+            "id": "lot_preferences",
+            "label": "Lot preferences",
+            "value": "Only lots in water, sewer or road disciplines; at most two lots per notice",
+            "proof_status": "Self-declared"
+          }
+        ]
+      },
+      "raw_output": {
+        "firm_id": "P2",
+        "notice_id": "MOCK-0004",
+        "notice_version_hash": "99e44049179f5d07c5ee20c2a39d7a155eba9aa235f7caae4ef0a471eb99213d",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 100,
+            "reason_en": "Place of performance 'anyw' = anywhere in Norway: compatible with every region",
+            "reason_nb": "Utførelsessted «anyw» = hele Norge: forenlig med alle regioner",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": null,
+            "reason_en": "Estimated value zero (0) is treated as unknown: excluded from the score",
+            "reason_nb": "Estimert verdi 0 behandles som ukjent: holdt utenfor scoren",
+            "data_points": [
+              "estimated_value"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Dynamic purchasing system; firm's DPS preference yes",
+            "reason_nb": "Dynamisk innkjøpsordning; firmaets DPS-preferanse ja",
+            "data_points": [
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      },
+      "schema_ok": true,
+      "schema_errors": [],
+      "validated_output": {
+        "firm_id": "P2",
+        "notice_id": "MOCK-0004",
+        "notice_version_hash": "99e44049179f5d07c5ee20c2a39d7a155eba9aa235f7caae4ef0a471eb99213d",
+        "prompt_version": "screening_v1",
+        "model": "none (mock generated by code)",
+        "sub_scores": {
+          "subject_relevance": {
+            "value": 5,
+            "reason_en": "No CPV overlap with the profile",
+            "reason_nb": "Ingen CPV-overlapp med profilen",
+            "data_points": [
+              "title",
+              "title_en",
+              "description",
+              "cpv_main",
+              "cpv_additional",
+              "trade"
+            ]
+          },
+          "region": {
+            "value": 100,
+            "reason_en": "Place of performance 'anyw' = anywhere in Norway: compatible with every region",
+            "reason_nb": "Utførelsessted «anyw» = hele Norge: forenlig med alle regioner",
+            "data_points": [
+              "place_of_performance_nuts"
+            ]
+          },
+          "contract_subject": {
+            "value": 0,
+            "reason_en": "Contract type Supplies differs from the firm's Services",
+            "reason_nb": "Kontraktstype Supplies avviker fra firmaets Services",
+            "data_points": [
+              "contract_type"
+            ]
+          },
+          "contract_form": {
+            "value": null,
+            "reason_en": "Contract form not applicable to a supplies/services contract",
+            "reason_nb": "Kontraktsform er ikke relevant for vare-/tjenestekontrakter",
+            "data_points": [
+              "description"
+            ]
+          },
+          "size": {
+            "value": null,
+            "reason_en": "Estimated value zero (0) is treated as unknown: excluded from the score",
+            "reason_nb": "Estimert verdi 0 behandles som ukjent: holdt utenfor scoren",
+            "data_points": [
+              "estimated_value"
+            ]
+          },
+          "framework_dps": {
+            "value": 100,
+            "reason_en": "Dynamic purchasing system; firm's DPS preference yes",
+            "reason_nb": "Dynamisk innkjøpsordning; firmaets DPS-preferanse ja",
+            "data_points": [
+              "dynamic_purchasing_system"
+            ]
+          },
+          "lots": {
+            "value": 100,
+            "reason_en": "Single contract (no lots)",
+            "reason_nb": "Én kontrakt (ingen delkontrakter)",
+            "data_points": [
+              "lot_count"
+            ]
+          }
+        },
+        "lot_scores": [],
+        "contradictions": [],
+        "data_quality_notes_en": [],
+        "data_quality_notes_nb": [],
+        "mock": true
+      }
+    }
+  }
+}

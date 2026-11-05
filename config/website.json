@@ -1,0 +1,4 @@
+{
+  "run_id": "mock-2026-11-05",
+  "note": "The website reads exactly one frozen run from /outputs/{run_id}/. Phase 2 points this to the real run."
+}

@@ -1,0 +1,11 @@
+{
+  "_note": "MOCK bid-coordinator picks recorded in the mock run to demonstrate the 'manually added' report state (SPEC §18 manual modes). Logged as missed matches for the feedback loop. Viewers can add more in their browser; those stay in browser storage only.",
+  "additions": [
+    {"firm_id": "P3", "notice_id": "2026-116600", "via": "ranked_list", "added_on": "2026-11-04",
+     "note_en": "MOCK: coordinator adds the school-transport tender to check whether its heavy-vehicle staff could qualify.",
+     "note_nb": "MOCK: koordinatoren legger til skoleskyss-konkurransen for å se om tungbilpersonellet kan kvalifisere.", "mock": true},
+    {"firm_id": "P1", "notice_id": "2026-116544", "via": "notice_browser", "added_on": "2026-11-04",
+     "note_en": "MOCK: coordinator adds the furniture tender from the notice browser because it includes installation work.",
+     "note_nb": "MOCK: koordinatoren legger til møbelkonkurransen fra kunngjøringssøket fordi den omfatter montering.", "mock": true}
+  ]
+}

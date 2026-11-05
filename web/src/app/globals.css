@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Colour tokens (RGB triplets). Semantics are the same in both themes (SPEC §8.4). Contrast checked for WCAG AA. */
+:root {
+  color-scheme: light;
+  --bg: 246 247 251; --surface: 255 255 255; --surface-2: 241 244 249; --border: 223 228 238;
+  --fg: 11 16 32; --muted: 84 98 120;
+  --accent: 79 70 229; --accent-fg: 255 255 255; --accent-soft: 236 235 254;
+  --go: 21 112 56; --go-soft: 220 247 230;
+  --warn: 161 72 8; --warn-soft: 254 241 199;
+  --nogo: 185 28 28; --nogo-soft: 254 228 228;
+  --flag: 109 40 217; --flag-soft: 239 233 254;
+  --proto: 15 118 110; --proto-soft: 214 245 240;
+  --info: 29 78 216; --info-soft: 224 234 255;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: 8 11 22; --surface: 17 22 38; --surface-2: 24 31 52; --border: 44 53 78;
+    --fg: 248 250 252; --muted: 160 172 194;
+    --accent: 139 146 250; --accent-fg: 11 16 32; --accent-soft: 38 38 84;
+    --go: 98 222 140; --go-soft: 18 58 36; --warn: 252 196 92; --warn-soft: 66 46 10;
+    --nogo: 252 129 129; --nogo-soft: 72 20 24; --flag: 196 170 255; --flag-soft: 52 30 92;
+    --proto: 94 226 205; --proto-soft: 12 58 54; --info: 147 182 255; --info-soft: 24 40 82;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: 8 11 22; --surface: 17 22 38; --surface-2: 24 31 52; --border: 44 53 78;
+  --fg: 248 250 252; --muted: 160 172 194;
+  --accent: 139 146 250; --accent-fg: 11 16 32; --accent-soft: 38 38 84;
+  --go: 98 222 140; --go-soft: 18 58 36; --warn: 252 196 92; --warn-soft: 66 46 10;
+  --nogo: 252 129 129; --nogo-soft: 72 20 24; --flag: 196 170 255; --flag-soft: 52 30 92;
+  --proto: 94 226 205; --proto-soft: 12 58 54; --info: 147 182 255; --info-soft: 24 40 82;
+}
+
+html, body { background: rgb(var(--bg)); color: rgb(var(--fg)); }
+body { font-feature-settings: "cv11", "ss01"; -webkit-font-smoothing: antialiased; }
+.tnum { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; border-radius: 6px; }
+
+.mock-stripes {
+  background-image: repeating-linear-gradient(135deg, rgb(var(--surface-2)) 0 10px, rgb(var(--border)) 10px 20px);
+}
+.proto-band { background-image: linear-gradient(90deg, rgb(var(--proto) / .16), rgb(var(--proto) / .04)); }
+.brand-gradient { background-image: linear-gradient(45deg, #6D3BEF, #4F46E5 50%, #2F7BF6); }
+.json-view { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.5; white-space: pre-wrap; word-break: break-word; }
+.hl-rect { position: absolute; background: rgb(250 204 21 / .38); outline: 1px solid rgb(202 138 4 / .8); border-radius: 2px; cursor: pointer; mix-blend-mode: multiply; }
+.hl-rect.active { background: rgb(79 70 229 / .30); outline: 2px solid rgb(79 70 229); }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; color: #000; }
+  .print-full { max-width: none !important; margin: 0 !important; padding: 0 !important; }
+}
