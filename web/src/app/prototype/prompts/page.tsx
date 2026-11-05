@@ -24,7 +24,7 @@ const Ok = ({ ok, label }: { ok: boolean; label: string }) => ok
 function Panes({ prompt, input, raw, validated, checks }: { prompt: string; input: unknown; raw: unknown; validated: unknown; checks: React.ReactNode }) {
   const t = useTranslations();
   return (
-    <div className="grid gap-4 xl:grid-cols-2">
+    <div className="grid gap-4 [&>*]:min-w-0 xl:grid-cols-2">
       <Card><CardHeader title={t("prompts.prompt")} /><div className="p-3"><JsonView data={prompt} max={420} /></div></Card>
       <Card><CardHeader title={t("prompts.input")} sub={t("prompts.inputSub")} /><div className="p-3"><JsonView data={input} max={420} /></div></Card>
       <Card><CardHeader title={t("prompts.raw")} /><div className="p-3"><JsonView data={raw} max={420} /></div></Card>
@@ -67,11 +67,11 @@ export default function PromptsPage() {
 
   return (
     <ProtoPage title={t("prompts.title")} sub={t("prompts.sub")}>
-      <div className="mb-4 flex flex-wrap items-end gap-3">
+      <div className="mb-4 flex flex-wrap items-end gap-3 [&>*]:min-w-0 [&>*]:max-w-full">
         <Tabs tabs={[{ id: "extraction", label: t("prompts.t.extraction") }, { id: "screening", label: t("prompts.t.screening") }, { id: "matching", label: t("prompts.t.matching") }]}
           value={task} onChange={(v) => set({ task: v, lot: null, req: null })} />
         <Field label={t("prompts.notice")}>
-          <select className={inputCls} value={notice} onChange={(e) => set({ notice: e.target.value, lot: null, req: null })}>
+          <select className={`${inputCls} max-w-full sm:w-auto`} value={notice} onChange={(e) => set({ notice: e.target.value, lot: null, req: null })}>
             {ids.map((n) => <option key={n} value={n}>{n} — {title(m, n, lang).slice(0, 60)}</option>)}
           </select>
         </Field>
@@ -90,8 +90,8 @@ export default function PromptsPage() {
           <Panes prompt={prompts.extraction_v1} input={ext.prompt_input} raw={{ pass_1_with_citations: ext.raw_output_pass1, pass_2_json: filterReq(ext.raw_output_pass2) }} validated={filterReq(ext.validated)}
             checks={<div className="flex flex-wrap gap-1"><Ok ok={ext.schema_ok} label={t("prompts.schema")} /><Ok ok={ext.citation_checks.every((c) => c.citation_ok)} label={t("prompts.citations", { ok: ext.citation_checks.filter((c) => c.citation_ok).length, n: ext.citation_checks.length })} /></div>} />
           <Card className="mt-4"><CardHeader title={t("prompts.citationTable")} />
-            <table className="w-full text-sm"><tbody>{ext.citation_checks.filter((c) => !reqFilter || c.req_id === reqFilter).map((c) => (
-              <tr key={c.req_id} className="border-b border-border last:border-0"><td className="px-4 py-2 font-semibold">{c.req_id}</td><td className="px-4 py-2"><Ok ok={c.citation_ok} label={t("prompts.citationOk")} /></td><td className="px-4 py-2"><Ok ok={c.highlighted} label={t("prompts.highlighted")} /></td><td className="px-4 py-2 text-xs text-muted">{c.error ?? ""}</td></tr>))}</tbody></table>
+            <ul className="divide-y divide-border text-sm">{ext.citation_checks.filter((c) => !reqFilter || c.req_id === reqFilter).map((c) => (
+              <li key={c.req_id} className="flex flex-wrap items-center gap-x-3 gap-y-1.5 px-4 py-2"><span className="w-9 font-semibold">{c.req_id}</span><Ok ok={c.citation_ok} label={t("prompts.citationOk")} /><Ok ok={c.highlighted} label={t("prompts.highlighted")} />{c.error && <span className="text-xs text-muted">{c.error}</span>}</li>))}</ul>
           </Card>
         </>
       ) : <Loading />)}

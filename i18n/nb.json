@@ -18,12 +18,16 @@
     "adviser": "Rådgiversiden",
     "tests": "Testtilfeller",
     "testlog": "Testlogg",
-    "run": "Data og kjøring"
+    "run": "Data og kjøring",
+    "groupInternal": "Internt",
+    "devstats": "Utviklingsstatistikk"
   },
   "proto": {
     "badge": "Prototype",
     "viewingAs": "Vis som",
-    "viewingAsHint": "Demokontroll for sensor: bytter firmaet hvis konto du ser. Ikke en del av tjenesten."
+    "viewingAsHint": "Demokontroll for sensor: bytter firmaet hvis konto du ser. Ikke en del av tjenesten.",
+    "demoControl": "Demokontroll",
+    "demoControlHint": "Bytter firmakontoen som vises på alle sider. Brukes til å demonstrere prototypen; ikke en del av tjenesten."
   },
   "header": {
     "coordinator": "Tilbudsansvarlig",
@@ -33,11 +37,13 @@
     "theme": "Fargetema",
     "theme_light": "Lyst",
     "theme_dark": "Mørkt",
-    "theme_system": "Følg systemet"
+    "theme_system": "Følg systemet",
+    "statusDemo": "Prototype",
+    "statusHint": "Driftsstatus — grønn: i drift, rød: frakoblet, gul: prototype / demodrift"
   },
   "mock": {
     "banner": "MOCK-DATA — konkurransedokumentene er ikke behandlet ennå",
-    "bannerSub": "Kunngjøringer og profiler er reelle/syntetiske inndata; krav, delscorer og klassifiseringer er generert av kode og beskriver ingen reell konkurranse."
+    "bannerSub": "Ekte Doffin-kunngjøringer og syntetiske firmaprofiler · KI-resultatene kommer fra én frossen kjøring og spilles av · hvert resultat kan klikkes helt ned til kilden"
   },
   "footer": {
     "attribution": "Kvia — prototype for senteret for KI-adopsjon og innovasjon. Syntetiske firmadata, ekte Doffin-kunngjøringer (uttrekk 2026-10-26)."
@@ -54,12 +60,12 @@
     "unknown": "Ukjent"
   },
   "status": {
-    "active": "Aktiv konkurranse",
-    "closed": "Lukket (frist passert)",
-    "award": "Tildeling",
+    "active": "Aktiv",
+    "closed": "Lukket",
+    "award": "Tildelt",
     "advisory": "Veiledende",
-    "intent": "Intensjon",
-    "flagged": "Flagget for rådgivergjennomgang",
+    "intent": "Intensjon om tildeling",
+    "flagged": "Til gjennomgang",
     "other": "Annet"
   },
   "indication": {
@@ -159,7 +165,7 @@
     },
     "distribution": "Indikasjoner i rapportene",
     "how": "Slik fungerer det",
-    "howSub": "Tre steg som skiller seg i hva de behandler og hvordan kostnaden skalerer. Oransje = KI-steg, blått = menneskelig beslutning.",
+    "howSub": "Tre steg som skiller seg i hva de behandler og hvordan kostnaden skalerer: dokumentanalysen kjøres én gang per kunngjøring, screening og rapport per firma.",
     "step": "Steg",
     "human": {
       "adviser": {
@@ -178,7 +184,12 @@
     "nextTitle": "Videresendt til diagnoserapport",
     "openReport": "Åpne rapport",
     "disclaimerTitle": "Hva indikasjonen betyr",
-    "disclaimerMore": "Go, grensetilfelle og no-go utledes med faste regler fra kravsjekklisten — aldri av KI-modellen."
+    "disclaimerMore": "Go, grensetilfelle og no-go utledes med faste regler fra kravsjekklisten — aldri av KI-modellen.",
+    "whatTitle": "Dette får dere",
+    "ctaScreening": "Se rangerte kunngjøringer",
+    "ctaReports": "Åpne diagnoserapporter",
+    "aiLabel": "KI",
+    "humanLabel": "Menneskelig beslutning"
   },
   "chain": {
     "pre": {
@@ -245,7 +256,17 @@
       "v_no": "Nei",
       "v_single": "Én",
       "v_multi": "Flere",
-      "clear": "Nullstill filtre"
+      "clear": "Nullstill filtre",
+      "more": "Filtre"
+    },
+    "sortBy": "Sorter",
+    "sortDefault": "Standard rekkefølge",
+    "sort": {
+      "deadline": "Frist",
+      "fit": "Treff",
+      "value": "Verdi",
+      "title": "Tittel",
+      "status": "Status"
     }
   },
   "notice": {
@@ -394,7 +415,18 @@
     "value": "Verdi",
     "proof": "Dokumentasjonsstatus",
     "updated": "Sist oppdatert",
-    "source": "Kilde: {src}; datamodell: {model}."
+    "source": "Kilde: {src}; datamodell: {model}.",
+    "cat": {
+      "search_criteria": "Søkekriterier",
+      "identity_and_size": "Identitet og størrelse",
+      "capacity": "Kapasitet",
+      "tax_and_compliance": "Skatt og etterlevelse",
+      "certificates_and_approvals": "Sertifikater og godkjenninger",
+      "financial_standing": "Økonomi",
+      "references": "Referanser",
+      "account": "Konto",
+      "baseline": "Utgangspunkt"
+    }
   },
   "pdf": {
     "page": "Side",
@@ -408,7 +440,7 @@
     "title": "Intern logikk",
     "sub": "Mekanismekjeden steg for steg: hvilke steg som er KI og hvilke som er fast kode, og de deterministiske reglene med antakelser.",
     "chain": "Mekanismekjede",
-    "chainSub": "Samsvarer med figur 2 i dokumentet om KI-mekanismekjeden.",
+    "chainSub": "De tre stegene og KI-kapabilitetene slik de er navngitt i dokumentet om KI-mekanismekjeden (figur 2).",
     "step": "Steg",
     "what": "Hva / inndata",
     "by": "Utføres av",
@@ -533,14 +565,66 @@
         "nogo": "minst ett obligatorisk krav er ikke oppfylt.",
         "borderline": "ingen krav er ikke oppfylt, men minst ett er delvis oppfylt, mangler data, har lav matchesikkerhet, eller krevd dokumentasjon er ikke dokumentert og gyldig på tilbudsfristen.",
         "go": "alle krav oppfylt med høy sikkerhet, og all krevd dokumentasjon dokumentert og gyldig på tilbudsfristen.",
-        "gap": "Hull i formuleringen (logget for teamet): et ikke-obligatorisk krav som ikke er oppfylt, eller et krav oppfylt med middels sikkerhet, passer verken grensetilfelle eller go. Standardvalg: grensetilfelle."
+        "gap": "Der formuleringen lar et tilfelle stå åpent (f.eks. et ikke-obligatorisk krav som ikke er oppfylt, eller et krav oppfylt med middels sikkerhet), blir resultatet grensetilfelle (teambeslutning)."
       },
       "health": {
         "title": "Helsesjekk av profilen (tjeneste 3)",
         "text": "Flagger utløpte oppføringer, oppføringer som utløper innen {days} dager fra referansedatoen, og verdier erklært manglende."
       }
     },
-    "assumptionsTitle": "Antakelser i denne kjøringen"
+    "assumptionsTitle": "Antakelser i denne kjøringen",
+    "implemented": "Implementert som",
+    "rulesTitle": "Deterministiske regler",
+    "feedback": "Forbedringssløyfe: rådgiverrettinger, flagg fra firmaer, manuelle tillegg og tilbudsutfall logges og brukes til å justere prompter, vekter og terskel.",
+    "chain3": {
+      "pre": {
+        "what": "Én gang per kunngjøring, ved ankomst; gjenbrukes for alle firmaer.",
+        "human": "Rådgiver gjennomgår flaggede kunngjøringer og frigir dem",
+        "output": "kravliste med kildehenvisninger; frigitt eller flagget"
+      },
+      "screen": {
+        "what": "Per firma, for hver frigitte kunngjøring.",
+        "human": "Tilbudsansvarlig kan legge til nesten-treff manuelt",
+        "output": "treffscore 0–100 med sikkerhet; videresendt eller under terskel"
+      },
+      "report": {
+        "what": "Per firma, for videresendte eller manuelt tillagte kunngjøringer.",
+        "human": "Tilbudsansvarlig bestemmer om det skal gis tilbud; firmaet kan flagge ethvert resultat",
+        "output": "kravsjekkliste, manglende dokumenter, go / grensetilfelle / no-go (faste regler)"
+      }
+    },
+    "cap": {
+      "retrieval": {
+        "name": "Gjenfinning",
+        "text": "Finner de relevante avsnittene i de lange konkurransedokumentene og forankrer modellen i kilden (Lewis mfl., 2020).",
+        "impl": "sidebiter rangert med BM25 per kravkategori; hentede sider logges"
+      },
+      "extraction": {
+        "name": "Uttrekk",
+        "text": "Gjør avsnittene om til en strukturert liste over obligatoriske krav og dokumentasjonskrav, hvert med kildehenvisning.",
+        "impl": "LLM (Claude Fable 5.1) i to pass: kildehenvisninger, deretter JSON-skjema; kildekontroll i kode"
+      },
+      "matching": {
+        "name": "Matching",
+        "text": "Matcher hvert datapunkt i en frigitt kunngjøring, inkludert fritekst i tittel og beskrivelse, mot søkeprofilen og gir en delscore.",
+        "impl": "LLM (Claude Fable 5.1); manglende data utelates, motstrid rapporteres"
+      },
+      "ranking": {
+        "name": "Rangering",
+        "text": "Kombinerer delscorene til en treffscore fra 0 til 100, vektet mot faglig relevans, og ordner kunngjøringene.",
+        "impl": "vektet aggregering i kode; terskel 60; én rangert liste per firma"
+      },
+      "matching2": {
+        "name": "Matching",
+        "text": "Kobler hvert lagret krav til tilsvarende oppføring i Capability Locker; kunngjøringsdata gir kontekst (frist, delkontrakter, verdi).",
+        "impl": "LLM (Claude Fable 5.1)"
+      },
+      "classification": {
+        "name": "Klassifisering",
+        "text": "Vurderer hvert krav som oppfylt, delvis oppfylt, ikke oppfylt eller mangler data, med sikkerhet; indikasjonen følger av faste regler.",
+        "impl": "LLM (Claude Fable 5.1); dokumentasjonsstatus og go / grensetilfelle / no-go beregnes i kode"
+      }
+    }
   },
   "prompts": {
     "title": "Prompter og I/O",
@@ -614,7 +698,7 @@
   },
   "run": {
     "title": "Data og kjøring",
-    "sub": "Datakilder, datoer, kjøringens identitet, modell, manifest med sjekksummer og kjente begrensninger.",
+    "sub": "Den frosne kjøringen nettsiden spiller av, og de underliggende kunngjøringsdataene.",
     "facts": "Kjøring",
     "runId": "Kjørings-ID",
     "created": "Opprettet (UTC)",
@@ -650,6 +734,23 @@
     "file": "Fil",
     "reset": "Nullstill demo",
     "resetSub": "Fjerner rapportene du har lagt til manuelt i denne nettleseren (lagres bare i nettleseren).",
-    "resetDone": "Demo nullstilt"
+    "resetDone": "Demo nullstilt",
+    "csvTitle": "Kunngjøringsdata (CSV)",
+    "csvSub": "{file} — {n} rader, {c} kolonner, vist uendret.",
+    "csvSearch": "Søk i dataene",
+    "csvNote": "Prototypens eneste datasett med kunngjøringer. De oppfunne MOCK-kunngjøringene er ikke en del av denne filen."
+  },
+  "statusHint": {
+    "active": "Konkurransekunngjøring med tilbudsfrist etter referansedatoen",
+    "closed": "Konkurransekunngjøring med passert tilbudsfrist",
+    "award": "Kunngjøring av kontraktstildeling: kontrakten er allerede tildelt",
+    "advisory": "Veiledende kunngjøring: forhåndsinformasjon eller markedsdialog, ingen konkurranse ennå",
+    "intent": "Intensjonskunngjøring: oppdragsgiver har til hensikt å tildele en kontrakt uten konkurranse",
+    "flagged": "Flagget i forbehandlingen; venter på rådgivergjennomgang før screening",
+    "other": "Annen kunngjøringstype"
+  },
+  "dev": {
+    "title": "Utviklingsstatistikk",
+    "sub": "Internt, bare for utvikling — ikke en del av prototypevurderingen: dekning av tilstander i mock-kjøringen, manifest og sjekksummer."
   }
 }

@@ -8,7 +8,7 @@ import { Chip } from "@/components/ui/chips";
 import { useJson } from "@/lib/data";
 import { evidenceHref } from "@/lib/evidence";
 import { useApp, useL } from "@/lib/state";
-import type { Coverage, TestCase } from "@/lib/types";
+import type { TestCase } from "@/lib/types";
 
 function StatusChipTest({ s }: { s: string }) {
   if (s.startsWith("passed")) return <Chip tone="go" icon={<CheckCircle2 className="h-3.5 w-3.5" aria-hidden />}>{s}</Chip>;
@@ -21,16 +21,25 @@ export default function TestsPage() {
   const t = useTranslations();
   const { href, firm } = useApp();
   const L = useL();
-  const d = useJson<[TestCase[], Coverage]>(["run/tests.json", "run/mode_coverage.json"]);
+  const d = useJson<[TestCase[]]>(["run/tests.json"]);
   if (!d) return <Loading />;
-  const [tests, cov] = d;
-  const groups = [...new Set(cov.modes.map((x) => x.group))];
-  const covered = cov.modes.filter((x) => x.examples.length).length;
+  const [tests] = d;
   return (
     <ProtoPage title={t("tests.title")} sub={t("tests.sub")}>
-      <Card className="mb-5 overflow-hidden">
+      <Card className="overflow-hidden">
         <CardHeader title={t("tests.cases")} sub={t("tests.casesSub")} />
-        <div className="overflow-x-auto">
+        <ul className="divide-y divide-border md:hidden">
+          {tests.map((x) => (
+            <li key={x.id} className="space-y-1.5 px-4 py-3 text-sm">
+              <div className="flex flex-wrap items-center gap-2"><b>{x.id}</b><Chip>{x.type}</Chip><StatusChipTest s={x.status} /></div>
+              <div className="font-medium">{x.scenario}</div>
+              <div className="text-xs text-muted">{t("tests.expected")}: {x.expected}</div>
+              <div className="text-xs">{t("tests.observed")}: {L(x, "observed")}</div>
+              <div className="flex flex-wrap gap-x-3 text-xs">{x.evidence.map((e, i) => <Link key={i} href={evidenceHref(e, href, firm)} className="text-accent hover:underline">{String(e.page)}{e.notice ? ` ${e.notice}` : ""}{e.req ? ` ${e.req}` : ""}</Link>)}</div>
+            </li>
+          ))}
+        </ul>
+        <div className="hidden overflow-x-auto md:block">
           <table className="w-full text-sm">
             <thead className="border-b border-border bg-surface-2 text-left text-xs uppercase tracking-wide text-muted">
               <tr><th className="px-4 py-2">#</th><th className="px-4 py-2">{t("tests.type")}</th><th className="px-4 py-2">{t("tests.scenario")}</th><th className="px-4 py-2">{t("tests.status")}</th><th className="px-4 py-2">{t("tests.observed")}</th><th className="px-4 py-2">{t("tests.evidence")}</th></tr>
@@ -50,28 +59,6 @@ export default function TestsPage() {
           </table>
         </div>
         <p className="border-t border-border px-4 py-3 text-xs text-muted">{t("tests.mockWarning")}</p>
-      </Card>
-      <Card>
-        <CardHeader title={t("tests.coverage")} sub={t("tests.coverageSub", { c: covered, n: cov.modes.length })} />
-        <div className="grid gap-4 p-4 md:grid-cols-2">
-          {groups.map((g) => (
-            <div key={g} className="rounded-lg border border-border">
-              <div className="border-b border-border bg-surface-2 px-3 py-2 text-xs font-semibold uppercase tracking-wide">{g.replace(/_/g, " ")}</div>
-              <ul className="divide-y divide-border text-sm">
-                {cov.modes.filter((x) => x.group === g).map((x) => (
-                  <li key={x.mode} className="flex flex-wrap items-start gap-2 px-3 py-2">
-                    {x.examples.length ? <CheckCircle2 className="mt-0.5 h-4 w-4 text-go" aria-label="covered" /> : <XCircle className="mt-0.5 h-4 w-4 text-nogo" aria-label="missing" />}
-                    <span className="min-w-0 flex-1">{x.mode}</span>
-                    <span className="flex flex-wrap gap-1">{x.examples.slice(0, 3).map((e, i) => (
-                      <Link key={i} href={evidenceHref(e, href, firm)} className="rounded bg-surface-2 px-1.5 py-0.5 text-[11px] text-accent hover:underline">
-                        {[e.firm_id, e.notice_id, e.lot_id && `lot ${e.lot_id}`, e.req_id].filter(Boolean).join(" · ") || e.note}
-                      </Link>))}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
       </Card>
     </ProtoPage>
   );

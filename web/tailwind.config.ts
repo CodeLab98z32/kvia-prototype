@@ -15,6 +15,8 @@ export default {
       },
       fontFamily: { sans: ["'Inter Variable'", "Inter", "system-ui", "sans-serif"] },
       maxWidth: { content: "1280px" },
+      // Restrained corner radii (team feedback: rounded corners, but not "soft").
+      borderRadius: { sm: "2px", DEFAULT: "3px", md: "4px", lg: "5px", xl: "6px", "2xl": "8px" },
       keyframes: {
         progress: { "0%": { width: "0%" }, "100%": { width: "100%" } },
         fadein: { "0%": { opacity: "0", transform: "translateY(4px)" }, "100%": { opacity: "1", transform: "none" } },

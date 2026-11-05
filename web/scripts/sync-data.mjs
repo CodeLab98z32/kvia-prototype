@@ -63,6 +63,11 @@ for (const base of ["data/mock/tender_docs", "data/raw/tender_docs"]) {
   }
 }
 
+// raw notice export (shown unaltered on the Data & run page)
+fs.mkdirSync(path.join(DATA, "raw"), { recursive: true });
+const exportFile = rd(path.join(RUN, "00_ingest/notice_store.json")).export_file;
+fs.copyFileSync(path.join(ROOT, exportFile), path.join(DATA, "raw", path.basename(exportFile)));
+
 // prompts
 const prompts = {};
 for (const f of fs.readdirSync(path.join(ROOT, "prompts")).filter((x) => x.endsWith(".md")))

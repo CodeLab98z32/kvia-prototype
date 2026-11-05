@@ -250,14 +250,14 @@ export function ReportPage({ id }: { id: string }) {
 
       <Banner lot={lot} onPick={(r) => setParam("req", r)} />
 
-      <div className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
+      <div className="grid gap-5 [&>*]:min-w-0 xl:grid-cols-[1.25fr_1fr]">
         <Card className="min-w-0">
           <CardHeader title={t("report.checklist")} sub={t("report.checklistSub", { n: lot.rows.length })} />
           <Checklist m={m} report={report} lot={lot} active={active} setActive={(r) => setParam("req", active === r ? null : r)} />
         </Card>
         <div className="space-y-5 xl:sticky xl:top-4 xl:self-start">
           {docs && (
-            <div className="h-[560px]">
+            <div className="h-[440px] sm:h-[560px]">
               <PdfViewer url={docUrl(id, docs.files[0])} title={`${docs.files[0]}${docs.source === "placeholder" ? " (MOCK)" : ""}`} page={page} onPageChange={setPage}
                 activeId={active} onSelect={(r) => setParam("req", r)}
                 highlights={lot.rows.filter((r) => r.highlight).map((r) => ({ id: r.req_id, page: r.highlight!.page, rects: r.highlight!.rects, label: L(r, "text_summary") }))} />

@@ -23,7 +23,7 @@ const TONE: Record<Tone, string> = {
 /** A chip always carries an icon AND text, never colour alone (SPEC §8.4 accessibility). */
 export function Chip({ tone = "muted", icon, children, className, title }: { tone?: Tone; icon?: ReactNode; children: ReactNode; className?: string; title?: string }) {
   return (
-    <span title={title} className={cn("inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 text-xs font-semibold", TONE[tone], className)}>
+    <span title={title} className={cn("inline-flex items-center gap-1 whitespace-nowrap rounded-md border px-1.5 py-px text-[11.5px] font-medium", TONE[tone], className)}>
       {icon}
       {children}
     </span>
@@ -34,7 +34,7 @@ const I = "h-3.5 w-3.5";
 export function IndicationChip({ v, large }: { v: Indication; large?: boolean }) {
   const t = useTranslations();
   const m = { go: ["go", <CheckCircle2 key="i" className={I} aria-hidden />], borderline: ["warn", <AlertTriangle key="i" className={I} aria-hidden />], "no-go": ["nogo", <Ban key="i" className={I} aria-hidden />] } as const;
-  return <Chip tone={m[v][0]} icon={m[v][1]} className={large ? "px-3 py-1 text-sm" : ""}>{t(`indication.${v}`)}</Chip>;
+  return <Chip tone={m[v][0]} icon={m[v][1]} className={large ? "px-2.5 py-1 text-sm" : ""}>{t(`indication.${v}`)}</Chip>;
 }
 export function MatchChip({ v }: { v: MatchStatus }) {
   const t = useTranslations();
@@ -79,7 +79,7 @@ export function StatusChip({ v }: { v: string }) {
   const t = useTranslations();
   const tones: Record<string, Tone> = { active: "go", closed: "muted", award: "info", advisory: "muted", intent: "muted", flagged: "flag", other: "muted" };
   const icon = v === "flagged" ? <Flag className={I} aria-hidden /> : v === "active" ? <Clock className={I} aria-hidden /> : undefined;
-  return <Chip tone={tones[v] ?? "muted"} icon={icon}>{t(`status.${v}`)}</Chip>;
+  return <Chip tone={tones[v] ?? "muted"} icon={icon} title={t(`statusHint.${v}`)}>{t(`status.${v}`)}</Chip>;
 }
 
 export function FitBar({ value, threshold = 60, compact }: { value: number | null; threshold?: number; compact?: boolean }) {
@@ -87,7 +87,7 @@ export function FitBar({ value, threshold = 60, compact }: { value: number | nul
   const color = value === null ? "bg-border" : v >= threshold ? "bg-accent" : "bg-muted/60";
   return (
     <div className={cn("flex items-center gap-2", compact ? "min-w-[110px]" : "min-w-[150px]")}>
-      <div className="relative h-2.5 flex-1 overflow-hidden rounded-full bg-surface-2" role="img" aria-label={`fit ${value ?? "—"} / 100`}>
+      <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-surface-2" role="img" aria-label={`fit ${value ?? "—"} / 100`}>
         <div className={cn("h-full rounded-full", color)} style={{ width: `${v}%` }} />
         <div className="absolute inset-y-0 w-0.5 bg-fg/50" style={{ left: `${threshold}%` }} aria-hidden />
       </div>
